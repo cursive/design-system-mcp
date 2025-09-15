@@ -1,1 +1,0 @@
-export { CirclePauseIcon } from './CirclePauseIcon';

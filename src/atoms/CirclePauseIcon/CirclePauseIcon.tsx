@@ -43,3 +43,4 @@ export const CirclePauseIcon: React.FC<CirclePauseIconProps> = ({
         </svg>
     );
 };
+

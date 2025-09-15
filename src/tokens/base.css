@@ -77,6 +77,7 @@ button {
     --color-foreground-invert-primary: #ffffff;
     --color-foreground-invert-secondary: rgba(255, 255, 255, 0.8);
     --color-background-primary: #ffffff;
+    --color-background-secondary: #f5f5f5;
     --color-background-accent: #f08e80;
     --color-background-accent-hover: #f08e80;
     --color-background-accent-disabled: #f7d0cb;
@@ -85,7 +86,11 @@ button {
     --color-stroke-primary: #141414;
     --color-stroke-horizontal-rule: rgba(0, 0, 0, 0.1);
     --color-status-info: #34484c;
+    --color-status-success: #07a023;
+    --color-status-warning: #d6b707;
+    --color-status-danger: #b51010;
     --color-form-controls-disabled: #d3d3d3;
+    --color-form-controls-error: #b51010;
     --color-focus: #0066cc;
 
     /* Typography */

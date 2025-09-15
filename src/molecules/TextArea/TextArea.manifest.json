@@ -1,0 +1,69 @@
+{
+    "id": "textarea",
+    "name": "TextArea",
+    "kind": "molecule",
+    "path": "src/molecules/TextArea/TextArea.tsx",
+    "defaultVariant": {
+        "state": "default",
+        "showLabel": true,
+        "disabled": false,
+        "rows": 4
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "state": "default",
+                "showLabel": true,
+                "disabled": false,
+                "rows": 4
+            }
+        },
+        {
+            "name": "Hover",
+            "props": {
+                "state": "hover",
+                "showLabel": true,
+                "disabled": false,
+                "rows": 4
+            }
+        },
+        {
+            "name": "Active",
+            "props": {
+                "state": "active",
+                "showLabel": true,
+                "disabled": false,
+                "rows": 4
+            }
+        },
+        {
+            "name": "Filled",
+            "props": {
+                "state": "filled",
+                "showLabel": true,
+                "disabled": false,
+                "rows": 4
+            }
+        },
+        {
+            "name": "Error",
+            "props": {
+                "state": "error",
+                "showLabel": true,
+                "disabled": false,
+                "rows": 4
+            }
+        },
+        {
+            "name": "Error Filled",
+            "props": {
+                "state": "error-filled",
+                "showLabel": true,
+                "disabled": false,
+                "rows": 4
+            }
+        }
+    ],
+    "dependencies": []
+}

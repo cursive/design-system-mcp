@@ -1,0 +1,54 @@
+.select-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 16px;
+    background-color: var(--color-background-primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+.select-item__text {
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    line-height: 22px;
+    white-space: nowrap;
+}
+
+/* State: Default */
+.select-item--default {
+    background-color: var(--color-background-primary);
+}
+
+/* State: Hover */
+.select-item--hover {
+    background-color: var(--color-background-secondary);
+}
+
+/* State: Selected */
+.select-item--selected {
+    background-color: var(--color-background-secondary);
+    font-weight: 600;
+}
+
+/* State: Disabled */
+.select-item--disabled {
+    background-color: var(--color-background-primary);
+    color: var(--color-foreground-secondary);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Hover state for interactive items */
+.select-item:not(.select-item--disabled):hover {
+    background-color: var(--color-background-secondary);
+}
+
+/* Focus state for accessibility */
+.select-item:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: -2px;
+}

@@ -17,6 +17,7 @@ export const CheckIcon: React.FC<CheckIconProps> = ({
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             focusable="false"
+            data-testid="check-icon"
         >
             <path
                 d="M20 6L9 17L4 12"
@@ -28,3 +29,4 @@ export const CheckIcon: React.FC<CheckIconProps> = ({
         </svg>
     );
 };
+

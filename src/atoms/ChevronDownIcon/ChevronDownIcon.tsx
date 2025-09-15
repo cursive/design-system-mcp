@@ -28,3 +28,4 @@ export const ChevronDownIcon: React.FC<ChevronDownIconProps> = ({
         </svg>
     );
 };
+

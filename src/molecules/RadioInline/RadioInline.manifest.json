@@ -1,0 +1,44 @@
+{
+    "id": "radio-inline",
+    "name": "RadioInline",
+    "kind": "molecule",
+    "path": "src/molecules/RadioInline/RadioInline.tsx",
+    "defaultVariant": {
+        "state": "unchecked",
+        "selected": false,
+        "disabled": false,
+        "showDivider": true
+    },
+    "variants": [
+        {
+            "name": "Unchecked",
+            "props": {
+                "state": "unchecked",
+                "selected": false,
+                "disabled": false,
+                "showDivider": true
+            }
+        },
+        {
+            "name": "Hover",
+            "props": {
+                "state": "hover",
+                "selected": false,
+                "disabled": false,
+                "showDivider": true
+            }
+        },
+        {
+            "name": "Checked",
+            "props": {
+                "state": "checked",
+                "selected": true,
+                "disabled": false,
+                "showDivider": true
+            }
+        }
+    ],
+    "dependencies": [
+        "RadioIcon"
+    ]
+}

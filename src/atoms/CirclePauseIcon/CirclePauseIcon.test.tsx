@@ -35,3 +35,4 @@ describe('CirclePauseIcon', () => {
         expect(svg).toHaveClass('circle-pause-icon', 'custom-class');
     });
 });
+

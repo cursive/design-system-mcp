@@ -101,3 +101,4 @@ export const CalendarFoldIcon: React.FC<CalendarFoldIconProps> = ({
         </svg>
     );
 };
+

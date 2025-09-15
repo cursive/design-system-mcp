@@ -7,6 +7,7 @@ export const colors = {
     },
     background: {
         primary: 'var(--color-background-primary)',
+        secondary: 'var(--color-background-secondary)',
         accent: 'var(--color-background-accent)',
         accentHover: 'var(--color-background-accent-hover)',
         accentDisabled: 'var(--color-background-accent-disabled)',
@@ -22,6 +23,7 @@ export const colors = {
     },
     formControls: {
         disabled: 'var(--color-form-controls-disabled)',
+        error: 'var(--color-form-controls-error)',
     },
     focus: 'var(--color-focus)',
 } as const;

@@ -3,3 +3,4 @@ export interface CheckIconProps {
     className?: string;
     color?: string;
 }
+

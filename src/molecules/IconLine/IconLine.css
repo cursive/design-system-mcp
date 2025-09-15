@@ -1,0 +1,55 @@
+.icon-line {
+    background-color: var(--color-background-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.icon-line__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.icon-line__content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    padding: 2px 0;
+}
+
+.icon-line__text {
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    line-height: 22px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* State: Disabled */
+.icon-line--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.icon-line--disabled .icon-line__text {
+    color: var(--color-foreground-secondary);
+}
+
+/* Focus state for accessibility */
+.icon-line:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Hover state for interactive icon lines */
+.icon-line:not(.icon-line--disabled):hover {
+    opacity: 0.8;
+}

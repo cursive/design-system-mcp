@@ -1,0 +1,122 @@
+.tile {
+    background-color: var(--color-background-primary);
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tile__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    width: 100%;
+    min-height: inherit;
+}
+
+.tile__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 24px;
+    width: 100%;
+}
+
+.tile__left {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.tile__left-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.tile__title {
+    font: var(--typography-body);
+    font-weight: 600;
+    color: var(--color-foreground-primary);
+    line-height: normal;
+    flex: 1;
+    min-width: 0;
+}
+
+.tile__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.tile__right-label {
+    font: var(--typography-body);
+    color: var(--color-foreground-secondary);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.tile__right-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.tile__description {
+    font: var(--typography-body-s);
+    color: var(--color-foreground-secondary);
+    line-height: normal;
+    width: 100%;
+}
+
+/* State: Default */
+.tile--default {
+    border: 1px solid var(--color-stroke-primary);
+}
+
+/* State: Active */
+.tile--active {
+    border: 2px solid var(--color-foreground-primary);
+}
+
+/* State: Disabled */
+.tile--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border: 1px solid var(--color-stroke-primary);
+}
+
+.tile--disabled .tile__title {
+    color: var(--color-foreground-secondary);
+}
+
+.tile--disabled .tile__right-label {
+    color: var(--color-foreground-secondary);
+}
+
+.tile--disabled .tile__description {
+    color: var(--color-foreground-secondary);
+}
+
+/* Hover state for interactive tiles */
+.tile:not(.tile--disabled):hover {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+}
+
+/* Focus state for accessibility */
+.tile:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}

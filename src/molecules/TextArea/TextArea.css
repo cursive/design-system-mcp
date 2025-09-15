@@ -1,0 +1,106 @@
+.textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.textarea__label {
+    font: var(--typography-body);
+    font-weight: 500;
+    color: var(--color-foreground-primary);
+    line-height: 20px;
+}
+
+.textarea__field-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.textarea__field {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-stroke-primary);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-background-primary);
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    outline: none;
+    resize: vertical;
+    min-height: 100px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.textarea__field::placeholder {
+    color: var(--color-foreground-secondary);
+}
+
+.textarea__field:focus {
+    outline: none;
+}
+
+.textarea__error {
+    font: var(--typography-body-s);
+    color: var(--color-form-controls-error);
+    line-height: 18px;
+}
+
+/* State: Default */
+.textarea--default .textarea__field {
+    border-color: var(--color-stroke-primary);
+}
+
+/* State: Hover */
+.textarea--hover .textarea__field {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+}
+
+/* State: Active */
+.textarea--active .textarea__field {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* State: Filled */
+.textarea--filled .textarea__field {
+    border-color: var(--color-foreground-primary);
+    color: var(--color-foreground-primary);
+}
+
+/* State: Disabled */
+.textarea--disabled .textarea__field {
+    background-color: var(--color-form-controls-disabled);
+    border-color: var(--color-stroke-primary);
+    color: var(--color-foreground-secondary);
+    cursor: not-allowed;
+    resize: none;
+}
+
+.textarea--disabled .textarea__label {
+    color: var(--color-foreground-secondary);
+}
+
+/* State: Error */
+.textarea--error .textarea__field {
+    border-color: var(--color-form-controls-error);
+    border-width: 2px;
+}
+
+.textarea--error .textarea__error {
+    color: var(--color-form-controls-error);
+}
+
+/* State: Error Filled */
+.textarea--error-filled .textarea__field {
+    border-color: var(--color-form-controls-error);
+    border-width: 2px;
+    color: var(--color-foreground-primary);
+}
+
+.textarea--error-filled .textarea__error {
+    color: var(--color-form-controls-error);
+}

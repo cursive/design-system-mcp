@@ -1,0 +1,32 @@
+{
+    "id": "checkbox-line",
+    "name": "CheckboxLine",
+    "kind": "molecule",
+    "path": "src/molecules/CheckboxLine/CheckboxLine.tsx",
+    "defaultVariant": {
+        "state": "default",
+        "checked": false,
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "state": "default",
+                "checked": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Active",
+            "props": {
+                "state": "active",
+                "checked": true,
+                "disabled": false
+            }
+        }
+    ],
+    "dependencies": [
+        "CheckIcon"
+    ]
+}

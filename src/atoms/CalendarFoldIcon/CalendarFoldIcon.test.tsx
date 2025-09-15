@@ -32,3 +32,4 @@ describe('CalendarFoldIcon', () => {
         expect(svg).toHaveClass('calendar-fold-icon', 'custom-class');
     });
 });
+

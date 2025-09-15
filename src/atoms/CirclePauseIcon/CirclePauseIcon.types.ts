@@ -3,3 +3,4 @@ export interface CirclePauseIconProps {
     className?: string;
     color?: string;
 }
+

@@ -1,1 +1,0 @@
-export { CalendarFoldIcon } from './CalendarFoldIcon';

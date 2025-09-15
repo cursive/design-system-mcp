@@ -1,0 +1,36 @@
+{
+    "id": "select-list",
+    "name": "SelectList",
+    "kind": "molecule",
+    "path": "src/molecules/SelectList/SelectList.tsx",
+    "defaultVariant": {
+        "selectedIndex": -1,
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "selectedIndex": -1,
+                "disabled": false
+            }
+        },
+        {
+            "name": "With Selection",
+            "props": {
+                "selectedIndex": 1,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Disabled",
+            "props": {
+                "selectedIndex": -1,
+                "disabled": true
+            }
+        }
+    ],
+    "dependencies": [
+        "SelectItem"
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "id": "textfield",
+    "name": "Textfield",
+    "kind": "molecule",
+    "path": "src/molecules/Textfield/Textfield.tsx",
+    "defaultVariant": {
+        "state": "default",
+        "showLabel": true,
+        "showIcon": false,
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "state": "default",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Hover",
+            "props": {
+                "state": "hover",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Active",
+            "props": {
+                "state": "active",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Filled",
+            "props": {
+                "state": "filled",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Disabled",
+            "props": {
+                "state": "disabled",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": true
+            }
+        },
+        {
+            "name": "Error",
+            "props": {
+                "state": "error",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Error Filled",
+            "props": {
+                "state": "error-filled",
+                "showLabel": true,
+                "showIcon": false,
+                "disabled": false
+            }
+        }
+    ],
+    "dependencies": []
+}

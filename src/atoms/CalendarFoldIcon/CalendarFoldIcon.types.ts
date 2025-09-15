@@ -3,3 +3,4 @@ export interface CalendarFoldIconProps {
     className?: string;
     color?: string;
 }
+

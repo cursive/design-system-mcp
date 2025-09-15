@@ -30,3 +30,4 @@ describe('ChevronDownIcon', () => {
         expect(svg).toHaveClass('chevron-down-icon', 'custom-class');
     });
 });
+

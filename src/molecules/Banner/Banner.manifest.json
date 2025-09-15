@@ -1,0 +1,51 @@
+{
+    "id": "banner",
+    "name": "Banner",
+    "kind": "molecule",
+    "path": "src/molecules/Banner/Banner.tsx",
+    "defaultVariant": {
+        "type": "default",
+        "showLeftIcon": true,
+        "showRightIcon": true,
+        "dismissible": true
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "type": "default",
+                "showLeftIcon": true,
+                "showRightIcon": true,
+                "dismissible": true
+            }
+        },
+        {
+            "name": "Success",
+            "props": {
+                "type": "success",
+                "showLeftIcon": true,
+                "showRightIcon": true,
+                "dismissible": true
+            }
+        },
+        {
+            "name": "Warning",
+            "props": {
+                "type": "warning",
+                "showLeftIcon": true,
+                "showRightIcon": true,
+                "dismissible": true
+            }
+        },
+        {
+            "name": "Alert",
+            "props": {
+                "type": "alert",
+                "showLeftIcon": true,
+                "showRightIcon": true,
+                "dismissible": true
+            }
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,44 @@
+{
+    "id": "select",
+    "name": "Select",
+    "kind": "molecule",
+    "path": "src/molecules/Select/Select.tsx",
+    "defaultVariant": {
+        "state": "default",
+        "showLabel": true,
+        "showHint": true,
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "state": "default",
+                "showLabel": true,
+                "showHint": true,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Hover",
+            "props": {
+                "state": "hover",
+                "showLabel": true,
+                "showHint": true,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Active",
+            "props": {
+                "state": "active",
+                "showLabel": true,
+                "showHint": true,
+                "disabled": false
+            }
+        }
+    ],
+    "dependencies": [
+        "ChevronDownIcon"
+    ]
+}

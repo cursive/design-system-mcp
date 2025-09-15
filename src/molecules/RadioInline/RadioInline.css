@@ -1,0 +1,111 @@
+.radio-inline {
+    display: flex;
+    width: 100%;
+}
+
+.radio-inline__label {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+
+.radio-inline__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-inline__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 11px 4px;
+    position: relative;
+}
+
+.radio-inline__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.radio-inline__text {
+    font: var(--typography-body);
+    font-weight: 600;
+    color: var(--color-foreground-primary);
+    line-height: normal;
+    flex: 1;
+}
+
+.radio-inline__text--hover {
+    text-decoration: underline;
+}
+
+.radio-inline__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.radio-inline__price {
+    font: var(--typography-body);
+    color: var(--color-foreground-secondary);
+    line-height: normal;
+}
+
+.radio-inline__radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.radio-inline__divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--color-stroke-horizontal-rule);
+}
+
+/* State: Unchecked */
+.radio-inline--unchecked .radio-inline__radio {
+    /* Default radio styling handled by RadioIcon component */
+}
+
+/* State: Hover */
+.radio-inline--hover .radio-inline__radio {
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* State: Checked */
+.radio-inline--checked .radio-inline__radio {
+    /* Checked styling handled by RadioIcon component */
+}
+
+/* State: Disabled */
+.radio-inline--disabled .radio-inline__label {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.radio-inline--disabled .radio-inline__text {
+    color: var(--color-foreground-secondary);
+}
+
+.radio-inline--disabled .radio-inline__price {
+    color: var(--color-foreground-secondary);
+}
+
+/* Hover state for interactive radios */
+.radio-inline:not(.radio-inline--disabled):hover .radio-inline__radio {
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.12);
+}

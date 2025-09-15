@@ -1,0 +1,102 @@
+.select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.select__label {
+    font: var(--typography-body);
+    font-weight: 500;
+    color: var(--color-foreground-primary);
+    line-height: 20px;
+}
+
+.select__field-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.select__field {
+    width: 100%;
+    padding: 16px;
+    padding-right: 48px;
+    /* Space for icon */
+    border: 1px solid var(--color-stroke-primary);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-background-primary);
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    outline: none;
+    appearance: none;
+    /* Remove default select styling */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.select__field:focus {
+    outline: none;
+}
+
+.select__field option {
+    color: var(--color-foreground-primary);
+    background-color: var(--color-background-primary);
+}
+
+.select__field option:disabled {
+    color: var(--color-foreground-secondary);
+}
+
+.select__icon {
+    position: absolute;
+    right: 16px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select__hint {
+    font: var(--typography-body-s);
+    color: var(--color-foreground-secondary);
+    line-height: 18px;
+}
+
+/* State: Default */
+.select--default .select__field {
+    border-color: var(--color-stroke-primary);
+}
+
+/* State: Hover */
+.select--hover .select__field {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+}
+
+/* State: Active */
+.select--active .select__field {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+}
+
+/* State: Disabled */
+.select--disabled .select__field {
+    background-color: var(--color-form-controls-disabled);
+    border-color: var(--color-stroke-primary);
+    color: var(--color-foreground-secondary);
+    cursor: not-allowed;
+}
+
+.select--disabled .select__label {
+    color: var(--color-foreground-secondary);
+}
+
+.select--disabled .select__hint {
+    color: var(--color-foreground-secondary);
+}
+
+.select--disabled .select__icon {
+    opacity: 0.5;
+}

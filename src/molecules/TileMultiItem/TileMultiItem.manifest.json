@@ -1,0 +1,33 @@
+{
+    "id": "tile-multi-item",
+    "name": "TileMultiItem",
+    "kind": "molecule",
+    "path": "src/molecules/TileMultiItem/TileMultiItem.tsx",
+    "defaultVariant": {
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "disabled": false
+            }
+        },
+        {
+            "name": "With Selection",
+            "props": {
+                "selectedId": "2",
+                "disabled": false
+            }
+        },
+        {
+            "name": "Disabled",
+            "props": {
+                "disabled": true
+            }
+        }
+    ],
+    "dependencies": [
+        "RadioInline"
+    ]
+}

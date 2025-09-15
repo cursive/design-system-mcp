@@ -1,0 +1,30 @@
+{
+    "id": "select-item",
+    "name": "SelectItem",
+    "kind": "molecule",
+    "path": "src/molecules/SelectItem/SelectItem.tsx",
+    "defaultVariant": {
+        "state": "default",
+        "selected": false,
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "state": "default",
+                "selected": false,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Hover",
+            "props": {
+                "state": "hover",
+                "selected": false,
+                "disabled": false
+            }
+        }
+    ],
+    "dependencies": []
+}

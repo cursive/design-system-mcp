@@ -30,3 +30,4 @@ describe('CheckIcon', () => {
         expect(svg).toHaveClass('check-icon', 'custom-class');
     });
 });
+

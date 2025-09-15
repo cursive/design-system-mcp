@@ -1,0 +1,38 @@
+{
+    "id": "tile",
+    "name": "Tile",
+    "kind": "molecule",
+    "path": "src/molecules/Tile/Tile.tsx",
+    "defaultVariant": {
+        "state": "default",
+        "showRightLabel": true,
+        "showDescription": true,
+        "showIcon": true,
+        "disabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "state": "default",
+                "showRightLabel": true,
+                "showDescription": true,
+                "showIcon": true,
+                "disabled": false
+            }
+        },
+        {
+            "name": "Active",
+            "props": {
+                "state": "active",
+                "showRightLabel": true,
+                "showDescription": true,
+                "showIcon": true,
+                "disabled": false
+            }
+        }
+    ],
+    "dependencies": [
+        "RadioIcon"
+    ]
+}

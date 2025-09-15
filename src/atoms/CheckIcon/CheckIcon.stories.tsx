@@ -38,3 +38,4 @@ export const CustomColor: Story = {
         color: '#f08e80',
     },
 };
+

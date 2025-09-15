@@ -67,3 +67,4 @@ describe('Button', () => {
         expect(screen.getByTestId('custom-icon')).toBeInTheDocument();
     });
 });
+

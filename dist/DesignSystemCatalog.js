@@ -9,6 +9,17 @@ import { CalendarFoldIcon } from './atoms/CalendarFoldIcon';
 import { CirclePauseIcon } from './atoms/CirclePauseIcon';
 import { PanelHeader } from './molecules/PanelHeader';
 import { Button } from './molecules/Button';
+import { Textfield } from './molecules/Textfield';
+import { Select } from './molecules/Select';
+import { TextArea } from './molecules/TextArea';
+import { CheckboxLine } from './molecules/CheckboxLine';
+import { RadioInline } from './molecules/RadioInline';
+import { SelectItem } from './molecules/SelectItem';
+import { SelectList } from './molecules/SelectList';
+import { Tile } from './molecules/Tile';
+import { TileMultiItem } from './molecules/TileMultiItem';
+import { IconLine } from './molecules/IconLine';
+import { Banner } from './molecules/Banner';
 const DesignSystemCatalog = () => {
     return (_jsxs("div", { style: { padding: '24px', fontFamily: 'var(--font-family-body)' }, children: [_jsx("h1", { style: {
                     fontSize: '32px',
@@ -111,7 +122,174 @@ const DesignSystemCatalog = () => {
                                             border: '1px solid var(--color-stroke-horizontal-rule)',
                                             borderRadius: '8px',
                                             backgroundColor: '#dddddd'
-                                        }, children: _jsx(PanelHeader, { hierarchy: "Default", title: "Custom Title", eyebrow: "Custom Eyebrow", subtitle: "Custom subtitle text" }) })] })] })] }), _jsxs("section", { style: { marginBottom: '48px' }, children: [_jsx("h2", { style: {
+                                        }, children: _jsx(PanelHeader, { hierarchy: "Default", title: "Custom Title", eyebrow: "Custom Eyebrow", subtitle: "Custom subtitle text" }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "Textfield" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "All States" }), _jsxs("div", { style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '16px',
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: [_jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "default", label: "Default", placeholder: "Enter text" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "hover", label: "Hover", placeholder: "Enter text" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "active", label: "Active", placeholder: "Enter text" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "filled", label: "Filled", value: "Sample text" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "disabled", label: "Disabled", placeholder: "Enter text", disabled: true }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "error", label: "Error", placeholder: "Enter text", errorMessage: "Required" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { state: "error-filled", label: "Error Filled", value: "Invalid text", errorMessage: "Explainer" }) })] })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Without Label" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(Textfield, { showLabel: false, placeholder: "No label" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "Select" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "All States" }), _jsxs("div", { style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '16px',
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: [_jsx("div", { style: { width: '300px' }, children: _jsx(Select, { state: "default", label: "Default", placeholder: "Select a country", hint: "Choose your country" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Select, { state: "hover", label: "Hover", placeholder: "Select a country", hint: "Choose your country" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(Select, { state: "active", label: "Active", placeholder: "Select a country", hint: "Choose your country" }) })] })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "With Selected Value" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(Select, { value: "us", label: "Country", placeholder: "Select a country", hint: "Choose your country" }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Disabled" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(Select, { disabled: true, label: "Disabled", placeholder: "Select a country", hint: "Choose your country" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "TextArea" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "All States" }), _jsxs("div", { style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '16px',
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: [_jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { state: "default", label: "Default", placeholder: "Enter your message" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { state: "hover", label: "Hover", placeholder: "Enter your message" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { state: "active", label: "Active", placeholder: "Enter your message" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { state: "filled", label: "Filled", value: "This is some sample text that fills the textarea to demonstrate the filled state." }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { state: "error", label: "Error", placeholder: "Enter your message", errorMessage: "Required" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { state: "error-filled", label: "Error Filled", value: "This text has an error.", errorMessage: "Explainer" }) })] })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Disabled" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { disabled: true, label: "Disabled", placeholder: "Enter your message" }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Custom Rows" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(TextArea, { rows: 6, label: "Large TextArea", placeholder: "Enter your message" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "CheckboxLine" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "All States" }), _jsxs("div", { style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '16px',
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: [_jsx("div", { style: { width: '300px' }, children: _jsx(CheckboxLine, { state: "default", label: "This is a gift" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(CheckboxLine, { state: "active", label: "This is a gift" }) })] })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Disabled" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(CheckboxLine, { disabled: true, label: "This is a gift" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "RadioInline" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "All States" }), _jsxs("div", { style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '16px',
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: [_jsx("div", { style: { width: '300px' }, children: _jsx(RadioInline, { state: "unchecked", label: "Breakfast Kit \u2014 Chicken", price: "$40" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(RadioInline, { state: "hover", label: "Breakfast Kit \u2014 Chicken", price: "$40" }) }), _jsx("div", { style: { width: '300px' }, children: _jsx(RadioInline, { state: "checked", label: "Breakfast Kit \u2014 Chicken", price: "$40" }) })] })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Without Divider" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '300px' }, children: _jsx(RadioInline, { showDivider: false, label: "Breakfast Kit \u2014 Chicken", price: "$40" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "SelectItem" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "All States" }), _jsxs("div", { style: {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '0px',
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: [_jsx("div", { style: { width: '200px' }, children: _jsx(SelectItem, { state: "default", children: "No peanuts" }) }), _jsx("div", { style: { width: '200px' }, children: _jsx(SelectItem, { state: "hover", children: "No peanuts" }) }), _jsx("div", { style: { width: '200px' }, children: _jsx(SelectItem, { selected: true, children: "No peanuts" }) })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "SelectList" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Default" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '200px' }, children: _jsx(SelectList, {}) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "With Selection" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '200px' }, children: _jsx(SelectList, { selectedIndex: 1 }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Custom Items" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '200px' }, children: _jsx(SelectList, { items: ['Option 1', 'Option 2', 'Option 3', 'Option 4'], selectedIndex: 2 }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "Tile" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Default" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(Tile, {}) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Active" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(Tile, { state: "active" }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Custom Content" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(Tile, { title: "Premium Package", description: "Includes all features and priority support", rightLabel: "$99" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "TileMultiItem" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Default" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(TileMultiItem, {}) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "With Selection" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(TileMultiItem, { selectedId: "2" }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Custom Options" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(TileMultiItem, { options: [
+                                                    { id: '1', label: 'Basic Plan', price: '$9/month' },
+                                                    { id: '2', label: 'Pro Plan', price: '$19/month' },
+                                                    { id: '3', label: 'Enterprise', price: '$49/month' },
+                                                ], selectedId: "2" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "IconLine" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Default" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(IconLine, {}) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Custom Text" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(IconLine, { children: "Custom text content" }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "With Check Icon" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '350px' }, children: _jsx(IconLine, { icon: _jsx(CheckIcon, { size: 20, color: "var(--color-foreground-primary)" }), children: "Completed task" }) }) })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "Banner" }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Default" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '450px' }, children: _jsx(Banner, {}) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Success" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '450px' }, children: _jsx(Banner, { type: "success", children: "Success! Your changes have been saved." }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Warning" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '450px' }, children: _jsx(Banner, { type: "warning", children: "Warning: This action cannot be undone." }) }) })] }), _jsxs("div", { style: { marginBottom: '16px' }, children: [_jsx("h4", { style: { fontSize: '16px', fontWeight: '600', marginBottom: '8px' }, children: "Alert" }), _jsx("div", { style: {
+                                            padding: '16px',
+                                            border: '1px solid var(--color-stroke-horizontal-rule)',
+                                            borderRadius: '8px',
+                                            backgroundColor: '#dddddd'
+                                        }, children: _jsx("div", { style: { width: '450px' }, children: _jsx(Banner, { type: "alert", children: "Error: Something went wrong. Please try again." }) }) })] })] })] }), _jsxs("section", { style: { marginBottom: '48px' }, children: [_jsx("h2", { style: {
                             fontSize: '24px',
                             fontWeight: '600',
                             marginBottom: '24px',

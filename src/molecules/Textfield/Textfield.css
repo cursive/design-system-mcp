@@ -1,0 +1,109 @@
+.textfield {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.textfield__label {
+    font: var(--typography-body);
+    font-weight: 500;
+    color: var(--color-foreground-primary);
+    line-height: 20px;
+}
+
+.textfield__input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.textfield__input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-stroke-primary);
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-background-primary);
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.textfield__input::placeholder {
+    color: var(--color-foreground-secondary);
+}
+
+.textfield__input:focus {
+    outline: none;
+}
+
+.textfield__icon {
+    position: absolute;
+    right: 16px;
+    pointer-events: none;
+}
+
+.textfield__error {
+    font: var(--typography-body-s);
+    color: var(--color-form-controls-error);
+    line-height: 18px;
+}
+
+/* State: Default */
+.textfield--default .textfield__input {
+    border-color: var(--color-stroke-primary);
+}
+
+/* State: Hover */
+.textfield--hover .textfield__input {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+}
+
+/* State: Active */
+.textfield--active .textfield__input {
+    border-color: var(--color-foreground-primary);
+    border-width: 2px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* State: Filled */
+.textfield--filled .textfield__input {
+    border-color: var(--color-foreground-primary);
+    color: var(--color-foreground-primary);
+}
+
+/* State: Disabled */
+.textfield--disabled .textfield__input {
+    background-color: var(--color-form-controls-disabled);
+    border-color: var(--color-stroke-primary);
+    color: var(--color-foreground-secondary);
+    cursor: not-allowed;
+}
+
+.textfield--disabled .textfield__label {
+    color: var(--color-foreground-secondary);
+}
+
+/* State: Error */
+.textfield--error .textfield__input {
+    border-color: var(--color-form-controls-error);
+    border-width: 2px;
+}
+
+.textfield--error .textfield__error {
+    color: var(--color-form-controls-error);
+}
+
+/* State: Error Filled */
+.textfield--error-filled .textfield__input {
+    border-color: var(--color-form-controls-error);
+    border-width: 2px;
+    color: var(--color-foreground-primary);
+}
+
+.textfield--error-filled .textfield__error {
+    color: var(--color-form-controls-error);
+}

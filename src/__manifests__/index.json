@@ -32,6 +32,102 @@
             "path": "molecules/PanelHeader",
             "hash": "m1jkl",
             "defaultVariant": "Default"
+        },
+        {
+            "id": "M2",
+            "name": "Button",
+            "kind": "molecule",
+            "path": "molecules/Button",
+            "hash": "m2mno",
+            "defaultVariant": "accent-default"
+        },
+        {
+            "id": "M3",
+            "name": "Textfield",
+            "kind": "molecule",
+            "path": "molecules/Textfield",
+            "hash": "m3pqr",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M4",
+            "name": "Select",
+            "kind": "molecule",
+            "path": "molecules/Select",
+            "hash": "m4stu",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M5",
+            "name": "TextArea",
+            "kind": "molecule",
+            "path": "molecules/TextArea",
+            "hash": "m5vwx",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M6",
+            "name": "CheckboxLine",
+            "kind": "molecule",
+            "path": "molecules/CheckboxLine",
+            "hash": "m6yza",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M7",
+            "name": "RadioInline",
+            "kind": "molecule",
+            "path": "molecules/RadioInline",
+            "hash": "m7abc",
+            "defaultVariant": "unchecked"
+        },
+        {
+            "id": "M8",
+            "name": "SelectItem",
+            "kind": "molecule",
+            "path": "molecules/SelectItem",
+            "hash": "m8def",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M9",
+            "name": "SelectList",
+            "kind": "molecule",
+            "path": "molecules/SelectList",
+            "hash": "m9ghi",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M10",
+            "name": "Tile",
+            "kind": "molecule",
+            "path": "molecules/Tile",
+            "hash": "m10jkl",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M11",
+            "name": "TileMultiItem",
+            "kind": "molecule",
+            "path": "molecules/TileMultiItem",
+            "hash": "m11mno",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M12",
+            "name": "IconLine",
+            "kind": "molecule",
+            "path": "molecules/IconLine",
+            "hash": "m12pqr",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M13",
+            "name": "Banner",
+            "kind": "molecule",
+            "path": "molecules/Banner",
+            "hash": "m13stu",
+            "defaultVariant": "default"
         }
     ],
     "edges": [],

@@ -1,1 +1,0 @@
-export { PackageIcon } from './PackageIcon';

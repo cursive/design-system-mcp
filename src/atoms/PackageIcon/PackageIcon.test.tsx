@@ -32,3 +32,4 @@ describe('PackageIcon', () => {
         expect(svg).toHaveClass('package-icon', 'custom-class');
     });
 });
+

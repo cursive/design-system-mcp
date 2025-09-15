@@ -1,0 +1,36 @@
+.tile-multi-item {
+    background-color: var(--color-background-primary);
+    border: 1px solid var(--color-foreground-primary);
+    border-radius: 16px;
+    position: relative;
+    width: 100%;
+}
+
+.tile-multi-item__container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+}
+
+.tile-multi-item__option {
+    width: 100%;
+}
+
+/* Override RadioInline styles within TileMultiItem */
+.tile-multi-item .radio-inline {
+    padding: 11px 0;
+}
+
+.tile-multi-item .radio-inline:first-child {
+    padding-top: 0;
+}
+
+.tile-multi-item .radio-inline:last-child {
+    padding-bottom: 0;
+}
+
+/* Ensure proper spacing and dividers */
+.tile-multi-item .radio-inline+.radio-inline {
+    border-top: 1px solid var(--color-stroke-horizontal-rule);
+}

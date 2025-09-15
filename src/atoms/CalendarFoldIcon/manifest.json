@@ -1,0 +1,15 @@
+{
+    "name": "CalendarFoldIcon",
+    "type": "atom",
+    "path": "src/atoms/CalendarFoldIcon",
+    "props": {
+        "size": "number",
+        "className": "string",
+        "color": "string"
+    },
+    "tokens": {
+        "colors": [
+            "currentColor"
+        ]
+    }
+}

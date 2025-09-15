@@ -1,0 +1,18 @@
+{
+    "id": "A2",
+    "schemaVersion": 1,
+    "kind": "atom",
+    "name": "Icon",
+    "defaultVariant": "default",
+    "variants": {},
+    "booleans": {
+        "decorative": true
+    },
+    "slots": {},
+    "tokens": {
+        "color": [
+            "foreground.primary"
+        ]
+    },
+    "children": []
+}

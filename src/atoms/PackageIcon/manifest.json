@@ -1,0 +1,15 @@
+{
+    "name": "PackageIcon",
+    "type": "atom",
+    "path": "src/atoms/PackageIcon",
+    "props": {
+        "size": "number",
+        "className": "string",
+        "color": "string"
+    },
+    "tokens": {
+        "colors": [
+            "currentColor"
+        ]
+    }
+}

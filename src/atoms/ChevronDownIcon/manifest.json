@@ -1,0 +1,15 @@
+{
+    "name": "ChevronDownIcon",
+    "type": "atom",
+    "path": "src/atoms/ChevronDownIcon",
+    "props": {
+        "size": "number",
+        "className": "string",
+        "color": "string"
+    },
+    "tokens": {
+        "colors": [
+            "currentColor"
+        ]
+    }
+}

@@ -1,0 +1,120 @@
+/* Design System Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins and padding for headings, body text, and lists */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Reset media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Reset form controls */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Focus-visible outlines for accessibility */
+:focus-visible {
+    outline: 2px solid var(--color-focus, #0066cc);
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Design System CSS Variables */
+:root {
+    /* Colors */
+    --color-foreground-primary: #141414;
+    --color-foreground-secondary: rgba(0, 0, 0, 0.6);
+    --color-foreground-invert-primary: #ffffff;
+    --color-foreground-invert-secondary: rgba(255, 255, 255, 0.8);
+    --color-background-primary: #ffffff;
+    --color-background-accent: #f08e80;
+    --color-background-accent-hover: #f08e80;
+    --color-background-accent-disabled: #f7d0cb;
+    --color-background-invert-primary: #141414;
+    --color-background-invert-primary-hover: rgba(20, 20, 20, 0.8);
+    --color-stroke-primary: #141414;
+    --color-stroke-horizontal-rule: rgba(0, 0, 0, 0.1);
+    --color-status-info: #34484c;
+    --color-form-controls-disabled: #d3d3d3;
+    --color-focus: #0066cc;
+
+    /* Typography */
+    --font-family-headings: "Open Sans", sans-serif;
+    --font-family-body: "Open Sans", sans-serif;
+
+    /* Typography Styles - Complete definitions */
+    --typography-h1: 600 32px/40px var(--font-family-headings);
+    --typography-h2: 600 24px/32px var(--font-family-headings);
+    --typography-h3: 600 21px/28px var(--font-family-headings);
+    --typography-h4: 600 16px/16px var(--font-family-headings);
+    --typography-body: 400 16px/22px var(--font-family-body);
+    --typography-body-s: 400 14px/18px var(--font-family-body);
+
+    /* Spacing */
+    --spacing-icon-gap: 8px;
+    --spacing-line: 4px;
+    --spacing-item: 8px;
+    --spacing-group: 16px;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 100px;
+
+    /* Shadows */
+    --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0px 6px 16px 0px rgba(74, 122, 174, 0.1);
+}

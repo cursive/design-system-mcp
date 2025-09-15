@@ -1,0 +1,54 @@
+{
+    "name": "Button",
+    "type": "molecule",
+    "path": "src/molecules/Button",
+    "variants": {
+        "style": [
+            "accent",
+            "primary",
+            "secondary"
+        ],
+        "state": [
+            "default",
+            "disabled",
+            "hover"
+        ]
+    },
+    "booleans": {
+        "showIcon": true
+    },
+    "slots": {
+        "icon": "React.ReactNode"
+    },
+    "tokens": {
+        "colors": [
+            "background-accent",
+            "background-invert-primary",
+            "background-primary",
+            "foreground-primary",
+            "foreground-invert-primary",
+            "form-controls-disabled"
+        ],
+        "spacing": [
+            "form-field-radius"
+        ],
+        "typography": [
+            "font-family-headings",
+            "font-weight-600",
+            "font-size-16",
+            "line-height-20"
+        ]
+    },
+    "children": [
+        {
+            "type": "text",
+            "role": "content",
+            "name": "Label"
+        },
+        {
+            "type": "icon",
+            "role": "icon",
+            "name": "ChevronDown"
+        }
+    ]
+}

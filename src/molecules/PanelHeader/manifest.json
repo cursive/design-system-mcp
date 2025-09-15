@@ -1,0 +1,34 @@
+{
+    "id": "M1",
+    "schemaVersion": 1,
+    "kind": "molecule",
+    "name": "PanelHeader",
+    "defaultVariant": "Default",
+    "variants": {
+        "hierarchy": [
+            "Default",
+            "Secondary"
+        ]
+    },
+    "booleans": {
+        "showEyebrow": true,
+        "showIcon": true,
+        "showSub": true
+    },
+    "slots": {
+        "icon": []
+    },
+    "tokens": {
+        "color": [
+            "foreground.primary",
+            "foreground.secondary",
+            "background.primary"
+        ],
+        "typography": [
+            "h2",
+            "h3",
+            "body"
+        ]
+    },
+    "children": []
+}

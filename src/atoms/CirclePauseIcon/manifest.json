@@ -1,0 +1,15 @@
+{
+    "name": "CirclePauseIcon",
+    "type": "atom",
+    "path": "src/atoms/CirclePauseIcon",
+    "props": {
+        "size": "number",
+        "className": "string",
+        "color": "string"
+    },
+    "tokens": {
+        "colors": [
+            "currentColor"
+        ]
+    }
+}

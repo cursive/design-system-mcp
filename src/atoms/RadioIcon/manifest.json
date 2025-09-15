@@ -1,0 +1,25 @@
+{
+    "id": "A1",
+    "schemaVersion": 1,
+    "kind": "atom",
+    "name": "RadioIcon",
+    "defaultVariant": "regular",
+    "variants": {
+        "size": [
+            "small",
+            "regular"
+        ],
+        "state": [
+            "checked",
+            "unchecked"
+        ]
+    },
+    "booleans": {},
+    "slots": {},
+    "tokens": {
+        "color": [
+            "foreground.primary"
+        ]
+    },
+    "children": []
+}

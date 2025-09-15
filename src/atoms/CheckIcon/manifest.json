@@ -1,0 +1,15 @@
+{
+    "name": "CheckIcon",
+    "type": "atom",
+    "path": "src/atoms/CheckIcon",
+    "props": {
+        "size": "number",
+        "className": "string",
+        "color": "string"
+    },
+    "tokens": {
+        "colors": [
+            "currentColor"
+        ]
+    }
+}

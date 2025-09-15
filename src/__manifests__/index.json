@@ -1,0 +1,41 @@
+{
+    "schemaVersion": 1,
+    "components": [
+        {
+            "id": "A1",
+            "name": "RadioIcon",
+            "kind": "atom",
+            "path": "atoms/RadioIcon",
+            "hash": "a1abc",
+            "defaultVariant": "regular"
+        },
+        {
+            "id": "A2",
+            "name": "Icon",
+            "kind": "atom",
+            "path": "atoms/Icon",
+            "hash": "a2def",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "A3",
+            "name": "PlaceholderIcon",
+            "kind": "atom",
+            "path": "atoms/placeholders/PlaceholderIcon",
+            "hash": "a3ghi",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M1",
+            "name": "PanelHeader",
+            "kind": "molecule",
+            "path": "molecules/PanelHeader",
+            "hash": "m1jkl",
+            "defaultVariant": "Default"
+        }
+    ],
+    "edges": [],
+    "icons": {
+        "placeholderPath": "atoms/placeholders/PlaceholderIcon"
+    }
+}

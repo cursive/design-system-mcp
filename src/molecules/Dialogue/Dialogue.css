@@ -1,0 +1,138 @@
+.dialogue {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dialogue__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.dialogue__content {
+    background-color: var(--color-background-primary);
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.dialogue--default .dialogue__content {
+    padding: 20px 20px 72px 20px;
+}
+
+.dialogue--desktop .dialogue__content {
+    padding: 20px;
+}
+
+.dialogue__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.dialogue__title {
+    font: var(--typography-h2);
+    color: var(--color-foreground-primary);
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    min-width: 0;
+}
+
+.dialogue__close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.dialogue__close-button:hover {
+    opacity: 0.7;
+}
+
+.dialogue__close-button:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.dialogue__description {
+    font: var(--typography-body);
+    color: var(--color-foreground-secondary);
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+    width: 100%;
+}
+
+.dialogue__spacing {
+    height: 24px;
+    width: 100%;
+}
+
+.dialogue__form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.dialogue__text-area {
+    width: 100%;
+}
+
+.dialogue__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.dialogue__primary-button {
+    width: 100%;
+}
+
+.dialogue__secondary-button {
+    width: 100%;
+}
+
+/* Desktop variant adjustments */
+.dialogue--desktop .dialogue__content {
+    max-width: 500px;
+}
+
+.dialogue--desktop .dialogue__buttons {
+    flex-direction: row;
+    gap: 12px;
+}
+
+.dialogue--desktop .dialogue__primary-button,
+.dialogue--desktop .dialogue__secondary-button {
+    flex: 1;
+}

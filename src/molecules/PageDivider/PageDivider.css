@@ -1,0 +1,48 @@
+.page-divider {
+    background-color: var(--color-background-primary);
+    width: 100%;
+}
+
+.page-divider--default {
+    padding: 24px 0;
+}
+
+.page-divider--labelled {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 0;
+}
+
+.page-divider--desktop {
+    padding: 36px 0;
+}
+
+.page-divider--blank {
+    /* No additional styles for blank variant */
+}
+
+.page-divider__line {
+    flex: 1;
+    height: 0;
+    position: relative;
+}
+
+.page-divider__line::before {
+    content: '';
+    position: absolute;
+    top: -0.5px;
+    left: 0;
+    right: 0;
+    bottom: -0.5px;
+    height: 1px;
+    background-color: var(--color-stroke-horizontal-rule);
+}
+
+.page-divider__label {
+    font: var(--typography-h4);
+    color: var(--color-foreground-secondary);
+    line-height: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}

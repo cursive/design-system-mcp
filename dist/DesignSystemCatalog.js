@@ -20,6 +20,16 @@ import { Tile } from './molecules/Tile';
 import { TileMultiItem } from './molecules/TileMultiItem';
 import { IconLine } from './molecules/IconLine';
 import { Banner } from './molecules/Banner';
+import { CarouselNav } from './molecules/CarouselNav';
+import { CarouselPips } from './molecules/CarouselPips';
+import { PageHeader } from './molecules/PageHeader';
+import { FooterPDP } from './molecules/FooterPDP';
+import { PageDivider } from './molecules/PageDivider';
+import { FAQCell } from './molecules/FAQCell';
+import { StarRating } from './molecules/StarRating';
+import { AddOn } from './molecules/AddOn';
+import { Dialogue } from './molecules/Dialogue';
+import { Lists } from './molecules/Lists';
 const DesignSystemCatalog = () => {
     return (_jsxs("div", { style: { padding: '24px', fontFamily: 'var(--font-family-body)' }, children: [_jsx("h1", { style: {
                     fontSize: '32px',
@@ -290,6 +300,71 @@ const DesignSystemCatalog = () => {
                                             borderRadius: '8px',
                                             backgroundColor: '#dddddd'
                                         }, children: _jsx("div", { style: { width: '450px' }, children: _jsx(Banner, { type: "alert", children: "Error: Something went wrong. Please try again." }) }) })] })] })] }), _jsxs("section", { style: { marginBottom: '48px' }, children: [_jsx("h2", { style: {
+                            fontSize: '24px',
+                            fontWeight: '600',
+                            marginBottom: '24px',
+                            color: 'var(--color-foreground-primary)'
+                        }, children: "Navigation Molecules" }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "CarouselNav" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(CarouselNav, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Previous Disabled" }), _jsx(CarouselNav, { prevDisabled: true })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Next Disabled" }), _jsx(CarouselNav, { nextDisabled: true })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "CarouselPips" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default (3 items)" }), _jsx(CarouselPips, { totalItems: 3, activeIndex: 0 })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Second Active" }), _jsx(CarouselPips, { totalItems: 3, activeIndex: 1 })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Five Items" }), _jsx(CarouselPips, { totalItems: 5, activeIndex: 2 })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "PageHeader" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: '1fr',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(PageHeader, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Without Back Button" }), _jsx(PageHeader, { showBackButton: false })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "FooterPDP" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Mobile" }), _jsx(FooterPDP, { device: "mobile" })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Desktop" }), _jsx(FooterPDP, { device: "desktop" })] })] })] })] }), _jsxs("section", { style: { marginBottom: '48px' }, children: [_jsx("h2", { style: {
+                            fontSize: '24px',
+                            fontWeight: '600',
+                            marginBottom: '24px',
+                            color: 'var(--color-foreground-primary)'
+                        }, children: "Layout Molecules" }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "PageDivider" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: '1fr',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(PageDivider, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Labelled" }), _jsx(PageDivider, { variant: "labelled", label: "Or pay by card" })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Desktop" }), _jsx(PageDivider, { variant: "desktop" })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Blank" }), _jsx(PageDivider, { variant: "blank" })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "FAQCell" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(FAQCell, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Long Question" }), _jsx(FAQCell, { question: "How do I cancel my subscription?", answer: "You can cancel your subscription at any time by going to your account settings." })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "StarRating" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "5 Stars" }), _jsx(StarRating, { rating: 5 })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "3 Stars" }), _jsx(StarRating, { rating: 3 })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Interactive" }), _jsx(StarRating, { rating: 0, interactive: true })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Large" }), _jsx(StarRating, { rating: 4, size: 32 })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "AddOn" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(AddOn, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "With Selection" }), _jsx(AddOn, { selectedOptionId: "red" })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Custom Options" }), _jsx(AddOn, { title: "Dessert add-on", description: "Sweet treats to complete your meal.", options: [
+                                                    { id: 'none', label: 'No dessert', price: '', selected: true },
+                                                    { id: 'chocolate', label: 'Chocolate cake', price: '+ $12' },
+                                                    { id: 'cheesecake', label: 'New York cheesecake', price: '+ $15' },
+                                                ] })] })] })] })] }), _jsxs("section", { style: { marginBottom: '48px' }, children: [_jsx("h2", { style: {
+                            fontSize: '24px',
+                            fontWeight: '600',
+                            marginBottom: '24px',
+                            color: 'var(--color-foreground-primary)'
+                        }, children: "Complex Molecules" }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "Dialogue" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(Dialogue, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Desktop" }), _jsx(Dialogue, { variant: "desktop" })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Without Text Area" }), _jsx(Dialogue, { showTextArea: false })] })] })] }), _jsxs("div", { style: { marginBottom: '32px' }, children: [_jsx("h3", { style: { fontSize: '18px', fontWeight: '600', marginBottom: '16px' }, children: "Lists" }), _jsxs("div", { style: {
+                                    display: 'grid',
+                                    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                                    gap: '16px'
+                                }, children: [_jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Default" }), _jsx(Lists, {})] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "With Custom Title" }), _jsx(Lists, { title: "Features" })] }), _jsxs("div", { style: { backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }, children: [_jsx("h4", { style: { fontSize: '14px', marginBottom: '8px' }, children: "Long List" }), _jsx(Lists, { title: "Menu Items", items: [
+                                                    { id: '1', text: 'Appetizers' },
+                                                    { id: '2', text: 'Main Courses' },
+                                                    { id: '3', text: 'Desserts' },
+                                                    { id: '4', text: 'Beverages' },
+                                                    { id: '5', text: 'Specials' },
+                                                ] })] })] })] })] }), _jsxs("section", { style: { marginBottom: '48px' }, children: [_jsx("h2", { style: {
                             fontSize: '24px',
                             fontWeight: '600',
                             marginBottom: '24px',

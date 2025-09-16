@@ -20,6 +20,16 @@ import { Tile } from './molecules/Tile';
 import { TileMultiItem } from './molecules/TileMultiItem';
 import { IconLine } from './molecules/IconLine';
 import { Banner } from './molecules/Banner';
+import { CarouselNav } from './molecules/CarouselNav';
+import { CarouselPips } from './molecules/CarouselPips';
+import { PageHeader } from './molecules/PageHeader';
+import { FooterPDP } from './molecules/FooterPDP';
+import { PageDivider } from './molecules/PageDivider';
+import { FAQCell } from './molecules/FAQCell';
+import { StarRating } from './molecules/StarRating';
+import { AddOn } from './molecules/AddOn';
+import { Dialogue } from './molecules/Dialogue';
+import { Lists } from './molecules/Lists';
 
 const DesignSystemCatalog: React.FC = () => {
     return (
@@ -869,6 +879,288 @@ const DesignSystemCatalog: React.FC = () => {
                             <div style={{ width: '450px' }}>
                                 <Banner type="alert">Error: Something went wrong. Please try again.</Banner>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Navigation Molecules Section */}
+            <section style={{ marginBottom: '48px' }}>
+                <h2 style={{
+                    fontSize: '24px',
+                    fontWeight: '600',
+                    marginBottom: '24px',
+                    color: 'var(--color-foreground-primary)'
+                }}>
+                    Navigation Molecules
+                </h2>
+
+                {/* CarouselNav */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>CarouselNav</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <CarouselNav />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Previous Disabled</h4>
+                            <CarouselNav prevDisabled={true} />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Next Disabled</h4>
+                            <CarouselNav nextDisabled={true} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* CarouselPips */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>CarouselPips</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default (3 items)</h4>
+                            <CarouselPips totalItems={3} activeIndex={0} />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Second Active</h4>
+                            <CarouselPips totalItems={3} activeIndex={1} />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Five Items</h4>
+                            <CarouselPips totalItems={5} activeIndex={2} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* PageHeader */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>PageHeader</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: '1fr',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <PageHeader />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Without Back Button</h4>
+                            <PageHeader showBackButton={false} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* FooterPDP */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>FooterPDP</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Mobile</h4>
+                            <FooterPDP device="mobile" />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Desktop</h4>
+                            <FooterPDP device="desktop" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Layout Molecules Section */}
+            <section style={{ marginBottom: '48px' }}>
+                <h2 style={{
+                    fontSize: '24px',
+                    fontWeight: '600',
+                    marginBottom: '24px',
+                    color: 'var(--color-foreground-primary)'
+                }}>
+                    Layout Molecules
+                </h2>
+
+                {/* PageDivider */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>PageDivider</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: '1fr',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <PageDivider />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Labelled</h4>
+                            <PageDivider variant="labelled" label="Or pay by card" />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Desktop</h4>
+                            <PageDivider variant="desktop" />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Blank</h4>
+                            <PageDivider variant="blank" />
+                        </div>
+                    </div>
+                </div>
+
+                {/* FAQCell */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>FAQCell</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <FAQCell />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Long Question</h4>
+                            <FAQCell
+                                question="How do I cancel my subscription?"
+                                answer="You can cancel your subscription at any time by going to your account settings."
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                {/* StarRating */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>StarRating</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>5 Stars</h4>
+                            <StarRating rating={5} />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>3 Stars</h4>
+                            <StarRating rating={3} />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Interactive</h4>
+                            <StarRating rating={0} interactive={true} />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Large</h4>
+                            <StarRating rating={4} size={32} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* AddOn */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>AddOn</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <AddOn />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>With Selection</h4>
+                            <AddOn selectedOptionId="red" />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Custom Options</h4>
+                            <AddOn
+                                title="Dessert add-on"
+                                description="Sweet treats to complete your meal."
+                                options={[
+                                    { id: 'none', label: 'No dessert', price: '', selected: true },
+                                    { id: 'chocolate', label: 'Chocolate cake', price: '+ $12' },
+                                    { id: 'cheesecake', label: 'New York cheesecake', price: '+ $15' },
+                                ]}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Complex Molecules Section */}
+            <section style={{ marginBottom: '48px' }}>
+                <h2 style={{
+                    fontSize: '24px',
+                    fontWeight: '600',
+                    marginBottom: '24px',
+                    color: 'var(--color-foreground-primary)'
+                }}>
+                    Complex Molecules
+                </h2>
+
+                {/* Dialogue */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Dialogue</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <Dialogue />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Desktop</h4>
+                            <Dialogue variant="desktop" />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Without Text Area</h4>
+                            <Dialogue showTextArea={false} />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Lists */}
+                <div style={{ marginBottom: '32px' }}>
+                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Lists</h3>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                        gap: '16px'
+                    }}>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
+                            <Lists />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>With Custom Title</h4>
+                            <Lists title="Features" />
+                        </div>
+                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
+                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Long List</h4>
+                            <Lists
+                                title="Menu Items"
+                                items={[
+                                    { id: '1', text: 'Appetizers' },
+                                    { id: '2', text: 'Main Courses' },
+                                    { id: '3', text: 'Desserts' },
+                                    { id: '4', text: 'Beverages' },
+                                    { id: '5', text: 'Specials' },
+                                ]}
+                            />
                         </div>
                     </div>
                 </div>

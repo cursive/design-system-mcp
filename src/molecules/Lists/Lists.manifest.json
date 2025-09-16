@@ -1,0 +1,32 @@
+{
+    "id": "lists",
+    "name": "Lists",
+    "kind": "molecule",
+    "path": "src/molecules/Lists/Lists.tsx",
+    "defaultVariant": {
+        "title": "title"
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "title": "title"
+            }
+        },
+        {
+            "name": "With Custom Title",
+            "props": {
+                "title": "Features"
+            }
+        },
+        {
+            "name": "With Icons",
+            "props": {
+                "title": "Services"
+            }
+        }
+    ],
+    "dependencies": [
+        "IconLine"
+    ]
+}

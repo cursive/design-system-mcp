@@ -1,0 +1,34 @@
+{
+    "id": "carousel-pips",
+    "name": "CarouselPips",
+    "kind": "molecule",
+    "path": "src/molecules/CarouselPips/CarouselPips.tsx",
+    "defaultVariant": {
+        "totalItems": 3,
+        "activeIndex": 0
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "totalItems": 3,
+                "activeIndex": 0
+            }
+        },
+        {
+            "name": "Second Active",
+            "props": {
+                "totalItems": 3,
+                "activeIndex": 1
+            }
+        },
+        {
+            "name": "Five Items",
+            "props": {
+                "totalItems": 5,
+                "activeIndex": 2
+            }
+        }
+    ],
+    "dependencies": []
+}

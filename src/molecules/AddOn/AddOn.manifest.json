@@ -1,0 +1,38 @@
+{
+    "id": "add-on",
+    "name": "AddOn",
+    "kind": "molecule",
+    "path": "src/molecules/AddOn/AddOn.tsx",
+    "defaultVariant": {
+        "title": "Optional wine pairing",
+        "description": "Tailored to each month's menu."
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "title": "Optional wine pairing",
+                "description": "Tailored to each month's menu."
+            }
+        },
+        {
+            "name": "With Image",
+            "props": {
+                "title": "Premium wine selection",
+                "description": "Carefully curated wines from local vineyards.",
+                "imageUrl": "https://via.placeholder.com/72x72/eee/999?text=Wine"
+            }
+        },
+        {
+            "name": "With Selection",
+            "props": {
+                "title": "Optional wine pairing",
+                "description": "Tailored to each month's menu.",
+                "selectedOptionId": "red"
+            }
+        }
+    ],
+    "dependencies": [
+        "RadioInline"
+    ]
+}

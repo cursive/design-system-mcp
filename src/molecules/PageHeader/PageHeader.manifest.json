@@ -1,0 +1,31 @@
+{
+    "id": "page-header",
+    "name": "PageHeader",
+    "kind": "molecule",
+    "path": "src/molecules/PageHeader/PageHeader.tsx",
+    "defaultVariant": {
+        "showBackButton": true
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "showBackButton": true
+            }
+        },
+        {
+            "name": "Without Back Button",
+            "props": {
+                "showBackButton": false
+            }
+        },
+        {
+            "name": "Without Subtitle",
+            "props": {
+                "subtitle": "",
+                "showBackButton": true
+            }
+        }
+    ],
+    "dependencies": []
+}

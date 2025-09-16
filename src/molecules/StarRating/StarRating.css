@@ -1,0 +1,35 @@
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.star-rating__star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.star-rating__star--interactive:hover {
+    transform: scale(1.1);
+}
+
+.star-rating__star:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.star-rating__star:disabled {
+    cursor: default;
+}
+
+.star-rating__star:disabled:hover {
+    transform: none;
+}

@@ -1,0 +1,42 @@
+{
+    "id": "star-rating",
+    "name": "StarRating",
+    "kind": "molecule",
+    "path": "src/molecules/StarRating/StarRating.tsx",
+    "defaultVariant": {
+        "rating": 5,
+        "maxRating": 5,
+        "interactive": false,
+        "size": 20
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "rating": 5,
+                "maxRating": 5,
+                "interactive": false,
+                "size": 20
+            }
+        },
+        {
+            "name": "Three Stars",
+            "props": {
+                "rating": 3,
+                "maxRating": 5,
+                "interactive": false,
+                "size": 20
+            }
+        },
+        {
+            "name": "Interactive",
+            "props": {
+                "rating": 0,
+                "maxRating": 5,
+                "interactive": true,
+                "size": 20
+            }
+        }
+    ],
+    "dependencies": []
+}

@@ -1,0 +1,41 @@
+{
+    "id": "dialogue",
+    "name": "Dialogue",
+    "kind": "molecule",
+    "path": "src/molecules/Dialogue/Dialogue.tsx",
+    "defaultVariant": {
+        "variant": "default",
+        "isOpen": true,
+        "showTextArea": true
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "variant": "default",
+                "isOpen": true,
+                "showTextArea": true
+            }
+        },
+        {
+            "name": "Desktop",
+            "props": {
+                "variant": "desktop",
+                "isOpen": true,
+                "showTextArea": true
+            }
+        },
+        {
+            "name": "Without Text Area",
+            "props": {
+                "variant": "default",
+                "isOpen": true,
+                "showTextArea": false
+            }
+        }
+    ],
+    "dependencies": [
+        "Button",
+        "TextArea"
+    ]
+}

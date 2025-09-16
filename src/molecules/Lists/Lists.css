@@ -1,0 +1,27 @@
+.lists {
+    background-color: var(--color-background-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.lists__title {
+    font: var(--typography-h4);
+    color: var(--color-foreground-primary);
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.lists__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.lists__item {
+    width: 100%;
+}

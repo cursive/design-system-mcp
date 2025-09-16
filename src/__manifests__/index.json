@@ -128,6 +128,86 @@
             "path": "molecules/Banner",
             "hash": "m13stu",
             "defaultVariant": "default"
+        },
+        {
+            "id": "M14",
+            "name": "CarouselNav",
+            "kind": "molecule",
+            "path": "molecules/CarouselNav",
+            "hash": "m14vwx",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M15",
+            "name": "CarouselPips",
+            "kind": "molecule",
+            "path": "molecules/CarouselPips",
+            "hash": "m15yza",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M16",
+            "name": "PageHeader",
+            "kind": "molecule",
+            "path": "molecules/PageHeader",
+            "hash": "m16abc",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M17",
+            "name": "FooterPDP",
+            "kind": "molecule",
+            "path": "molecules/FooterPDP",
+            "hash": "m17def",
+            "defaultVariant": "desktop"
+        },
+        {
+            "id": "M18",
+            "name": "PageDivider",
+            "kind": "molecule",
+            "path": "molecules/PageDivider",
+            "hash": "m18ghi",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M19",
+            "name": "FAQCell",
+            "kind": "molecule",
+            "path": "molecules/FAQCell",
+            "hash": "m19jkl",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M20",
+            "name": "StarRating",
+            "kind": "molecule",
+            "path": "molecules/StarRating",
+            "hash": "m20mno",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M21",
+            "name": "AddOn",
+            "kind": "molecule",
+            "path": "molecules/AddOn",
+            "hash": "m21pqr",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M22",
+            "name": "Dialogue",
+            "kind": "molecule",
+            "path": "molecules/Dialogue",
+            "hash": "m22stu",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "M23",
+            "name": "Lists",
+            "kind": "molecule",
+            "path": "molecules/Lists",
+            "hash": "m23vwx",
+            "defaultVariant": "default"
         }
     ],
     "edges": [],

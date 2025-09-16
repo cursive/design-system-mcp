@@ -1,0 +1,36 @@
+.faq-cell {
+    background-color: var(--color-background-primary);
+    position: relative;
+    padding: 24px 0;
+    width: 100%;
+}
+
+.faq-cell::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--color-stroke-horizontal-rule);
+}
+
+.faq-cell__question {
+    font: var(--typography-body);
+    font-weight: 600;
+    color: var(--color-foreground-primary);
+    line-height: 20px;
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 100%;
+}
+
+.faq-cell__answer {
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+    width: 100%;
+}

@@ -1,0 +1,24 @@
+{
+    "id": "footer-pdp",
+    "name": "FooterPDP",
+    "kind": "molecule",
+    "path": "src/molecules/FooterPDP/FooterPDP.tsx",
+    "defaultVariant": {
+        "device": "desktop"
+    },
+    "variants": [
+        {
+            "name": "Mobile",
+            "props": {
+                "device": "mobile"
+            }
+        },
+        {
+            "name": "Desktop",
+            "props": {
+                "device": "desktop"
+            }
+        }
+    ],
+    "dependencies": []
+}

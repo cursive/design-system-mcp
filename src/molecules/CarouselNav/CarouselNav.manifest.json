@@ -1,0 +1,34 @@
+{
+    "id": "carousel-nav",
+    "name": "CarouselNav",
+    "kind": "molecule",
+    "path": "src/molecules/CarouselNav/CarouselNav.tsx",
+    "defaultVariant": {
+        "prevDisabled": false,
+        "nextDisabled": false
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "prevDisabled": false,
+                "nextDisabled": false
+            }
+        },
+        {
+            "name": "Previous Disabled",
+            "props": {
+                "prevDisabled": true,
+                "nextDisabled": false
+            }
+        },
+        {
+            "name": "Next Disabled",
+            "props": {
+                "prevDisabled": false,
+                "nextDisabled": true
+            }
+        }
+    ],
+    "dependencies": []
+}

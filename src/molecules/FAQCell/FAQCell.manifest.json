@@ -1,0 +1,34 @@
+{
+    "id": "faq-cell",
+    "name": "FAQCell",
+    "kind": "molecule",
+    "path": "src/molecules/FAQCell/FAQCell.tsx",
+    "defaultVariant": {
+        "question": "How",
+        "answer": "Because"
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "question": "How",
+                "answer": "Because"
+            }
+        },
+        {
+            "name": "Long Question",
+            "props": {
+                "question": "How do I cancel my subscription?",
+                "answer": "You can cancel your subscription at any time by going to your account settings."
+            }
+        },
+        {
+            "name": "Long Answer",
+            "props": {
+                "question": "What is included in the premium plan?",
+                "answer": "The premium plan includes unlimited access to all features, priority customer support, and advanced analytics."
+            }
+        }
+    ],
+    "dependencies": []
+}

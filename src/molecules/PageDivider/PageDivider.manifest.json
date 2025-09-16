@@ -1,0 +1,37 @@
+{
+    "id": "page-divider",
+    "name": "PageDivider",
+    "kind": "molecule",
+    "path": "src/molecules/PageDivider/PageDivider.tsx",
+    "defaultVariant": {
+        "variant": "default"
+    },
+    "variants": [
+        {
+            "name": "Default",
+            "props": {
+                "variant": "default"
+            }
+        },
+        {
+            "name": "Labelled",
+            "props": {
+                "variant": "labelled",
+                "label": "Or pay by card"
+            }
+        },
+        {
+            "name": "Blank",
+            "props": {
+                "variant": "blank"
+            }
+        },
+        {
+            "name": "Desktop",
+            "props": {
+                "variant": "desktop"
+            }
+        }
+    ],
+    "dependencies": []
+}

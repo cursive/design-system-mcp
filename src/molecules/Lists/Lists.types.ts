@@ -14,6 +14,4 @@ export interface ListsProps {
     items?: ListItem[];
     /** Additional CSS class name */
     className?: string;
-    /** Item click handler */
-    onItemClick?: (item: ListItem) => void;
 }

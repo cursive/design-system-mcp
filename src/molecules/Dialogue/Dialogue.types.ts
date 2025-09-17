@@ -17,6 +17,8 @@ export interface DialogueProps {
     variant?: DialogueVariant;
     /** Whether the dialogue is open */
     isOpen?: boolean;
+    /** Render inline (no fullscreen overlay) */
+    inline?: boolean;
     /** Additional CSS class name */
     className?: string;
     /** Primary button click handler */

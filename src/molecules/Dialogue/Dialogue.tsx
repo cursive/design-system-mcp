@@ -20,6 +20,8 @@ export interface DialogueProps {
     variant?: 'default' | 'desktop';
     /** Whether the dialogue is open */
     isOpen?: boolean;
+    /** Whether to render the dialogue inline */
+    inline?: boolean;
     /** Additional CSS class name */
     className?: string;
     /** Primary button click handler */
@@ -39,6 +41,7 @@ export const Dialogue: React.FC<DialogueProps> = ({
     textAreaPlaceholder = 'Text area',
     variant = 'default',
     isOpen = true,
+    inline = false,
     className = '',
     onPrimaryClick,
     onSecondaryClick,
@@ -48,15 +51,22 @@ export const Dialogue: React.FC<DialogueProps> = ({
         return null;
     }
 
+    const containerClass = [
+        'dialogue',
+        `dialogue--${variant}`,
+        inline ? 'dialogue--inline' : 'dialogue--overlay',
+        className,
+    ].filter(Boolean).join(' ');
+
     return (
-        <div className={`dialogue dialogue--${variant} ${className}`}>
-            <div className="dialogue__overlay" onClick={onClose} />
+        <div className={containerClass}>
+            {!inline && <div className="dialogue__overlay" onClick={onClose} />}
             <div className="dialogue__content">
                 <div className="dialogue__header">
                     <h2 className="dialogue__title">
                         {title}
                     </h2>
-                    {onClose && (
+                    {onClose && !inline && (
                         <button
                             className="dialogue__close-button"
                             onClick={onClose}

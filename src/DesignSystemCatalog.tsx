@@ -1,4 +1,5 @@
 import React from 'react';
+import './DesignSystemCatalog.css';
 import { RadioIcon } from './atoms/RadioIcon';
 import { Icon } from './atoms/Icon';
 import { PlaceholderIcon } from './atoms/placeholders';
@@ -17,7 +18,7 @@ import { RadioInline } from './molecules/RadioInline';
 import { SelectItem } from './molecules/SelectItem';
 import { SelectList } from './molecules/SelectList';
 import { Tile } from './molecules/Tile';
-import { TileMultiItem } from './molecules/TileMultiItem';
+import { TileMultiItem, TileMultiItemOption } from './molecules/TileMultiItem';
 import { IconLine } from './molecules/IconLine';
 import { Banner } from './molecules/Banner';
 import { CarouselNav } from './molecules/CarouselNav';
@@ -27,45 +28,27 @@ import { FooterPDP } from './molecules/FooterPDP';
 import { PageDivider } from './molecules/PageDivider';
 import { FAQCell } from './molecules/FAQCell';
 import { StarRating } from './molecules/StarRating';
-import { AddOn } from './molecules/AddOn';
+import { AddOn, AddOnOption } from './molecules/AddOn';
 import { Dialogue } from './molecules/Dialogue';
-import { Lists } from './molecules/Lists';
+import { Lists, ListItem } from './molecules/Lists';
 
 const DesignSystemCatalog: React.FC = () => {
     return (
-        <div style={{ padding: '24px', fontFamily: 'var(--font-family-body)' }}>
-            <h1 style={{
-                fontSize: '32px',
-                fontWeight: '600',
-                marginBottom: '32px',
-                color: 'var(--color-foreground-primary)'
-            }}>
-                Design System Catalog
+        <div className="design-system-catalog-page">
+            <h1 className="page-title">
+                Design System
             </h1>
 
             {/* Atoms Section */}
-            <section style={{ marginBottom: '48px' }}>
-                <h2 style={{
-                    fontSize: '24px',
-                    fontWeight: '600',
-                    marginBottom: '24px',
-                    color: 'var(--color-foreground-primary)'
-                }}>
+            <section className="component-section">
+                <h2 className="section-title">
                     Atoms
                 </h2>
 
                 {/* RadioIcon */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>RadioIcon</h3>
-                    <div style={{
-                        display: 'flex',
-                        gap: '16px',
-                        alignItems: 'center',
-                        padding: '16px',
-                        border: '1px solid var(--color-stroke-horizontal-rule)',
-                        borderRadius: '8px',
-                        backgroundColor: '#dddddd'
-                    }}>
+                <div className="component-section">
+                    <h3 className="component-title">RadioIcon</h3>
+                    <div className="grid-demo">
                         <div style={{ textAlign: 'center' }}>
                             <RadioIcon size="regular" state="unchecked" />
                             <div style={{ fontSize: '12px', marginTop: '4px' }}>Regular Unchecked</div>
@@ -86,17 +69,9 @@ const DesignSystemCatalog: React.FC = () => {
                 </div>
 
                 {/* Icon */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Icon</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(6, 1fr)',
-                        gap: '16px',
-                        padding: '16px',
-                        border: '1px solid var(--color-stroke-horizontal-rule)',
-                        borderRadius: '8px',
-                        backgroundColor: '#dddddd'
-                    }}>
+                <div className="component-section">
+                    <h3 className="component-title">Icon</h3>
+                    <div className="grid-demo">
                         {['search', 'edit', 'local-shipping', 'storefront', 'credit-card', 'account-circle'].map((iconName) => (
                             <div key={iconName} style={{ textAlign: 'center' }}>
                                 <Icon name={iconName as any} size={24} />
@@ -107,778 +82,1411 @@ const DesignSystemCatalog: React.FC = () => {
                 </div>
 
                 {/* Large Icons */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Large Icons (40px)</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(5, 1fr)',
-                        gap: '16px',
-                        padding: '16px',
-                        border: '1px solid var(--color-stroke-horizontal-rule)',
-                        borderRadius: '8px',
-                        backgroundColor: '#dddddd'
-                    }}>
-                        {['gift-large', 'wine-large', 'car-large', 'chef-hat-large', 'house-large'].map((iconName) => (
-                            <div key={iconName} style={{ textAlign: 'center' }}>
-                                <Icon name={iconName as any} size={40} />
-                                <div style={{ fontSize: '12px', marginTop: '4px' }}>{iconName}</div>
-                            </div>
-                        ))}
+                <div className="component-section">
+                    <h3 className="component-title">Large Icons (40px)</h3>
+                    <div className="container">
+                        <div className="grid-demo-5">
+                            {['gift-large', 'wine-large', 'car-large', 'chef-hat-large', 'house-large'].map((iconName) => (
+                                <div key={iconName} style={{ textAlign: 'center' }}>
+                                    <Icon name={iconName as any} size={40} />
+                                    <div style={{ fontSize: '12px', marginTop: '4px' }}>{iconName}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 {/* PlaceholderIcon */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>PlaceholderIcon</h3>
-                    <div style={{
-                        display: 'flex',
-                        gap: '16px',
-                        alignItems: 'center',
-                        padding: '16px',
-                        border: '1px solid var(--color-stroke-horizontal-rule)',
-                        borderRadius: '8px',
-                        backgroundColor: '#dddddd'
-                    }}>
-                        <PlaceholderIcon size={20} />
-                        <PlaceholderIcon size={24} />
-                        <PlaceholderIcon size={32} />
-                        <PlaceholderIcon size={40} />
+                <div className="component-section">
+                    <h3 className="component-title">PlaceholderIcon</h3>
+                    <div className="container">
+                        <div className="flex-demo">
+                            <PlaceholderIcon size={20} />
+                            <PlaceholderIcon size={24} />
+                            <PlaceholderIcon size={32} />
+                            <PlaceholderIcon size={40} />
+                        </div>
                     </div>
                 </div>
 
                 {/* Individual Icon Components */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Individual Icons</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(5, 1fr)',
-                        gap: '16px',
-                        padding: '16px',
-                        border: '1px solid var(--color-stroke-horizontal-rule)',
-                        borderRadius: '8px',
-                        backgroundColor: '#dddddd'
-                    }}>
-                        <div style={{ textAlign: 'center' }}>
-                            <CheckIcon size={24} />
-                            <div style={{ fontSize: '12px', marginTop: '4px' }}>CheckIcon</div>
-                        </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <ChevronDownIcon size={24} />
-                            <div style={{ fontSize: '12px', marginTop: '4px' }}>ChevronDownIcon</div>
-                        </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <PackageIcon size={24} />
-                            <div style={{ fontSize: '12px', marginTop: '4px' }}>PackageIcon</div>
-                        </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <CalendarFoldIcon size={24} />
-                            <div style={{ fontSize: '12px', marginTop: '4px' }}>CalendarFoldIcon</div>
-                        </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <CirclePauseIcon size={24} />
-                            <div style={{ fontSize: '12px', marginTop: '4px' }}>CirclePauseIcon</div>
+                <div className="component-section">
+                    <h3 className="component-title">Individual Icons</h3>
+                    <div className="container">
+                        <div className="grid-demo-5">
+                            <div style={{ textAlign: 'center' }}>
+                                <CheckIcon size={24} />
+                                <div style={{ fontSize: '12px', marginTop: '4px' }}>CheckIcon</div>
+                            </div>
+                            <div style={{ textAlign: 'center' }}>
+                                <ChevronDownIcon size={24} />
+                                <div style={{ fontSize: '12px', marginTop: '4px' }}>ChevronDownIcon</div>
+                            </div>
+                            <div style={{ textAlign: 'center' }}>
+                                <PackageIcon size={24} />
+                                <div style={{ fontSize: '12px', marginTop: '4px' }}>PackageIcon</div>
+                            </div>
+                            <div style={{ textAlign: 'center' }}>
+                                <CalendarFoldIcon size={24} />
+                                <div style={{ fontSize: '12px', marginTop: '4px' }}>CalendarFoldIcon</div>
+                            </div>
+                            <div style={{ textAlign: 'center' }}>
+                                <CirclePauseIcon size={24} />
+                                <div style={{ fontSize: '12px', marginTop: '4px' }}>CirclePauseIcon</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Molecules Section */}
-            <section style={{ marginBottom: '48px' }}>
-                <h2 style={{
-                    fontSize: '24px',
-                    fontWeight: '600',
-                    marginBottom: '24px',
-                    color: 'var(--color-foreground-primary)'
-                }}>
+            <section className="component-section">
+                <h2 className="section-title">
                     Molecules
                 </h2>
 
                 {/* Button */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Button</h3>
+                <div className="component-section">
+                    <h3 className="component-title">Button</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All Styles</h4>
-                        <div style={{
-                            display: 'flex',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <Button style="accent">Accent</Button>
-                            <Button style="primary">Primary</Button>
-                            <Button style="secondary">Secondary</Button>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [buttonStyle, setButtonStyle] = React.useState<'accent' | 'primary' | 'secondary'>('accent');
+                                const [state, setState] = React.useState<'default' | 'disabled' | 'hover'>('default');
+                                const [showIcon, setShowIcon] = React.useState<boolean>(true);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [label, setLabel] = React.useState<string>('Label');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                // expose state setters via a tiny inline context to controls pane
+                                (window as any).__CATALOG_BUTTON__ = {
+                                    buttonStyle, setButtonStyle,
+                                    state, setState,
+                                    showIcon, setShowIcon,
+                                    disabled, setDisabled,
+                                    label, setLabel,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <Button
+                                        style={buttonStyle}
+                                        state={state}
+                                        showIcon={showIcon}
+                                        disabled={disabled}
+                                        className={className}
+                                    >
+                                        {label}
+                                    </Button>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Disabled States</h4>
-                        <div style={{
-                            display: 'flex',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <Button style="accent" disabled>Accent Disabled</Button>
-                            <Button style="primary" disabled>Primary Disabled</Button>
-                            <Button style="secondary" disabled>Secondary Disabled</Button>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Without Icon</h4>
-                        <div style={{
-                            display: 'flex',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <Button style="accent" showIcon={false}>No Icon</Button>
-                            <Button style="primary" showIcon={false}>No Icon</Button>
-                            <Button style="secondary" showIcon={false}>No Icon</Button>
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Label"
+                                    onInput={(e) => (window as any).__CATALOG_BUTTON__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Style</label>
+                                <select
+                                    defaultValue="accent"
+                                    onChange={(e) => (window as any).__CATALOG_BUTTON__?.setButtonStyle?.(e.target.value as 'accent' | 'primary' | 'secondary')}
+                                >
+                                    <option value="accent">accent</option>
+                                    <option value="primary">primary</option>
+                                    <option value="secondary">secondary</option>
+                                </select>
+                            </div>
+
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_BUTTON__?.setState?.(e.target.value as 'default' | 'disabled' | 'hover')}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="hover">Hover</option>
+                                    <option value="disabled">Disabled</option>
+                                </select>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_BUTTON__?.setShowIcon?.(e.currentTarget.checked)}
+                                    />
+                                    Show Icon
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_BUTTON__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* PanelHeader */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>PanelHeader</h3>
+                <div className="component-section">
+                    <h3 className="component-title">PanelHeader</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Default Hierarchy</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <PanelHeader
-                                hierarchy="Default"
-                                title="What you'll get"
-                                eyebrow="What you'll get"
-                                subtitle="Sub"
-                            />
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [hierarchy, setHierarchy] = React.useState<'Default' | 'Secondary'>('Default');
+                                const [showEyebrow, setShowEyebrow] = React.useState<boolean>(true);
+                                const [showIcon, setShowIcon] = React.useState<boolean>(true);
+                                const [showSub, setShowSub] = React.useState<boolean>(true);
+                                const [title, setTitle] = React.useState<string>("What you'll get");
+                                const [eyebrow, setEyebrow] = React.useState<string>("What you'll get");
+                                const [subtitle, setSubtitle] = React.useState<string>("Sub");
+                                const [className, setClassName] = React.useState<string>('');
+
+                                // expose state setters via a tiny inline context to controls pane
+                                (window as any).__CATALOG_PANELHEADER__ = {
+                                    hierarchy, setHierarchy,
+                                    showEyebrow, setShowEyebrow,
+                                    showIcon, setShowIcon,
+                                    showSub, setShowSub,
+                                    title, setTitle,
+                                    eyebrow, setEyebrow,
+                                    subtitle, setSubtitle,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <PanelHeader
+                                        hierarchy={hierarchy}
+                                        showEyebrow={showEyebrow}
+                                        showIcon={showIcon}
+                                        showSub={showSub}
+                                        title={title}
+                                        eyebrow={eyebrow}
+                                        subtitle={subtitle}
+                                        className={className}
+                                    />
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Secondary Hierarchy</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <PanelHeader
-                                hierarchy="Secondary"
-                                title="What you'll get"
-                                eyebrow="What you'll get"
-                                subtitle="Sub"
-                            />
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Without Eyebrow</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <PanelHeader
-                                hierarchy="Default"
-                                title="What you'll get"
-                                showEyebrow={false}
-                                subtitle="Sub"
-                            />
-                        </div>
-                    </div>
+                            <div className="control-group">
+                                <label>Title</label>
+                                <input
+                                    type="text"
+                                    defaultValue="What you'll get"
+                                    onInput={(e) => (window as any).__CATALOG_PANELHEADER__?.setTitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Without Icon</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <PanelHeader
-                                hierarchy="Default"
-                                title="What you'll get"
-                                eyebrow="What you'll get"
-                                showIcon={false}
-                                subtitle="Sub"
-                            />
-                        </div>
-                    </div>
+                            <div className="control-group">
+                                <label>Eyebrow</label>
+                                <input
+                                    type="text"
+                                    defaultValue="What you'll get"
+                                    onInput={(e) => (window as any).__CATALOG_PANELHEADER__?.setEyebrow?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Custom Content</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <PanelHeader
-                                hierarchy="Default"
-                                title="Custom Title"
-                                eyebrow="Custom Eyebrow"
-                                subtitle="Custom subtitle text"
-                            />
+                            <div className="control-group">
+                                <label>Subtitle</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Sub"
+                                    onInput={(e) => (window as any).__CATALOG_PANELHEADER__?.setSubtitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Hierarchy</label>
+                                <select
+                                    defaultValue="Default"
+                                    onChange={(e) => (window as any).__CATALOG_PANELHEADER__?.setHierarchy?.(e.target.value as 'Default' | 'Secondary')}
+                                >
+                                    <option value="Default">Default</option>
+                                    <option value="Secondary">Secondary</option>
+                                </select>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_PANELHEADER__?.setShowEyebrow?.(e.currentTarget.checked)}
+                                    />
+                                    Show Eyebrow
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_PANELHEADER__?.setShowIcon?.(e.currentTarget.checked)}
+                                    />
+                                    Show Icon
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_PANELHEADER__?.setShowSub?.(e.currentTarget.checked)}
+                                    />
+                                    Show Subtitle
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Textfield */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Textfield</h3>
+                <div className="component-section">
+                    <h3 className="component-title">Textfield</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All States</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="default" label="Default" placeholder="Enter text" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="hover" label="Hover" placeholder="Enter text" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="active" label="Active" placeholder="Enter text" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="filled" label="Filled" value="Sample text" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="disabled" label="Disabled" placeholder="Enter text" disabled />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="error" label="Error" placeholder="Enter text" errorMessage="Required" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Textfield state="error-filled" label="Error Filled" value="Invalid text" errorMessage="Explainer" />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'default' | 'hover' | 'active' | 'filled' | 'disabled' | 'error' | 'error-filled'>('default');
+                                const [showLabel, setShowLabel] = React.useState<boolean>(true);
+                                const [showIcon, setShowIcon] = React.useState<boolean>(false);
+                                const [label, setLabel] = React.useState<string>('Label');
+                                const [placeholder, setPlaceholder] = React.useState<string>('Enter text');
+                                const [value, setValue] = React.useState<string>('');
+                                const [errorMessage, setErrorMessage] = React.useState<string>('');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_TEXTFIELD__ = {
+                                    state, setState,
+                                    showLabel, setShowLabel,
+                                    showIcon, setShowIcon,
+                                    label, setLabel,
+                                    placeholder, setPlaceholder,
+                                    value, setValue,
+                                    errorMessage, setErrorMessage,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <Textfield
+                                            state={state}
+                                            showLabel={showLabel}
+                                            showIcon={showIcon}
+                                            label={label}
+                                            placeholder={placeholder}
+                                            value={value}
+                                            errorMessage={errorMessage}
+                                            disabled={state === 'disabled'}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Without Label</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <Textfield showLabel={false} placeholder="No label" />
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_TEXTFIELD__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="hover">Hover</option>
+                                    <option value="active">Active</option>
+                                    <option value="filled">Filled</option>
+                                    <option value="disabled">Disabled</option>
+                                    <option value="error">Error</option>
+                                    <option value="error-filled">Error Filled</option>
+                                </select>
                             </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_TEXTFIELD__?.setShowLabel?.(e.currentTarget.checked)}
+                                    />
+                                    Show Label
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TEXTFIELD__?.setShowIcon?.(e.currentTarget.checked)}
+                                    />
+                                    Show Icon
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Label"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTFIELD__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Placeholder</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Enter text"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTFIELD__?.setPlaceholder?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Value</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTFIELD__?.setValue?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Error Message</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTFIELD__?.setErrorMessage?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Select */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Select</h3>
+                <div className="component-section">
+                    <h3 className="component-title">Select</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All States</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <Select state="default" label="Default" placeholder="Select a country" hint="Choose your country" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Select state="hover" label="Hover" placeholder="Select a country" hint="Choose your country" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <Select state="active" label="Active" placeholder="Select a country" hint="Choose your country" />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'default' | 'hover' | 'active'>('default');
+                                const [value, setValue] = React.useState<string>('');
+                                const [label, setLabel] = React.useState<string>('Label');
+                                const [placeholder, setPlaceholder] = React.useState<string>('Select a country');
+                                const [hint, setHint] = React.useState<string>('Choose your country');
+                                const [showLabel, setShowLabel] = React.useState<boolean>(true);
+                                const [showHint, setShowHint] = React.useState<boolean>(true);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_SELECT__ = {
+                                    state, setState,
+                                    value, setValue,
+                                    label, setLabel,
+                                    placeholder, setPlaceholder,
+                                    hint, setHint,
+                                    showLabel, setShowLabel,
+                                    showHint, setShowHint,
+                                    disabled, setDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <Select
+                                            state={state}
+                                            value={value}
+                                            label={label}
+                                            placeholder={placeholder}
+                                            hint={hint}
+                                            showLabel={showLabel}
+                                            showHint={showHint}
+                                            disabled={disabled}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>With Selected Value</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <Select value="us" label="Country" placeholder="Select a country" hint="Choose your country" />
-                            </div>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Disabled</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <Select disabled label="Disabled" placeholder="Select a country" hint="Choose your country" />
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_SELECT__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="hover">Hover</option>
+                                    <option value="active">Active</option>
+                                </select>
                             </div>
+
+                            <div className="control-group">
+                                <label>Value</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_SELECT__?.setValue?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Label"
+                                    onInput={(e) => (window as any).__CATALOG_SELECT__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Placeholder</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Select a country"
+                                    onInput={(e) => (window as any).__CATALOG_SELECT__?.setPlaceholder?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Hint</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Choose your country"
+                                    onInput={(e) => (window as any).__CATALOG_SELECT__?.setHint?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_SELECT__?.setShowLabel?.(e.currentTarget.checked)}
+                                    />
+                                    Show Label
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_SELECT__?.setShowHint?.(e.currentTarget.checked)}
+                                    />
+                                    Show Hint
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_SELECT__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* TextArea */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>TextArea</h3>
+                <div className="component-section">
+                    <h3 className="component-title">TextArea</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All States</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <TextArea state="default" label="Default" placeholder="Enter your message" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <TextArea state="hover" label="Hover" placeholder="Enter your message" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <TextArea state="active" label="Active" placeholder="Enter your message" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <TextArea state="filled" label="Filled" value="This is some sample text that fills the textarea to demonstrate the filled state." />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <TextArea state="error" label="Error" placeholder="Enter your message" errorMessage="Required" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <TextArea state="error-filled" label="Error Filled" value="This text has an error." errorMessage="Explainer" />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'default' | 'hover' | 'active' | 'filled' | 'error' | 'error-filled'>('default');
+                                const [label, setLabel] = React.useState<string>('Label');
+                                const [placeholder, setPlaceholder] = React.useState<string>('Enter your message');
+                                const [value, setValue] = React.useState<string>('');
+                                const [errorMessage, setErrorMessage] = React.useState<string>('');
+                                const [showLabel, setShowLabel] = React.useState<boolean>(true);
+                                const [showError, setShowError] = React.useState<boolean>(false);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [rows, setRows] = React.useState<number>(4);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_TEXTAREA__ = {
+                                    state, setState,
+                                    label, setLabel,
+                                    placeholder, setPlaceholder,
+                                    value, setValue,
+                                    errorMessage, setErrorMessage,
+                                    showLabel, setShowLabel,
+                                    showError, setShowError,
+                                    disabled, setDisabled,
+                                    rows, setRows,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <TextArea
+                                            state={state}
+                                            label={label}
+                                            placeholder={placeholder}
+                                            value={value}
+                                            errorMessage={errorMessage}
+                                            showLabel={showLabel}
+                                            showError={showError}
+                                            disabled={disabled}
+                                            rows={rows}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Disabled</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <TextArea disabled label="Disabled" placeholder="Enter your message" />
-                            </div>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Custom Rows</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <TextArea rows={6} label="Large TextArea" placeholder="Enter your message" />
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_TEXTAREA__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="hover">Hover</option>
+                                    <option value="active">Active</option>
+                                    <option value="filled">Filled</option>
+                                    <option value="error">Error</option>
+                                    <option value="error-filled">Error Filled</option>
+                                </select>
                             </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_TEXTAREA__?.setShowLabel?.(e.currentTarget.checked)}
+                                    />
+                                    Show Label
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Label"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTAREA__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Placeholder</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Enter your message"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTAREA__?.setPlaceholder?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Value</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTAREA__?.setValue?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TEXTAREA__?.setShowError?.(e.currentTarget.checked)}
+                                    />
+                                    Show Error
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>Error Message</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTAREA__?.setErrorMessage?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Rows</label>
+                                <input
+                                    type="number"
+                                    defaultValue="4"
+                                    onInput={(e) => (window as any).__CATALOG_TEXTAREA__?.setRows?.(parseInt((e.target as HTMLInputElement).value) || 4)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TEXTAREA__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* CheckboxLine */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>CheckboxLine</h3>
+                <div className="component-section">
+                    <h3 className="component-title">CheckboxLine</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All States</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <CheckboxLine state="default" label="This is a gift" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <CheckboxLine state="active" label="This is a gift" />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'default' | 'active'>('default');
+                                const [label, setLabel] = React.useState<string>('This is a gift');
+                                const [checked, setChecked] = React.useState<boolean>(false);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_CHECKBOXLINE__ = {
+                                    state, setState,
+                                    label, setLabel,
+                                    checked, setChecked,
+                                    disabled, setDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <CheckboxLine
+                                            state={state}
+                                            label={label}
+                                            checked={checked}
+                                            disabled={disabled}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Disabled</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <CheckboxLine disabled label="This is a gift" />
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_CHECKBOXLINE__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="active">Active</option>
+                                </select>
                             </div>
+
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="This is a gift"
+                                    onInput={(e) => (window as any).__CATALOG_CHECKBOXLINE__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_CHECKBOXLINE__?.setChecked?.(e.currentTarget.checked)}
+                                    />
+                                    Checked
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_CHECKBOXLINE__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* RadioInline */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>RadioInline</h3>
+                <div className="component-section">
+                    <h3 className="component-title">RadioInline</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All States</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '16px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <RadioInline state="unchecked" label="Breakfast Kit — Chicken" price="$40" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <RadioInline state="hover" label="Breakfast Kit — Chicken" price="$40" />
-                            </div>
-                            <div style={{ width: '300px' }}>
-                                <RadioInline state="checked" label="Breakfast Kit — Chicken" price="$40" />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'unchecked' | 'hover' | 'checked'>('unchecked');
+                                const [label, setLabel] = React.useState<string>('Breakfast Kit — Chicken');
+                                const [price, setPrice] = React.useState<string>('$40');
+                                const [selected, setSelected] = React.useState<boolean>(false);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [showDivider, setShowDivider] = React.useState<boolean>(true);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_RADIOINLINE__ = {
+                                    state, setState,
+                                    label, setLabel,
+                                    price, setPrice,
+                                    selected, setSelected,
+                                    disabled, setDisabled,
+                                    showDivider, setShowDivider,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <RadioInline
+                                            state={state}
+                                            label={label}
+                                            price={price}
+                                            selected={selected}
+                                            disabled={disabled}
+                                            showDivider={showDivider}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Without Divider</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '300px' }}>
-                                <RadioInline showDivider={false} label="Breakfast Kit — Chicken" price="$40" />
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="unchecked"
+                                    onChange={(e) => (window as any).__CATALOG_RADIOINLINE__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="unchecked">Unchecked</option>
+                                    <option value="hover">Hover</option>
+                                    <option value="checked">Checked</option>
+                                </select>
                             </div>
+
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Breakfast Kit — Chicken"
+                                    onInput={(e) => (window as any).__CATALOG_RADIOINLINE__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Price</label>
+                                <input
+                                    type="text"
+                                    defaultValue="$40"
+                                    onInput={(e) => (window as any).__CATALOG_RADIOINLINE__?.setPrice?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_RADIOINLINE__?.setSelected?.(e.currentTarget.checked)}
+                                    />
+                                    Selected
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_RADIOINLINE__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_RADIOINLINE__?.setShowDivider?.(e.currentTarget.checked)}
+                                    />
+                                    Show Divider
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* SelectItem */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>SelectItem</h3>
+                <div className="component-section">
+                    <h3 className="component-title">SelectItem</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>All States</h4>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '0px',
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '200px' }}>
-                                <SelectItem state="default">No peanuts</SelectItem>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'default' | 'hover'>('default');
+                                const [selected, setSelected] = React.useState<boolean>(false);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [children, setChildren] = React.useState<string>('No peanuts');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_SELECTITEM__ = {
+                                    state, setState,
+                                    selected, setSelected,
+                                    disabled, setDisabled,
+                                    children, setChildren,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '200px' }}>
+                                        <SelectItem
+                                            state={state}
+                                            selected={selected}
+                                            disabled={disabled}
+                                            className={className}
+                                        >
+                                            {children}
+                                        </SelectItem>
+                                    </div>
+                                );
+                            })()}
+                        </div>
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_SELECTITEM__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="hover">Hover</option>
+                                </select>
                             </div>
-                            <div style={{ width: '200px' }}>
-                                <SelectItem state="hover">No peanuts</SelectItem>
+
+                            <div className="control-group">
+                                <label>Text</label>
+                                <input
+                                    type="text"
+                                    defaultValue="No peanuts"
+                                    onInput={(e) => (window as any).__CATALOG_SELECTITEM__?.setChildren?.((e.target as HTMLInputElement).value)}
+                                />
                             </div>
-                            <div style={{ width: '200px' }}>
-                                <SelectItem selected>No peanuts</SelectItem>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_SELECTITEM__?.setSelected?.(e.currentTarget.checked)}
+                                    />
+                                    Selected
+                                </label>
                             </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_SELECTITEM__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* SelectList */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>SelectList</h3>
+                <div className="component-section">
+                    <h3 className="component-title">SelectList</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Default</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '200px' }}>
-                                <SelectList />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [selectedIndex, setSelectedIndex] = React.useState<number>(-1);
+                                const [items, setItems] = React.useState<string[]>(['Option 1', 'Option 2', 'Option 3', 'Option 4']);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_SELECTLIST__ = {
+                                    selectedIndex, setSelectedIndex,
+                                    items, setItems,
+                                    disabled, setDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '200px' }}>
+                                        <SelectList
+                                            selectedIndex={selectedIndex}
+                                            items={items}
+                                            disabled={disabled}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>With Selection</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '200px' }}>
-                                <SelectList selectedIndex={1} />
-                            </div>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Custom Items</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '200px' }}>
-                                <SelectList items={['Option 1', 'Option 2', 'Option 3', 'Option 4']} selectedIndex={2} />
+                            <div className="control-group">
+                                <label>Selected Index</label>
+                                <input
+                                    type="number"
+                                    defaultValue="-1"
+                                    onInput={(e) => (window as any).__CATALOG_SELECTLIST__?.setSelectedIndex?.(parseInt((e.target as HTMLInputElement).value) || -1)}
+                                />
                             </div>
+
+                            <div className="control-group">
+                                <label>Items (comma-separated)</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Option 1, Option 2, Option 3, Option 4"
+                                    onInput={(e) => (window as any).__CATALOG_SELECTLIST__?.setItems?.((e.target as HTMLInputElement).value.split(',').map(item => item.trim()))}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_SELECTLIST__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Tile */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Tile</h3>
+                <div className="component-section">
+                    <h3 className="component-title">Tile</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Default</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <Tile />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [state, setState] = React.useState<'default' | 'active'>('default');
+                                const [title, setTitle] = React.useState<string>('');
+                                const [description, setDescription] = React.useState<string>('');
+                                const [rightLabel, setRightLabel] = React.useState<string>('');
+                                const [showRightLabel, setShowRightLabel] = React.useState<boolean>(true);
+                                const [showDescription, setShowDescription] = React.useState<boolean>(true);
+                                const [showPill, setShowPill] = React.useState<boolean>(false);
+                                const [showIcon, setShowIcon] = React.useState<boolean>(false);
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_TILE__ = {
+                                    state, setState,
+                                    title, setTitle,
+                                    description, setDescription,
+                                    rightLabel, setRightLabel,
+                                    showRightLabel, setShowRightLabel,
+                                    showDescription, setShowDescription,
+                                    showPill, setShowPill,
+                                    showIcon, setShowIcon,
+                                    disabled, setDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '350px' }}>
+                                        <Tile
+                                            state={state}
+                                            title={title}
+                                            description={description}
+                                            rightLabel={rightLabel}
+                                            showRightLabel={showRightLabel}
+                                            showDescription={showDescription}
+                                            showPill={showPill}
+                                            showIcon={showIcon}
+                                            disabled={disabled}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Active</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <Tile state="active" />
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>State</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_TILE__?.setState?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="active">Active</option>
+                                </select>
                             </div>
-                        </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Custom Content</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <Tile
-                                    title="Premium Package"
-                                    description="Includes all features and priority support"
-                                    rightLabel="$99"
+                            <div className="control-group">
+                                <label>Title</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TILE__?.setTitle?.((e.target as HTMLInputElement).value)}
                                 />
                             </div>
+
+                            <div className="control-group">
+                                <label>Description</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TILE__?.setDescription?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Right Label</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_TILE__?.setRightLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_TILE__?.setShowRightLabel?.(e.currentTarget.checked)}
+                                    />
+                                    Show Right Label
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_TILE__?.setShowDescription?.(e.currentTarget.checked)}
+                                    />
+                                    Show Description
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TILE__?.setShowPill?.(e.currentTarget.checked)}
+                                    />
+                                    Show Pill
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TILE__?.setShowIcon?.(e.currentTarget.checked)}
+                                    />
+                                    Show Icon
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TILE__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* TileMultiItem */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>TileMultiItem</h3>
+                <div className="component-section">
+                    <h3 className="component-title">TileMultiItem</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Default</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <TileMultiItem />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [options, setOptions] = React.useState<TileMultiItemOption[]>([
+                                    { id: '1', label: '2 bottles', price: '+ $45' },
+                                    { id: '2', label: '4 bottles', price: '+ $90' },
+                                    { id: '3', label: 'No, thank you', price: '', selected: true }
+                                ]);
+                                const [selectedId, setSelectedId] = React.useState<string>('3');
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_TILEMULTIITEM__ = {
+                                    options, setOptions,
+                                    selectedId, setSelectedId,
+                                    disabled, setDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '350px' }}>
+                                        <TileMultiItem
+                                            options={options}
+                                            selectedId={selectedId}
+                                            disabled={disabled}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>With Selection</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <TileMultiItem selectedId="2" />
-                            </div>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Custom Options</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <TileMultiItem
-                                    options={[
-                                        { id: '1', label: 'Basic Plan', price: '$9/month' },
-                                        { id: '2', label: 'Pro Plan', price: '$19/month' },
-                                        { id: '3', label: 'Enterprise', price: '$49/month' },
-                                    ]}
-                                    selectedId="2"
+                            <div className="control-group">
+                                <label>Selected ID</label>
+                                <input
+                                    type="text"
+                                    defaultValue="3"
+                                    onInput={(e) => (window as any).__CATALOG_TILEMULTIITEM__?.setSelectedId?.((e.target as HTMLInputElement).value)}
                                 />
                             </div>
+
+                            <div className="control-group">
+                                <label>Options (JSON format)</label>
+                                <textarea
+                                    rows={4}
+                                    defaultValue={JSON.stringify([
+                                        { id: '1', label: '2 bottles', price: '+ $45' },
+                                        { id: '2', label: '4 bottles', price: '+ $90' },
+                                        { id: '3', label: 'No, thank you', price: '', selected: true }
+                                    ], null, 2)}
+                                    onInput={(e) => {
+                                        try {
+                                            const parsed = JSON.parse((e.target as HTMLTextAreaElement).value);
+                                            (window as any).__CATALOG_TILEMULTIITEM__?.setOptions?.(parsed);
+                                        } catch (e) {
+                                            // Invalid JSON, ignore
+                                        }
+                                    }}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_TILEMULTIITEM__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* IconLine */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>IconLine</h3>
+                <div className="component-section">
+                    <h3 className="component-title">IconLine</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Default</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <IconLine />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [children, setChildren] = React.useState<string>('Custom text content');
+                                const [disabled, setDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_ICONLINE__ = {
+                                    children, setChildren,
+                                    disabled, setDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '350px' }}>
+                                        <IconLine
+                                            disabled={disabled}
+                                            className={className}
+                                        >
+                                            {children}
+                                        </IconLine>
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Custom Text</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <IconLine>Custom text content</IconLine>
-                            </div>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>With Check Icon</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '350px' }}>
-                                <IconLine icon={<CheckIcon size={20} color="var(--color-foreground-primary)" />}>
-                                    Completed task
-                                </IconLine>
+                            <div className="control-group">
+                                <label>Text Content</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Custom text content"
+                                    onInput={(e) => (window as any).__CATALOG_ICONLINE__?.setChildren?.((e.target as HTMLInputElement).value)}
+                                />
                             </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_ICONLINE__?.setDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Banner */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Banner</h3>
+                <div className="component-section">
+                    <h3 className="component-title">Banner</h3>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Default</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '450px' }}>
-                                <Banner />
-                            </div>
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [children, setChildren] = React.useState<string>('Success! Your changes have been saved.');
+                                const [type, setType] = React.useState<'default' | 'success' | 'warning' | 'alert'>('success');
+                                const [showLeftIcon, setShowLeftIcon] = React.useState<boolean>(true);
+                                const [showRightIcon, setShowRightIcon] = React.useState<boolean>(true);
+                                const [dismissible, setDismissible] = React.useState<boolean>(true);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_BANNER__ = {
+                                    children, setChildren,
+                                    type, setType,
+                                    showLeftIcon, setShowLeftIcon,
+                                    showRightIcon, setShowRightIcon,
+                                    dismissible, setDismissible,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '450px' }}>
+                                        <Banner
+                                            type={type}
+                                            showLeftIcon={showLeftIcon}
+                                            showRightIcon={showRightIcon}
+                                            dismissible={dismissible}
+                                            className={className}
+                                        >
+                                            {children}
+                                        </Banner>
+                                    </div>
+                                );
+                            })()}
                         </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Success</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '450px' }}>
-                                <Banner type="success">Success! Your changes have been saved.</Banner>
-                            </div>
-                        </div>
-                    </div>
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Warning</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '450px' }}>
-                                <Banner type="warning">Warning: This action cannot be undone.</Banner>
+                            <div className="control-group">
+                                <label>Content</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Success! Your changes have been saved."
+                                    onInput={(e) => (window as any).__CATALOG_BANNER__?.setChildren?.((e.target as HTMLInputElement).value)}
+                                />
                             </div>
-                        </div>
-                    </div>
 
-                    <div style={{ marginBottom: '16px' }}>
-                        <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Alert</h4>
-                        <div style={{
-                            padding: '16px',
-                            border: '1px solid var(--color-stroke-horizontal-rule)',
-                            borderRadius: '8px',
-                            backgroundColor: '#dddddd'
-                        }}>
-                            <div style={{ width: '450px' }}>
-                                <Banner type="alert">Error: Something went wrong. Please try again.</Banner>
+                            <div className="control-group">
+                                <label>Type</label>
+                                <select
+                                    defaultValue="success"
+                                    onChange={(e) => (window as any).__CATALOG_BANNER__?.setType?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="success">Success</option>
+                                    <option value="warning">Warning</option>
+                                    <option value="alert">Alert</option>
+                                </select>
                             </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_BANNER__?.setShowLeftIcon?.(e.currentTarget.checked)}
+                                    />
+                                    Show Left Icon
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_BANNER__?.setShowRightIcon?.(e.currentTarget.checked)}
+                                    />
+                                    Show Right Icon
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_BANNER__?.setDismissible?.(e.currentTarget.checked)}
+                                    />
+                                    Dismissible
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -896,85 +1504,262 @@ const DesignSystemCatalog: React.FC = () => {
                 </h2>
 
                 {/* CarouselNav */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>CarouselNav</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <CarouselNav />
+                <div className="component-section">
+                    <h3 className="component-title">CarouselNav</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [prevDisabled, setPrevDisabled] = React.useState<boolean>(false);
+                                const [nextDisabled, setNextDisabled] = React.useState<boolean>(false);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_CAROUSELNAV__ = {
+                                    prevDisabled, setPrevDisabled,
+                                    nextDisabled, setNextDisabled,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '200px' }}>
+                                        <CarouselNav
+                                            prevDisabled={prevDisabled}
+                                            nextDisabled={nextDisabled}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Previous Disabled</h4>
-                            <CarouselNav prevDisabled={true} />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Next Disabled</h4>
-                            <CarouselNav nextDisabled={true} />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_CAROUSELNAV__?.setPrevDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Previous Disabled
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_CAROUSELNAV__?.setNextDisabled?.(e.currentTarget.checked)}
+                                    />
+                                    Next Disabled
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* CarouselPips */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>CarouselPips</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default (3 items)</h4>
-                            <CarouselPips totalItems={3} activeIndex={0} />
+                <div className="component-section">
+                    <h3 className="component-title">CarouselPips</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [totalItems, setTotalItems] = React.useState<number>(3);
+                                const [activeIndex, setActiveIndex] = React.useState<number>(0);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_CAROUSELPIPS__ = {
+                                    totalItems, setTotalItems,
+                                    activeIndex, setActiveIndex,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '200px' }}>
+                                        <CarouselPips
+                                            totalItems={totalItems}
+                                            activeIndex={activeIndex}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Second Active</h4>
-                            <CarouselPips totalItems={3} activeIndex={1} />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Five Items</h4>
-                            <CarouselPips totalItems={5} activeIndex={2} />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Total Items</label>
+                                <input
+                                    type="number"
+                                    defaultValue="3"
+                                    min="1"
+                                    max="10"
+                                    onInput={(e) => (window as any).__CATALOG_CAROUSELPIPS__?.setTotalItems?.(parseInt((e.target as HTMLInputElement).value) || 3)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Active Index</label>
+                                <input
+                                    type="number"
+                                    defaultValue="0"
+                                    min="0"
+                                    onInput={(e) => (window as any).__CATALOG_CAROUSELPIPS__?.setActiveIndex?.(parseInt((e.target as HTMLInputElement).value) || 0)}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* PageHeader */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>PageHeader</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <PageHeader />
+                <div className="component-section">
+                    <h3 className="component-title">PageHeader</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [backText, setBackText] = React.useState<string>('Back');
+                                const [title, setTitle] = React.useState<string>('Page Title');
+                                const [subtitle, setSubtitle] = React.useState<string>('Page Subtitle');
+                                const [showBackButton, setShowBackButton] = React.useState<boolean>(true);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_PAGEHEADER__ = {
+                                    backText, setBackText,
+                                    title, setTitle,
+                                    subtitle, setSubtitle,
+                                    showBackButton, setShowBackButton,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '400px' }}>
+                                        <PageHeader
+                                            backText={backText}
+                                            title={title}
+                                            subtitle={subtitle}
+                                            showBackButton={showBackButton}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Without Back Button</h4>
-                            <PageHeader showBackButton={false} />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Back Text</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Back"
+                                    onInput={(e) => (window as any).__CATALOG_PAGEHEADER__?.setBackText?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Title</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Page Title"
+                                    onInput={(e) => (window as any).__CATALOG_PAGEHEADER__?.setTitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Subtitle</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Page Subtitle"
+                                    onInput={(e) => (window as any).__CATALOG_PAGEHEADER__?.setSubtitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_PAGEHEADER__?.setShowBackButton?.(e.currentTarget.checked)}
+                                    />
+                                    Show Back Button
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* FooterPDP */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>FooterPDP</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Mobile</h4>
-                            <FooterPDP device="mobile" />
+                <div className="component-section">
+                    <h3 className="component-title">FooterPDP</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [device, setDevice] = React.useState<'mobile' | 'desktop'>('mobile');
+                                const [buttonText, setButtonText] = React.useState<string>('Add to Cart');
+                                const [priceText, setPriceText] = React.useState<string>('$29.99');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_FOOTERPDP__ = {
+                                    device, setDevice,
+                                    buttonText, setButtonText,
+                                    priceText, setPriceText,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <FooterPDP
+                                            device={device}
+                                            buttonText={buttonText}
+                                            priceText={priceText}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Desktop</h4>
-                            <FooterPDP device="desktop" />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Device</label>
+                                <select
+                                    defaultValue="mobile"
+                                    onChange={(e) => (window as any).__CATALOG_FOOTERPDP__?.setDevice?.(e.target.value as 'mobile' | 'desktop')}
+                                >
+                                    <option value="mobile">Mobile</option>
+                                    <option value="desktop">Desktop</option>
+                                </select>
+                            </div>
+
+                            <div className="control-group">
+                                <label>Button Text</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Add to Cart"
+                                    onInput={(e) => (window as any).__CATALOG_FOOTERPDP__?.setButtonText?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Price Text</label>
+                                <input
+                                    type="text"
+                                    defaultValue="$29.99"
+                                    onInput={(e) => (window as any).__CATALOG_FOOTERPDP__?.setPriceText?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -992,108 +1777,302 @@ const DesignSystemCatalog: React.FC = () => {
                 </h2>
 
                 {/* PageDivider */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>PageDivider</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: '1fr',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <PageDivider />
+                <div className="component-section">
+                    <h3 className="component-title">PageDivider</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [variant, setVariant] = React.useState<'default' | 'labelled' | 'blank' | 'desktop'>('default');
+                                const [label, setLabel] = React.useState<string>('Or pay by card');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_PAGEDIVIDER__ = {
+                                    variant, setVariant,
+                                    label, setLabel,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '400px' }}>
+                                        <PageDivider
+                                            variant={variant}
+                                            label={label}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Labelled</h4>
-                            <PageDivider variant="labelled" label="Or pay by card" />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Desktop</h4>
-                            <PageDivider variant="desktop" />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Blank</h4>
-                            <PageDivider variant="blank" />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Variant</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_PAGEDIVIDER__?.setVariant?.(e.target.value as any)}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="labelled">Labelled</option>
+                                    <option value="blank">Blank</option>
+                                    <option value="desktop">Desktop</option>
+                                </select>
+                            </div>
+
+                            <div className="control-group">
+                                <label>Label</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Or pay by card"
+                                    onInput={(e) => (window as any).__CATALOG_PAGEDIVIDER__?.setLabel?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* FAQCell */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>FAQCell</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <FAQCell />
+                <div className="component-section">
+                    <h3 className="component-title">FAQCell</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [question, setQuestion] = React.useState<string>('How do I cancel my subscription?');
+                                const [answer, setAnswer] = React.useState<string>('You can cancel your subscription at any time by going to your account settings.');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_FAQCELL__ = {
+                                    question, setQuestion,
+                                    answer, setAnswer,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <FAQCell
+                                            question={question}
+                                            answer={answer}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Long Question</h4>
-                            <FAQCell
-                                question="How do I cancel my subscription?"
-                                answer="You can cancel your subscription at any time by going to your account settings."
-                            />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Question</label>
+                                <input
+                                    type="text"
+                                    defaultValue="How do I cancel my subscription?"
+                                    onInput={(e) => (window as any).__CATALOG_FAQCELL__?.setQuestion?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Answer</label>
+                                <textarea
+                                    rows={3}
+                                    defaultValue="You can cancel your subscription at any time by going to your account settings."
+                                    onInput={(e) => (window as any).__CATALOG_FAQCELL__?.setAnswer?.((e.target as HTMLTextAreaElement).value)}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* StarRating */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>StarRating</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>5 Stars</h4>
-                            <StarRating rating={5} />
+                <div className="component-section">
+                    <h3 className="component-title">StarRating</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [rating, setRating] = React.useState<number>(3);
+                                const [maxRating, setMaxRating] = React.useState<number>(5);
+                                const [interactive, setInteractive] = React.useState<boolean>(false);
+                                const [size, setSize] = React.useState<number>(20);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_STARRATING__ = {
+                                    rating, setRating,
+                                    maxRating, setMaxRating,
+                                    interactive, setInteractive,
+                                    size, setSize,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '200px' }}>
+                                        <StarRating
+                                            rating={rating}
+                                            maxRating={maxRating}
+                                            interactive={interactive}
+                                            size={size}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>3 Stars</h4>
-                            <StarRating rating={3} />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Interactive</h4>
-                            <StarRating rating={0} interactive={true} />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Large</h4>
-                            <StarRating rating={4} size={32} />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Rating</label>
+                                <input
+                                    type="number"
+                                    defaultValue="3"
+                                    min="0"
+                                    max="5"
+                                    onInput={(e) => (window as any).__CATALOG_STARRATING__?.setRating?.(parseInt((e.target as HTMLInputElement).value) || 0)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Max Rating</label>
+                                <input
+                                    type="number"
+                                    defaultValue="5"
+                                    min="1"
+                                    max="10"
+                                    onInput={(e) => (window as any).__CATALOG_STARRATING__?.setMaxRating?.(parseInt((e.target as HTMLInputElement).value) || 5)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Size (px)</label>
+                                <input
+                                    type="number"
+                                    defaultValue="20"
+                                    min="10"
+                                    max="50"
+                                    onInput={(e) => (window as any).__CATALOG_STARRATING__?.setSize?.(parseInt((e.target as HTMLInputElement).value) || 20)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={(e) => (window as any).__CATALOG_STARRATING__?.setInteractive?.(e.currentTarget.checked)}
+                                    />
+                                    Interactive
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* AddOn */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>AddOn</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <AddOn />
+                <div className="component-section">
+                    <h3 className="component-title">AddOn</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [title, setTitle] = React.useState<string>('Optional wine pairing');
+                                const [description, setDescription] = React.useState<string>('Tailored to each month\'s menu.');
+                                const [imageUrl, setImageUrl] = React.useState<string>('');
+                                const [options, setOptions] = React.useState<AddOnOption[]>([
+                                    { id: 'none', label: 'No, thank you', price: '', selected: true },
+                                    { id: 'red', label: '1 bottle of red', price: '+ $35' },
+                                    { id: 'white', label: '1 bottle of white', price: '+ $35' },
+                                ]);
+                                const [selectedOptionId, setSelectedOptionId] = React.useState<string>('none');
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_ADDON__ = {
+                                    title, setTitle,
+                                    description, setDescription,
+                                    imageUrl, setImageUrl,
+                                    options, setOptions,
+                                    selectedOptionId, setSelectedOptionId,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '300px' }}>
+                                        <AddOn
+                                            title={title}
+                                            description={description}
+                                            imageUrl={imageUrl}
+                                            options={options}
+                                            selectedOptionId={selectedOptionId}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>With Selection</h4>
-                            <AddOn selectedOptionId="red" />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Custom Options</h4>
-                            <AddOn
-                                title="Dessert add-on"
-                                description="Sweet treats to complete your meal."
-                                options={[
-                                    { id: 'none', label: 'No dessert', price: '', selected: true },
-                                    { id: 'chocolate', label: 'Chocolate cake', price: '+ $12' },
-                                    { id: 'cheesecake', label: 'New York cheesecake', price: '+ $15' },
-                                ]}
-                            />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Title</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Optional wine pairing"
+                                    onInput={(e) => (window as any).__CATALOG_ADDON__?.setTitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Description</label>
+                                <textarea
+                                    rows={2}
+                                    defaultValue="Tailored to each month's menu."
+                                    onInput={(e) => (window as any).__CATALOG_ADDON__?.setDescription?.((e.target as HTMLTextAreaElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Image URL</label>
+                                <input
+                                    type="text"
+                                    onInput={(e) => (window as any).__CATALOG_ADDON__?.setImageUrl?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Selected Option ID</label>
+                                <input
+                                    type="text"
+                                    defaultValue="none"
+                                    onInput={(e) => (window as any).__CATALOG_ADDON__?.setSelectedOptionId?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Options (JSON format)</label>
+                                <textarea
+                                    rows={4}
+                                    defaultValue={JSON.stringify([
+                                        { id: 'none', label: 'No, thank you', price: '', selected: true },
+                                        { id: 'red', label: '1 bottle of red', price: '+ $35' },
+                                        { id: 'white', label: '1 bottle of white', price: '+ $35' },
+                                    ], null, 2)}
+                                    onInput={(e) => {
+                                        try {
+                                            const parsed = JSON.parse((e.target as HTMLTextAreaElement).value);
+                                            (window as any).__CATALOG_ADDON__?.setOptions?.(parsed);
+                                        } catch (e) {
+                                            // Invalid JSON, ignore
+                                        }
+                                    }}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -1111,86 +2090,234 @@ const DesignSystemCatalog: React.FC = () => {
                 </h2>
 
                 {/* Dialogue */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Dialogue</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <Dialogue />
+                <div className="component-section">
+                    <h3 className="component-title">Dialogue</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [title, setTitle] = React.useState<string>('Modal template');
+                                const [description, setDescription] = React.useState<string>('Body copy');
+                                const [primaryButtonText, setPrimaryButtonText] = React.useState<string>('Primary');
+                                const [secondaryButtonText, setSecondaryButtonText] = React.useState<string>('Secondary');
+                                const [showTextArea, setShowTextArea] = React.useState<boolean>(true);
+                                const [textAreaPlaceholder, setTextAreaPlaceholder] = React.useState<string>('Text area');
+                                const [variant, setVariant] = React.useState<'default' | 'desktop'>('default');
+                                const [isOpen, setIsOpen] = React.useState<boolean>(true);
+                                const [inline, setInline] = React.useState<boolean>(true);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_DIALOGUE__ = {
+                                    title, setTitle,
+                                    description, setDescription,
+                                    primaryButtonText, setPrimaryButtonText,
+                                    secondaryButtonText, setSecondaryButtonText,
+                                    showTextArea, setShowTextArea,
+                                    textAreaPlaceholder, setTextAreaPlaceholder,
+                                    variant, setVariant,
+                                    isOpen, setIsOpen,
+                                    inline, setInline,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '400px' }}>
+                                        <Dialogue
+                                            title={title}
+                                            description={description}
+                                            primaryButtonText={primaryButtonText}
+                                            secondaryButtonText={secondaryButtonText}
+                                            showTextArea={showTextArea}
+                                            textAreaPlaceholder={textAreaPlaceholder}
+                                            variant={variant}
+                                            isOpen={isOpen}
+                                            inline={inline}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Desktop</h4>
-                            <Dialogue variant="desktop" />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Without Text Area</h4>
-                            <Dialogue showTextArea={false} />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Title</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Modal template"
+                                    onInput={(e) => (window as any).__CATALOG_DIALOGUE__?.setTitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Description</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Body copy"
+                                    onInput={(e) => (window as any).__CATALOG_DIALOGUE__?.setDescription?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Primary Button Text</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Primary"
+                                    onInput={(e) => (window as any).__CATALOG_DIALOGUE__?.setPrimaryButtonText?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Secondary Button Text</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Secondary"
+                                    onInput={(e) => (window as any).__CATALOG_DIALOGUE__?.setSecondaryButtonText?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Text Area Placeholder</label>
+                                <input
+                                    type="text"
+                                    defaultValue="Text area"
+                                    onInput={(e) => (window as any).__CATALOG_DIALOGUE__?.setTextAreaPlaceholder?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Variant</label>
+                                <select
+                                    defaultValue="default"
+                                    onChange={(e) => (window as any).__CATALOG_DIALOGUE__?.setVariant?.(e.target.value as 'default' | 'desktop')}
+                                >
+                                    <option value="default">Default</option>
+                                    <option value="desktop">Desktop</option>
+                                </select>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_DIALOGUE__?.setShowTextArea?.(e.currentTarget.checked)}
+                                    />
+                                    Show Text Area
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_DIALOGUE__?.setIsOpen?.(e.currentTarget.checked)}
+                                    />
+                                    Is Open
+                                </label>
+                            </div>
+
+                            <div className="control-group">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        defaultChecked
+                                        onChange={(e) => (window as any).__CATALOG_DIALOGUE__?.setInline?.(e.currentTarget.checked)}
+                                    />
+                                    Inline
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 {/* Lists */}
-                <div style={{ marginBottom: '32px' }}>
-                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Lists</h3>
-                    <div style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-                        gap: '16px'
-                    }}>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Default</h4>
-                            <Lists />
+                <div className="component-section">
+                    <h3 className="component-title">Lists</h3>
+
+                    <div className="component-demo">
+                        <div className="left">
+                            {(() => {
+                                const [title, setTitle] = React.useState<string>('title');
+                                const [items, setItems] = React.useState<ListItem[]>([
+                                    { id: '1', text: 'Text' },
+                                    { id: '2', text: 'Text' },
+                                    { id: '3', text: 'Text' },
+                                ]);
+                                const [className, setClassName] = React.useState<string>('');
+
+                                (window as any).__CATALOG_LISTS__ = {
+                                    title, setTitle,
+                                    items, setItems,
+                                    className, setClassName,
+                                };
+
+                                return (
+                                    <div style={{ width: '250px' }}>
+                                        <Lists
+                                            title={title}
+                                            items={items}
+                                            className={className}
+                                        />
+                                    </div>
+                                );
+                            })()}
                         </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>With Custom Title</h4>
-                            <Lists title="Features" />
-                        </div>
-                        <div style={{ backgroundColor: '#dddddd', padding: '16px', borderRadius: '8px' }}>
-                            <h4 style={{ fontSize: '14px', marginBottom: '8px' }}>Long List</h4>
-                            <Lists
-                                title="Menu Items"
-                                items={[
-                                    { id: '1', text: 'Appetizers' },
-                                    { id: '2', text: 'Main Courses' },
-                                    { id: '3', text: 'Desserts' },
-                                    { id: '4', text: 'Beverages' },
-                                    { id: '5', text: 'Specials' },
-                                ]}
-                            />
+
+                        <div className="right">
+                            <h4 className="subtitle">Controls</h4>
+
+                            <div className="control-group">
+                                <label>Title</label>
+                                <input
+                                    type="text"
+                                    defaultValue="title"
+                                    onInput={(e) => (window as any).__CATALOG_LISTS__?.setTitle?.((e.target as HTMLInputElement).value)}
+                                />
+                            </div>
+
+                            <div className="control-group">
+                                <label>Items (JSON format)</label>
+                                <textarea
+                                    rows={4}
+                                    defaultValue={JSON.stringify([
+                                        { id: '1', text: 'Text' },
+                                        { id: '2', text: 'Text' },
+                                        { id: '3', text: 'Text' },
+                                    ], null, 2)}
+                                    onInput={(e) => {
+                                        try {
+                                            const parsed = JSON.parse((e.target as HTMLTextAreaElement).value);
+                                            (window as any).__CATALOG_LISTS__?.setItems?.(parsed);
+                                        } catch (e) {
+                                            // Invalid JSON, ignore
+                                        }
+                                    }}
+                                />
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Design Tokens Section */}
-            <section style={{ marginBottom: '48px' }}>
-                <h2 style={{
-                    fontSize: '24px',
-                    fontWeight: '600',
-                    marginBottom: '24px',
-                    color: 'var(--color-foreground-primary)'
-                }}>
+            <section className="component-section">
+                <h2 className="section-title">
                     Design Tokens
                 </h2>
 
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '24px',
-                    padding: '16px',
-                    border: '1px solid var(--color-stroke-horizontal-rule)',
-                    borderRadius: '8px'
-                }}>
+                <div className="tokens-grid">
                     <div>
-                        <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Colors</h3>
+                        <h3 className="component-title">Colors</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                <div style={{ width: '20px', height: '20px', backgroundColor: 'var(--color-foreground-primary)', borderRadius: '4px' }}></div>
-                                <span>--color-foreground-primary (#141414)</span>
+                            <div className="token-item">
+                                <div className="token-name">--color-foreground-primary</div>
+                                <div className="token-value">#141414</div>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <div style={{ width: '20px', height: '20px', backgroundColor: 'var(--color-foreground-secondary)', borderRadius: '4px' }}></div>
@@ -1228,7 +2355,7 @@ const DesignSystemCatalog: React.FC = () => {
                     </div>
 
                     <div>
-                        <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>Typography</h3>
+                        <h3 className="component-title">Typography</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                             <div style={{ fontSize: '24px', fontWeight: '600', lineHeight: '32px' }}>H2 Heading (24px/600)</div>
                             <div style={{ fontSize: '21px', fontWeight: '600', lineHeight: '28px' }}>H3 Heading (21px/600)</div>

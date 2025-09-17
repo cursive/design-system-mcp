@@ -1,8 +1,8 @@
 export const spacing = {
-    iconGap: 'var(--spacing-icon-gap)',
-    line: 'var(--spacing-line)',
-    item: 'var(--spacing-item)',
-    group: 'var(--spacing-group)',
+    iconGap: 'var(--icon-gap)',
+    line: 'var(--line)',
+    item: 'var(--item)',
+    group: 'var(--group)',
 } as const;
 
 export type SpacingToken = keyof typeof spacing;

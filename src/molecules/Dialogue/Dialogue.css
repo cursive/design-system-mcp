@@ -11,6 +11,17 @@
     padding: 20px;
 }
 
+.dialogue--inline {
+    position: static;
+    z-index: auto;
+    padding: 0;
+    display: block;
+}
+
+.dialogue--inline .dialogue__content {
+    max-width: none;
+}
+
 .dialogue__overlay {
     position: absolute;
     top: 0;

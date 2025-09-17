@@ -137,6 +137,7 @@ All rules below are mandatory. If you ever encounter ambiguity (e.g. no `default
 
 ## Step 5 — Workflow
 1. Playback rules.  
+2. Alwasy check anaylze the data frm the MCP when wanting to understand a componet na dhow it is built. NEVER refere to the componets in the desing system to make assumptions. The only source of truth is the figma file
 2. Map out structure + tree diagrams for each component.  
 3. After confirmation, generate manifests-first.  
 4. Generate code in topological order (atoms → molecules → organisms).  

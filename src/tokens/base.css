@@ -108,10 +108,10 @@ button {
     --typography-body-s: 400 14px/18px var(--font-family-body);
 
     /* Spacing */
-    --spacing-icon-gap: 8px;
-    --spacing-line: 4px;
-    --spacing-item: 8px;
-    --spacing-group: 16px;
+    --icon-gap: 8px;
+    --line: 4px;
+    --item: 8px;
+    --group: 16px;
 
     /* Border Radius */
     --radius-sm: 4px;

@@ -18,8 +18,6 @@ export interface ListsProps {
     items?: ListItem[];
     /** Additional CSS class name */
     className?: string;
-    /** Item click handler */
-    onItemClick?: (item: ListItem) => void;
 }
 
 export const Lists: React.FC<ListsProps> = ({
@@ -30,13 +28,7 @@ export const Lists: React.FC<ListsProps> = ({
         { id: '3', text: 'Text' },
     ],
     className = '',
-    onItemClick,
 }) => {
-    const handleItemClick = (item: ListItem) => {
-        if (onItemClick) {
-            onItemClick(item);
-        }
-    };
 
     return (
         <div className={`lists ${className}`}>
@@ -48,7 +40,6 @@ export const Lists: React.FC<ListsProps> = ({
                     <div key={item.id} className="lists__item">
                         <IconLine
                             icon={item.icon}
-                            onClick={() => handleItemClick(item)}
                         >
                             {item.text}
                         </IconLine>

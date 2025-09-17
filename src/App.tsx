@@ -1,5 +1,5 @@
 import React from 'react';
-import DesignSystemCatalog from './DesignSystemCatalog';
+import DesignSystemCatalog from './DesignSystemCatalogNew';
 import './tokens/base.css';
 
 const App: React.FC = () => {

@@ -7,8 +7,8 @@ export * from './atoms';
 // Molecules
 export * from './molecules';
 
-// Organisms  
-// (will be added as we build them)
+// Organisms
+export * from './organisms';
 
 // Import base styles
 import './tokens/base.css';

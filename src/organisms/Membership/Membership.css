@@ -1,0 +1,447 @@
+/* Main Membership Component */
+.membership {
+    background: var(--color-background-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.membership__header {
+    background: var(--color-background-primary);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 12px 0;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__header-title {
+    flex: 1 0 0;
+    font: var(--typography-h2);
+    color: var(--color-foreground-primary);
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__main-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__addon-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__addon-title {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px 0 8px;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__addon-title-text {
+    flex: 1 0 0;
+    font: var(--typography-h4);
+    color: var(--color-foreground-primary);
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership__waitlist-banner {
+    background: var(--color-status-info);
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 12px;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__waitlist-content {
+    flex: 1 0 0;
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership__waitlist-text {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership__waitlist-message {
+    display: flex;
+    flex-direction: column;
+    font: var(--typography-body-s);
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+    color: var(--color-foreground-invert-primary);
+    width: 100%;
+}
+
+.membership__waitlist-link {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 0 0;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__waitlist-link-text {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    font: 700 14px/18px var(--font-family-body);
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+    color: var(--color-foreground-invert-secondary);
+    text-decoration: underline;
+}
+
+.membership__plan-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__plan-title {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px 0 8px;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__plan-title-text {
+    flex: 1 0 0;
+    font: var(--typography-h4);
+    color: var(--color-foreground-primary);
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership__gifting {
+    background: var(--color-background-primary);
+    box-sizing: border-box;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 4px;
+    position: relative;
+    flex-shrink: 0;
+    width: 313px;
+}
+
+.membership__gifting-icon {
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.membership__gifting-text {
+    font: var(--typography-h4);
+    color: var(--color-foreground-primary);
+    position: relative;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.membership__info-section {
+    background: var(--color-background-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__info-title {
+    font: var(--typography-h4);
+    color: var(--color-foreground-primary);
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__info-item {
+    background: var(--color-background-primary);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership__info-item-icon {
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.membership__info-item-content {
+    flex: 1 0 0;
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    padding: 2px 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership__info-item-text {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    font: var(--typography-body);
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+    color: var(--color-foreground-primary);
+}
+
+/* MembershipTile Sub-component */
+.membership-tile {
+    background: var(--color-background-primary);
+    min-width: 200px;
+    position: relative;
+    border-radius: 12px;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership-tile--selected {
+    border: 2px solid var(--color-foreground-primary);
+}
+
+.membership-tile--unselected {
+    border: 1px solid var(--color-foreground-secondary);
+}
+
+.membership-tile__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: inherit;
+    overflow: hidden;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+}
+
+.membership-tile__header {
+    display: flex;
+    height: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership-tile__left {
+    flex: 1 0 0;
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership-tile__title {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    font: var(--typography-h4);
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    align-self: stretch;
+    flex-shrink: 0;
+    color: var(--color-foreground-primary);
+}
+
+.membership-tile__right {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.membership-tile__price {
+    font: var(--typography-body);
+    color: var(--color-foreground-secondary);
+    position: relative;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.membership-tile__radio {
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.membership-tile__description {
+    font: var(--typography-body-s);
+    color: var(--color-foreground-secondary);
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.membership-tile__pill {
+    background: var(--color-foreground-primary);
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    position: relative;
+    border-radius: 100px;
+    flex-shrink: 0;
+}
+
+.membership-tile__pill-text {
+    font: 400 12px/18px var(--font-family-body);
+    color: var(--color-foreground-invert-primary);
+    position: relative;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Pill Sub-component */
+.pill {
+    background: var(--color-foreground-primary);
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    position: relative;
+    border-radius: 100px;
+    flex-shrink: 0;
+}
+
+.pill__text {
+    font: 400 12px/18px var(--font-family-body);
+    color: var(--color-foreground-invert-primary);
+    position: relative;
+    flex-shrink: 0;
+    white-space: nowrap;
+}

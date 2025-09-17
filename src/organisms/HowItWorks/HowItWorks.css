@@ -1,0 +1,173 @@
+.how-it-works {
+    background: var(--color-background-primary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.how-it-works--desktop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.how-it-works--default {
+    background: var(--color-background-primary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.how-it-works__title {
+    background: var(--color-background-primary);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 12px 0;
+    position: relative;
+    flex-shrink: 0;
+    width: 180px;
+}
+
+.how-it-works__title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.how-it-works__title-text {
+    flex: 1 0 0;
+    font: var(--typography-h2);
+    color: var(--color-foreground-primary);
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.how-it-works__content {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 0;
+    min-width: 354px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.how-it-works__step {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.how-it-works__step-icon {
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.how-it-works__step-icon-svg {
+    position: absolute;
+    inset: 12.48% 12.48% 12.5% 12.49%;
+}
+
+.how-it-works__step-icon-path {
+    position: absolute;
+    inset: -4.17%;
+}
+
+.how-it-works__step-icon-path-2 {
+    position: absolute;
+    inset: -1.25px -6.25%;
+}
+
+.how-it-works__step-icon-path-3 {
+    position: absolute;
+    inset: -7.5% -3.75%;
+}
+
+.how-it-works__step-icon-path-4 {
+    position: absolute;
+    inset: -18.75%;
+}
+
+.how-it-works__step-icon-path-5 {
+    position: absolute;
+    inset: -1.25px -12.5%;
+}
+
+.how-it-works__step-icon-path-6 {
+    position: absolute;
+    inset: -8.33% -12.5%;
+}
+
+.how-it-works__step-icon-path-7 {
+    position: absolute;
+    inset: -3.95% -4.17%;
+}
+
+.how-it-works__step-content {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.how-it-works__step-text {
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.how-it-works__divider {
+    height: 0;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.how-it-works__divider-line {
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+    right: 0;
+    top: -0.5px;
+}

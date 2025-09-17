@@ -1,0 +1,97 @@
+.reviews {
+    background: var(--color-background-primary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews__title {
+    background: var(--color-background-primary);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 12px 0;
+    position: relative;
+    flex-shrink: 0;
+    width: 180px;
+}
+
+.reviews__title-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.reviews__title-text {
+    flex: 1 0 0;
+    font: var(--typography-h2);
+    color: var(--color-foreground-primary);
+    min-height: 0;
+    min-width: 0;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.reviews__content {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 0;
+    min-width: 354px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.reviews__review {
+    background: var(--color-background-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.reviews__review-date {
+    font: var(--typography-body);
+    color: var(--color-foreground-primary);
+    position: relative;
+    flex-shrink: 0;
+    width: 315px;
+}
+
+.reviews__review-text {
+    font: var(--typography-body);
+    color: var(--color-foreground-secondary);
+    opacity: 0.7;
+    min-width: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.reviews__review-rating {
+    background: var(--color-background-primary);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+}

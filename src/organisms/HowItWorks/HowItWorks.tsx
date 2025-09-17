@@ -1,5 +1,6 @@
 import React from 'react';
 import { CirclePauseIcon } from '../../atoms/CirclePauseIcon';
+import { PanelHeader } from '../../molecules/PanelHeader';
 import { HowItWorksProps, HowItWorksStep } from './HowItWorks.types';
 import './HowItWorks.css';
 
@@ -27,11 +28,13 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({
     ];
 
     const title = (
-        <div className="how-it-works__title-content" data-name="Title">
-            <div className="how-it-works__title-text">
-                <p>How it works</p>
-            </div>
-        </div>
+        <PanelHeader
+            title="How it works"
+            className="how-it-works__header"
+            showEyebrow={false}
+            showIcon={false}
+            showSub={false}
+        />
     );
 
     const renderStep = (step: HowItWorksStep, index: number) => (

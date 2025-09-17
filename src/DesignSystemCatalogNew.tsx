@@ -4,6 +4,7 @@ import { TabContainer } from './components';
 import { AtomsSection } from './sections/AtomsSection';
 import { MoleculesSection } from './sections/MoleculesSection';
 import { OrganismsSection } from './sections/OrganismsSection';
+import { TemplatesSection } from './sections/TemplatesSection';
 
 const DesignSystemCatalog: React.FC = () => {
     const tabs = [
@@ -21,6 +22,11 @@ const DesignSystemCatalog: React.FC = () => {
             id: 'organisms',
             label: 'Organisms',
             content: <OrganismsSection />
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            content: <TemplatesSection />
         }
     ];
 

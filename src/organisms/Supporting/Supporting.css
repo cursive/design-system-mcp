@@ -7,7 +7,7 @@
     justify-content: flex-start;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: auto;
 }
 
 .supporting--desktop {
@@ -18,7 +18,7 @@
     justify-content: flex-start;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: auto;
 }
 
 .supporting--default {
@@ -29,10 +29,12 @@
     justify-content: flex-start;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: auto;
+    margin-bottom: 16px;
+    overflow: visible;
 }
 
-.supporting__title {
+.supporting__header {
     background: var(--color-background-primary);
     box-sizing: border-box;
     display: flex;
@@ -45,7 +47,7 @@
     width: 180px;
 }
 
-.supporting__title--default {
+.supporting__header--default {
     background: var(--color-background-primary);
     box-sizing: border-box;
     display: flex;
@@ -58,24 +60,6 @@
     width: 100%;
 }
 
-.supporting__title-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.supporting__title-text {
-    flex: 1 0 0;
-    font: 600 22px/26px var(--font-family-headings);
-    color: var(--color-foreground-primary);
-    min-height: 0;
-    min-width: 0;
-    position: relative;
-    flex-shrink: 0;
-}
 
 .supporting__content {
     flex: 1 0 0;
@@ -94,10 +78,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    min-width: 300px;
     position: relative;
     flex-shrink: 0;
     width: 100%;
+    min-height: fit-content;
 }
 
 .supporting__image {
@@ -129,14 +113,15 @@
     box-sizing: border-box;
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    max-height: 690px;
-    overflow: hidden;
-    padding: 0 0 16px 0;
+    overflow: visible;
+    padding: 0 0 24px 0;
     position: relative;
     flex-shrink: 0;
     width: 100%;
+    margin-bottom: 12px;
+    min-height: fit-content;
 }
 
 .supporting__image-content {
@@ -162,12 +147,15 @@
 .supporting__image-content--default {
     aspect-ratio: 406/430.206;
     background-repeat: no-repeat;
-    background-size: 105.25% 100.13%;
-    background-position: top left;
+    background-size: cover;
+    background-position: center;
     flex: 1 0 0;
-    min-height: 0;
+    min-height: 200px;
     min-width: 0;
     flex-shrink: 0;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
 }
 
 .supporting__container-padded {
@@ -179,6 +167,7 @@
     position: relative;
     flex-shrink: 0;
     width: 100%;
+    padding-bottom: 16px;
 }
 
 .supporting__text {

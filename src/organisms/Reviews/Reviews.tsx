@@ -1,5 +1,6 @@
 import React from 'react';
 import { StarRating } from '../../molecules/StarRating';
+import { PanelHeader } from '../../molecules/PanelHeader';
 import { ReviewsProps, ReviewItem } from './Reviews.types';
 import './Reviews.css';
 
@@ -29,13 +30,7 @@ export const Reviews: React.FC<ReviewsProps> = ({
 }) => {
     return (
         <div className={`reviews ${className}`} data-name="Reviews" data-node-id="5512:24694">
-            <div className="reviews__title" data-name="Title" data-node-id="5832:66680">
-                <div className="reviews__title-content" data-name="Title" data-node-id="I5832:66680;6105:56204">
-                    <div className="reviews__title-text" data-node-id="I5832:66680;6105:56205">
-                        <p>Reviews</p>
-                    </div>
-                </div>
-            </div>
+            <PanelHeader title="Reviews" className="reviews__header" />
             <div className="reviews__content" data-name="Content" data-node-id="5503:24546">
                 {reviews.map((review) => (
                     <div key={review.id} className="reviews__review" data-name="review" data-node-id="5812:46104">

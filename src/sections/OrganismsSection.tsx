@@ -11,7 +11,7 @@ export const OrganismsSection: React.FC = () => {
                 title="Hero"
                 component={
                     (() => {
-                        const [variant, setVariant] = React.useState<'desktop' | 'default'>('desktop');
+                        const [variant, setVariant] = React.useState<'desktop' | 'default'>('default');
                         const [subtitle, setSubtitle] = React.useState<string>('THE SUPPER CLUB');
                         const [description, setDescription] = React.useState<string>('Each month we bring you a tasting menu featuring signature dishes to prepare at home, and some members-only surprises');
                         const [rating, setRating] = React.useState<number>(5);
@@ -179,7 +179,7 @@ export const OrganismsSection: React.FC = () => {
                 title="Supporting"
                 component={
                     (() => {
-                        const [variant, setVariant] = React.useState<'desktop' | 'default'>('desktop');
+                        const [variant, setVariant] = React.useState<'desktop' | 'default'>('default');
                         const [showImage, setShowImage] = React.useState<boolean>(true);
 
                         (window as any).__CATALOG_SUPPORTING__ = {
@@ -227,7 +227,7 @@ export const OrganismsSection: React.FC = () => {
                 title="Carousel"
                 component={
                     (() => {
-                        const [variant, setVariant] = React.useState<'desktop' | 'default' | 'mobile-desktop'>('desktop');
+                        const [variant, setVariant] = React.useState<'desktop' | 'default' | 'mobile-desktop'>('default');
 
                         (window as any).__CATALOG_CAROUSEL__ = {
                             variant, setVariant,
@@ -263,7 +263,7 @@ export const OrganismsSection: React.FC = () => {
                 title="How It Works"
                 component={
                     (() => {
-                        const [variant, setVariant] = React.useState<'desktop' | 'default'>('desktop');
+                        const [variant, setVariant] = React.useState<'desktop' | 'default'>('default');
                         const [showImage, setShowImage] = React.useState<boolean>(true);
 
                         (window as any).__CATALOG_HOWITWORKS__ = {

@@ -2,6 +2,7 @@ import React from 'react';
 import { RadioIcon } from '../../atoms/RadioIcon';
 import { CheckIcon } from '../../atoms/CheckIcon';
 import { TileMultiItem } from '../../molecules/TileMultiItem';
+import { PanelHeader } from '../../molecules/PanelHeader';
 import { MembershipProps, MembershipTileProps, WaitlistBannerProps, PillProps, GiftOptionProps, InfoSectionProps, AddOnSectionProps } from './Membership.types';
 import './Membership.css';
 
@@ -210,13 +211,13 @@ export const Membership: React.FC<MembershipProps> = ({
 
     return (
         <div className={`membership ${className}`} data-name="Membership" data-node-id="6105:55910">
-            <div className="membership__header" data-name="Panel header" data-node-id="6105:55911">
-                <div className="membership__header-content" data-name="Title" data-node-id="I6105:55911;828:15113">
-                    <div className="membership__header-title" data-node-id="I6105:55911;828:13676">
-                        <p>Your monthly membership</p>
-                    </div>
-                </div>
-            </div>
+            <PanelHeader
+                title="Your monthly membership"
+                className="membership__header"
+                showEyebrow={false}
+                showIcon={false}
+                showSub={false}
+            />
 
             <div className="membership__content" data-name="content" data-node-id="6105:55912">
                 <div className="membership__main-group" data-name="Main group" data-node-id="6105:55915">

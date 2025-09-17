@@ -4,15 +4,18 @@ import { CarouselPips } from '../../molecules/CarouselPips';
 import { CarouselProps, CarouselImage } from './Carousel.types';
 import './Carousel.css';
 
+// Import the hero photo as a placeholder
+import heroPhoto from '../../assets/hero.png';
+
 export const Carousel: React.FC<CarouselProps> = ({
-    variant = 'desktop',
+    variant = 'default',
     images = [
-        { id: '1', src: 'http://localhost:3845/assets/cf95b8200ea7132be97d0d45e69974cb2cbd2674.png', alt: 'Food image 1', aspectRatio: '345/258' },
-        { id: '2', src: 'http://localhost:3845/assets/fe0da13885a02c2da935c7eb2b91e2d0d58143f8.png', alt: 'Food image 2', aspectRatio: '786/1101' },
-        { id: '3', src: 'http://localhost:3845/assets/1e51e6e8149da2468ae2be3bc240afb1f524d8ce.png', alt: 'Food image 3', aspectRatio: '585/877' },
-        { id: '4', src: 'http://localhost:3845/assets/cd3e45d54ec3167dd48a5e379910d0c960f8d8e4.png', alt: 'Food image 4', aspectRatio: '786/524' },
-        { id: '5', src: 'http://localhost:3845/assets/f74458075e33c5cf63a31ee3dff77641cde6ca57.png', alt: 'Food image 5', aspectRatio: '345/260' },
-        { id: '6', src: 'http://localhost:3845/assets/553b7074d96c1f74bacd8b0c009a21c926c1f5b5.png', alt: 'Food image 6', aspectRatio: '501' },
+        { id: '1', src: heroPhoto, alt: 'Hero food image', aspectRatio: '345/258' },
+        { id: '2', src: heroPhoto, alt: 'Hero food image', aspectRatio: '786/1101' },
+        { id: '3', src: heroPhoto, alt: 'Hero food image', aspectRatio: '585/877' },
+        { id: '4', src: heroPhoto, alt: 'Hero food image', aspectRatio: '786/524' },
+        { id: '5', src: heroPhoto, alt: 'Hero food image', aspectRatio: '345/260' },
+        { id: '6', src: heroPhoto, alt: 'Hero food image', aspectRatio: '501' },
     ],
     className = '',
 }) => {

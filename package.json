@@ -5,10 +5,9 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "rm -rf dist-lib && vite build && mv dist-lib dist",
+        "build": "vite build",
         "build:lib": "vite build --mode library",
         "build:app": "vite build --mode app && tsc",
-        "build:clean": "rm -rf dist-lib && vite build && mv dist-lib dist",
         "dev": "vite --port 5173 --strictPort --open",
         "storybook": "storybook dev -p 6006",
         "build-storybook": "storybook build",

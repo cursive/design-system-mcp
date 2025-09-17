@@ -21,11 +21,19 @@ export default defineConfig({
         lib: {
             entry: {
                 index: resolve(__dirname, 'src/index.ts'),
-                atoms: resolve(__dirname, 'src/atoms/index.ts'),
-                molecules: resolve(__dirname, 'src/molecules/index.ts'),
-                organisms: resolve(__dirname, 'src/organisms/index.ts'),
-                templates: resolve(__dirname, 'src/templates/index.ts'),
                 tokens: resolve(__dirname, 'src/tokens/index.ts'),
+                // Individual component entries for tree-shaking
+                'components/Button': resolve(__dirname, 'src/molecules/Button/index.ts'),
+                'components/PanelHeader': resolve(__dirname, 'src/molecules/PanelHeader/index.ts'),
+                'components/StarRating': resolve(__dirname, 'src/molecules/StarRating/index.ts'),
+                'components/Carousel': resolve(__dirname, 'src/organisms/Carousel/index.ts'),
+                'components/Supporting': resolve(__dirname, 'src/organisms/Supporting/index.ts'),
+                'components/Reviews': resolve(__dirname, 'src/organisms/Reviews/index.ts'),
+                'components/FAQ': resolve(__dirname, 'src/organisms/FAQ/index.ts'),
+                'components/HowItWorks': resolve(__dirname, 'src/organisms/HowItWorks/index.ts'),
+                'components/Membership': resolve(__dirname, 'src/organisms/Membership/index.ts'),
+                'components/Hero': resolve(__dirname, 'src/organisms/Hero/index.ts'),
+                'components/PDPTemplate': resolve(__dirname, 'src/templates/index.ts'),
             },
             name: 'FigmaDesignSystem',
             formats: ['es'],
@@ -40,7 +48,7 @@ export default defineConfig({
                 }
             }
         },
-        outDir: 'dist-lib'
+        outDir: 'dist'
     }
 });
 

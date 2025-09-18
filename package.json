@@ -2,8 +2,8 @@
     "name": "cursive-design-system",
     "version": "1.0.1",
     "description": "React design system generated from Figma via MCP",
-    "main": "src/index.ts",
-    "types": "src/index.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "build": "vite build",
         "build:lib": "vite build --mode library",
@@ -58,7 +58,7 @@
         "react-dom": ">=16.8.0"
     },
     "files": [
-        "src",
+        "dist",
         "README.md"
     ],
     "keywords": [

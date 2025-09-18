@@ -9,8 +9,10 @@ node_modules/
 .gitignore
 .DS_Store
 
-# Exclude build artifacts
-dist/
+# Exclude source files (we're publishing dist)
+src/
+
+# Exclude build artifacts (except dist)
 build/
 
 # Exclude test files

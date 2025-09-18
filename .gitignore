@@ -89,3 +89,7 @@ storybook-static
 # Temporary folders
 tmp/
 temp/
+
+# Catalogue (visualization UI)
+src/catalogue/
+catalogue/

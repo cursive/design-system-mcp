@@ -26,6 +26,46 @@
             "defaultVariant": "default"
         },
         {
+            "id": "A4",
+            "name": "CalendarFoldIcon",
+            "kind": "atom",
+            "path": "atoms/CalendarFoldIcon",
+            "hash": "a4jkl",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "A5",
+            "name": "CheckIcon",
+            "kind": "atom",
+            "path": "atoms/CheckIcon",
+            "hash": "a5mno",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "A6",
+            "name": "ChevronDownIcon",
+            "kind": "atom",
+            "path": "atoms/ChevronDownIcon",
+            "hash": "a6pqr",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "A7",
+            "name": "CirclePauseIcon",
+            "kind": "atom",
+            "path": "atoms/CirclePauseIcon",
+            "hash": "a7stu",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "A8",
+            "name": "PackageIcon",
+            "kind": "atom",
+            "path": "atoms/PackageIcon",
+            "hash": "a8vwx",
+            "defaultVariant": "default"
+        },
+        {
             "id": "M1",
             "name": "PanelHeader",
             "kind": "molecule",

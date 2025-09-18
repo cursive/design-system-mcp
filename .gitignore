@@ -90,6 +90,9 @@ storybook-static
 tmp/
 temp/
 
-# Catalogue (visualization UI)
+# Catalogue (visualization  UI)
 src/catalogue/
 catalogue/
+
+# Built artifacts
+dist/

@@ -3,314 +3,1376 @@
     "components": [
         {
             "id": "A1",
-            "name": "RadioIcon",
+            "name": "CalendarFoldIcon",
             "kind": "atom",
-            "path": "atoms/RadioIcon",
-            "hash": "a1abc",
-            "defaultVariant": "regular"
+            "path": "atoms/CalendarFoldIcon",
+            "hash": "a135f",
+            "defaultVariant": "default"
         },
         {
             "id": "A2",
-            "name": "Icon",
+            "name": "CheckIcon",
             "kind": "atom",
-            "path": "atoms/Icon",
-            "hash": "a2def",
+            "path": "atoms/CheckIcon",
+            "hash": "a2hca",
             "defaultVariant": "default"
         },
         {
             "id": "A3",
-            "name": "PlaceholderIcon",
+            "name": "ChevronDownIcon",
             "kind": "atom",
-            "path": "atoms/placeholders/PlaceholderIcon",
-            "hash": "a3ghi",
+            "path": "atoms/ChevronDownIcon",
+            "hash": "a3agn",
             "defaultVariant": "default"
         },
         {
             "id": "A4",
-            "name": "CalendarFoldIcon",
+            "name": "CirclePauseIcon",
             "kind": "atom",
-            "path": "atoms/CalendarFoldIcon",
-            "hash": "a4jkl",
+            "path": "atoms/CirclePauseIcon",
+            "hash": "a4mb5",
             "defaultVariant": "default"
         },
         {
             "id": "A5",
-            "name": "CheckIcon",
+            "name": "Icon",
             "kind": "atom",
-            "path": "atoms/CheckIcon",
-            "hash": "a5mno",
+            "path": "atoms/Icon",
+            "hash": "a59ky",
             "defaultVariant": "default"
         },
         {
             "id": "A6",
-            "name": "ChevronDownIcon",
+            "name": "PackageIcon",
             "kind": "atom",
-            "path": "atoms/ChevronDownIcon",
-            "hash": "a6pqr",
+            "path": "atoms/PackageIcon",
+            "hash": "a6m4n",
             "defaultVariant": "default"
         },
         {
             "id": "A7",
-            "name": "CirclePauseIcon",
+            "name": "RadioIcon",
             "kind": "atom",
-            "path": "atoms/CirclePauseIcon",
-            "hash": "a7stu",
+            "path": "atoms/RadioIcon",
+            "hash": "a7rdl",
             "defaultVariant": "default"
         },
         {
             "id": "A8",
-            "name": "PackageIcon",
+            "name": "placeholders",
             "kind": "atom",
-            "path": "atoms/PackageIcon",
-            "hash": "a8vwx",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M1",
-            "name": "PanelHeader",
-            "kind": "molecule",
-            "path": "molecules/PanelHeader",
-            "hash": "m1jkl",
-            "defaultVariant": "Default"
-        },
-        {
-            "id": "M2",
-            "name": "Button",
-            "kind": "molecule",
-            "path": "molecules/Button",
-            "hash": "m2mno",
-            "defaultVariant": "accent-default"
-        },
-        {
-            "id": "M3",
-            "name": "Textfield",
-            "kind": "molecule",
-            "path": "molecules/Textfield",
-            "hash": "m3pqr",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M4",
-            "name": "Select",
-            "kind": "molecule",
-            "path": "molecules/Select",
-            "hash": "m4stu",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M5",
-            "name": "TextArea",
-            "kind": "molecule",
-            "path": "molecules/TextArea",
-            "hash": "m5vwx",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M6",
-            "name": "CheckboxLine",
-            "kind": "molecule",
-            "path": "molecules/CheckboxLine",
-            "hash": "m6yza",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M7",
-            "name": "RadioInline",
-            "kind": "molecule",
-            "path": "molecules/RadioInline",
-            "hash": "m7abc",
-            "defaultVariant": "unchecked"
-        },
-        {
-            "id": "M8",
-            "name": "SelectItem",
-            "kind": "molecule",
-            "path": "molecules/SelectItem",
-            "hash": "m8def",
+            "path": "atoms/placeholders",
+            "hash": "a8id7",
             "defaultVariant": "default"
         },
         {
             "id": "M9",
-            "name": "SelectList",
+            "name": "AddOn",
             "kind": "molecule",
-            "path": "molecules/SelectList",
-            "hash": "m9ghi",
-            "defaultVariant": "default"
+            "path": "molecules/AddOn",
+            "hash": "m96hu",
+            "defaultVariant": "default",
+            "props": {
+                "title": {
+                    "type": "string",
+                    "description": "Add-on title",
+                    "required": false
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Add-on description",
+                    "required": false
+                },
+                "imageUrl": {
+                    "type": "string",
+                    "description": "Add-on image URL",
+                    "required": false
+                },
+                "options": {
+                    "type": "array",
+                    "description": "Available options",
+                    "required": false
+                },
+                "selectedOptionId": {
+                    "type": "string",
+                    "description": "Currently selected option ID",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onOptionSelect": {
+                    "type": "string",
+                    "description": "Option selection handler",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M10",
-            "name": "Tile",
+            "name": "Banner",
             "kind": "molecule",
-            "path": "molecules/Tile",
-            "hash": "m10jkl",
-            "defaultVariant": "default"
+            "path": "molecules/Banner",
+            "hash": "m10dcn",
+            "defaultVariant": "default",
+            "props": {
+                "children": {
+                    "type": "string",
+                    "description": "Banner content text",
+                    "required": false
+                },
+                "type": {
+                    "type": "BannerType",
+                    "description": "Banner type/color scheme",
+                    "required": false
+                },
+                "showLeftIcon": {
+                    "type": "boolean",
+                    "description": "Whether to show the left icon",
+                    "required": false
+                },
+                "showRightIcon": {
+                    "type": "boolean",
+                    "description": "Whether to show the right close icon",
+                    "required": false
+                },
+                "dismissible": {
+                    "type": "boolean",
+                    "description": "Whether the banner is dismissible",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onClose": {
+                    "type": "function",
+                    "description": "Close handler for dismissible banners",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M11",
-            "name": "TileMultiItem",
+            "name": "Button",
             "kind": "molecule",
-            "path": "molecules/TileMultiItem",
-            "hash": "m11mno",
+            "path": "molecules/Button",
+            "hash": "m11n53",
             "defaultVariant": "default"
         },
         {
             "id": "M12",
-            "name": "IconLine",
-            "kind": "molecule",
-            "path": "molecules/IconLine",
-            "hash": "m12pqr",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M13",
-            "name": "Banner",
-            "kind": "molecule",
-            "path": "molecules/Banner",
-            "hash": "m13stu",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "M14",
             "name": "CarouselNav",
             "kind": "molecule",
             "path": "molecules/CarouselNav",
-            "hash": "m14vwx",
-            "defaultVariant": "default"
+            "hash": "m12vtx",
+            "defaultVariant": "default",
+            "props": {
+                "prevDisabled": {
+                    "type": "boolean",
+                    "description": "Whether the previous button is disabled",
+                    "required": false
+                },
+                "nextDisabled": {
+                    "type": "boolean",
+                    "description": "Whether the next button is disabled",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onPrevious": {
+                    "type": "function",
+                    "description": "Previous button click handler",
+                    "required": false
+                },
+                "onNext": {
+                    "type": "function",
+                    "description": "Next button click handler",
+                    "required": false
+                }
+            }
         },
         {
-            "id": "M15",
+            "id": "M13",
             "name": "CarouselPips",
             "kind": "molecule",
             "path": "molecules/CarouselPips",
-            "hash": "m15yza",
-            "defaultVariant": "default"
+            "hash": "m130q2",
+            "defaultVariant": "default",
+            "props": {
+                "totalItems": {
+                    "type": "number",
+                    "description": "Total number of items",
+                    "required": false
+                },
+                "activeIndex": {
+                    "type": "number",
+                    "description": "Currently active item index (0-based)",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onPipClick": {
+                    "type": "number",
+                    "description": "Pip click handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M14",
+            "name": "CheckboxLine",
+            "kind": "molecule",
+            "path": "molecules/CheckboxLine",
+            "hash": "m14xok",
+            "defaultVariant": "default",
+            "props": {
+                "label": {
+                    "type": "string",
+                    "description": "Label text for the checkbox",
+                    "required": false
+                },
+                "checked": {
+                    "type": "boolean",
+                    "description": "Whether the checkbox is checked",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the checkbox is disabled",
+                    "required": false
+                },
+                "state": {
+                    "type": "CheckboxLineState",
+                    "description": "Visual state of the checkbox",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onChange": {
+                    "type": "boolean",
+                    "description": "Checkbox change handler",
+                    "required": false
+                },
+                "onClick": {
+                    "type": "function",
+                    "description": "Checkbox click handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M15",
+            "name": "Dialogue",
+            "kind": "molecule",
+            "path": "molecules/Dialogue",
+            "hash": "m15tc0",
+            "defaultVariant": "default",
+            "props": {
+                "title": {
+                    "type": "string",
+                    "description": "Dialogue title",
+                    "required": false
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Dialogue description",
+                    "required": false
+                },
+                "primaryButtonText": {
+                    "type": "string",
+                    "description": "Primary button text",
+                    "required": false
+                },
+                "secondaryButtonText": {
+                    "type": "string",
+                    "description": "Secondary button text",
+                    "required": false
+                },
+                "showTextArea": {
+                    "type": "boolean",
+                    "description": "Whether to show the text area",
+                    "required": false
+                },
+                "textAreaPlaceholder": {
+                    "type": "string",
+                    "description": "Text area placeholder",
+                    "required": false
+                },
+                "variant": {
+                    "type": "DialogueVariant",
+                    "description": "Dialogue variant",
+                    "required": false
+                },
+                "isOpen": {
+                    "type": "boolean",
+                    "description": "Whether the dialogue is open",
+                    "required": false
+                },
+                "inline": {
+                    "type": "boolean",
+                    "description": "Render inline (no fullscreen overlay)",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onPrimaryClick": {
+                    "type": "function",
+                    "description": "Primary button click handler",
+                    "required": false
+                },
+                "onSecondaryClick": {
+                    "type": "function",
+                    "description": "Secondary button click handler",
+                    "required": false
+                },
+                "onClose": {
+                    "type": "function",
+                    "description": "Close handler",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M16",
-            "name": "PageHeader",
+            "name": "FAQCell",
             "kind": "molecule",
-            "path": "molecules/PageHeader",
-            "hash": "m16abc",
-            "defaultVariant": "default"
+            "path": "molecules/FAQCell",
+            "hash": "m16118",
+            "defaultVariant": "default",
+            "props": {
+                "question": {
+                    "type": "string",
+                    "description": "FAQ question",
+                    "required": false
+                },
+                "answer": {
+                    "type": "string",
+                    "description": "FAQ answer",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M17",
             "name": "FooterPDP",
             "kind": "molecule",
             "path": "molecules/FooterPDP",
-            "hash": "m17def",
-            "defaultVariant": "desktop"
+            "hash": "m17kpe",
+            "defaultVariant": "default",
+            "props": {
+                "device": {
+                    "type": "FooterPDPDevice",
+                    "description": "Device type for responsive layout",
+                    "required": false
+                },
+                "buttonText": {
+                    "type": "string",
+                    "description": "Button text",
+                    "required": false
+                },
+                "priceText": {
+                    "type": "string",
+                    "description": "Price text",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onButtonClick": {
+                    "type": "function",
+                    "description": "Button click handler",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M18",
-            "name": "PageDivider",
+            "name": "IconLine",
             "kind": "molecule",
-            "path": "molecules/PageDivider",
-            "hash": "m18ghi",
-            "defaultVariant": "default"
+            "path": "molecules/IconLine",
+            "hash": "m182ih",
+            "defaultVariant": "default",
+            "props": {
+                "children": {
+                    "type": "string",
+                    "description": "Text content for the icon line",
+                    "required": false
+                },
+                "icon": {
+                    "type": "React.ReactNode",
+                    "description": "Custom icon component",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the icon line is disabled",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onClick": {
+                    "type": "function",
+                    "description": "Click handler",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M19",
-            "name": "FAQCell",
+            "name": "Lists",
             "kind": "molecule",
-            "path": "molecules/FAQCell",
-            "hash": "m19jkl",
-            "defaultVariant": "default"
+            "path": "molecules/Lists",
+            "hash": "m19lpm",
+            "defaultVariant": "default",
+            "props": {
+                "title": {
+                    "type": "string",
+                    "description": "List title",
+                    "required": false
+                },
+                "items": {
+                    "type": "array",
+                    "description": "List items",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M20",
-            "name": "StarRating",
+            "name": "PageDivider",
             "kind": "molecule",
-            "path": "molecules/StarRating",
-            "hash": "m20mno",
-            "defaultVariant": "default"
+            "path": "molecules/PageDivider",
+            "hash": "m202ci",
+            "defaultVariant": "default",
+            "props": {
+                "variant": {
+                    "type": "PageDividerVariant",
+                    "description": "Divider variant",
+                    "required": false
+                },
+                "label": {
+                    "type": "string",
+                    "description": "Label text for labelled variant",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M21",
-            "name": "AddOn",
+            "name": "PageHeader",
             "kind": "molecule",
-            "path": "molecules/AddOn",
-            "hash": "m21pqr",
-            "defaultVariant": "default"
+            "path": "molecules/PageHeader",
+            "hash": "m21lus",
+            "defaultVariant": "default",
+            "props": {
+                "backText": {
+                    "type": "string",
+                    "description": "Back button text",
+                    "required": false
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Main title",
+                    "required": false
+                },
+                "subtitle": {
+                    "type": "string",
+                    "description": "Subtitle",
+                    "required": false
+                },
+                "showBackButton": {
+                    "type": "boolean",
+                    "description": "Whether to show the back button",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onBack": {
+                    "type": "function",
+                    "description": "Back button click handler",
+                    "required": false
+                }
+            }
         },
         {
             "id": "M22",
-            "name": "Dialogue",
+            "name": "PanelHeader",
             "kind": "molecule",
-            "path": "molecules/Dialogue",
-            "hash": "m22stu",
+            "path": "molecules/PanelHeader",
+            "hash": "m227by",
             "defaultVariant": "default"
         },
         {
             "id": "M23",
-            "name": "Lists",
+            "name": "RadioInline",
             "kind": "molecule",
-            "path": "molecules/Lists",
-            "hash": "m23vwx",
-            "defaultVariant": "default"
+            "path": "molecules/RadioInline",
+            "hash": "m234sh",
+            "defaultVariant": "default",
+            "props": {
+                "label": {
+                    "type": "string",
+                    "description": "Label text for the radio option",
+                    "required": false
+                },
+                "price": {
+                    "type": "string",
+                    "description": "Price or value text",
+                    "required": false
+                },
+                "selected": {
+                    "type": "boolean",
+                    "description": "Whether the radio is selected",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the radio is disabled",
+                    "required": false
+                },
+                "state": {
+                    "type": "RadioInlineState",
+                    "description": "Visual state of the radio",
+                    "required": false
+                },
+                "showDivider": {
+                    "type": "boolean",
+                    "description": "Whether to show the divider",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onChange": {
+                    "type": "boolean",
+                    "description": "Radio change handler",
+                    "required": false
+                },
+                "onClick": {
+                    "type": "function",
+                    "description": "Radio click handler",
+                    "required": false
+                }
+            }
         },
         {
-            "id": "O1",
+            "id": "M24",
+            "name": "Select",
+            "kind": "molecule",
+            "path": "molecules/Select",
+            "hash": "m24s7l",
+            "defaultVariant": "default",
+            "props": {
+                "label": {
+                    "type": "string",
+                    "description": "Label text for the select field",
+                    "required": false
+                },
+                "placeholder": {
+                    "type": "string",
+                    "description": "Placeholder text",
+                    "required": false
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Current selected value",
+                    "required": false
+                },
+                "hint": {
+                    "type": "string",
+                    "description": "Hint text below the select",
+                    "required": false
+                },
+                "showLabel": {
+                    "type": "boolean",
+                    "description": "Whether to show the label",
+                    "required": false
+                },
+                "showHint": {
+                    "type": "boolean",
+                    "description": "Whether to show the hint",
+                    "required": false
+                },
+                "state": {
+                    "type": "SelectState",
+                    "description": "Visual state of the select",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onChange": {
+                    "type": "string",
+                    "description": "Select change handler",
+                    "required": false
+                },
+                "onFocus": {
+                    "type": "function",
+                    "description": "Select focus handler",
+                    "required": false
+                },
+                "onBlur": {
+                    "type": "function",
+                    "description": "Select blur handler",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the select is disabled",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M25",
+            "name": "SelectItem",
+            "kind": "molecule",
+            "path": "molecules/SelectItem",
+            "hash": "m25up6",
+            "defaultVariant": "default",
+            "props": {
+                "children": {
+                    "type": "string",
+                    "description": "Text content of the select item",
+                    "required": false
+                },
+                "selected": {
+                    "type": "boolean",
+                    "description": "Whether the item is selected",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the item is disabled",
+                    "required": false
+                },
+                "state": {
+                    "type": "SelectItemState",
+                    "description": "Visual state of the select item",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onClick": {
+                    "type": "function",
+                    "description": "Click handler",
+                    "required": false
+                },
+                "onMouseEnter": {
+                    "type": "function",
+                    "description": "Mouse enter handler",
+                    "required": false
+                },
+                "onMouseLeave": {
+                    "type": "function",
+                    "description": "Mouse leave handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M26",
+            "name": "SelectList",
+            "kind": "molecule",
+            "path": "molecules/SelectList",
+            "hash": "m26ygq",
+            "defaultVariant": "default",
+            "props": {
+                "items": {
+                    "type": "string",
+                    "description": "Array of items to display",
+                    "required": false
+                },
+                "selectedIndex": {
+                    "type": "number",
+                    "description": "Currently selected item index",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the list is disabled",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onItemSelect": {
+                    "type": "string",
+                    "description": "Item selection handler",
+                    "required": false
+                },
+                "onItemHover": {
+                    "type": "string",
+                    "description": "Item hover handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M27",
+            "name": "StarRating",
+            "kind": "molecule",
+            "path": "molecules/StarRating",
+            "hash": "m27c6u",
+            "defaultVariant": "default",
+            "props": {
+                "rating": {
+                    "type": "number",
+                    "description": "Current rating (0-5)",
+                    "required": false
+                },
+                "maxRating": {
+                    "type": "number",
+                    "description": "Maximum rating (default 5)",
+                    "required": false
+                },
+                "interactive": {
+                    "type": "boolean",
+                    "description": "Whether the rating is interactive",
+                    "required": false
+                },
+                "size": {
+                    "type": "number",
+                    "description": "Star size in pixels",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onRatingChange": {
+                    "type": "number",
+                    "description": "Rating change handler for interactive mode",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M28",
+            "name": "TextArea",
+            "kind": "molecule",
+            "path": "molecules/TextArea",
+            "hash": "m28z65",
+            "defaultVariant": "default",
+            "props": {
+                "label": {
+                    "type": "string",
+                    "description": "Label text for the textarea field",
+                    "required": false
+                },
+                "placeholder": {
+                    "type": "string",
+                    "description": "Placeholder text",
+                    "required": false
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Current value of the textarea",
+                    "required": false
+                },
+                "errorMessage": {
+                    "type": "string",
+                    "description": "Error message to display",
+                    "required": false
+                },
+                "showLabel": {
+                    "type": "boolean",
+                    "description": "Whether to show the label",
+                    "required": false
+                },
+                "showError": {
+                    "type": "boolean",
+                    "description": "Whether to show an error message",
+                    "required": false
+                },
+                "state": {
+                    "type": "TextAreaState",
+                    "description": "Visual state of the textarea",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onChange": {
+                    "type": "string",
+                    "description": "Textarea change handler",
+                    "required": false
+                },
+                "onFocus": {
+                    "type": "function",
+                    "description": "Textarea focus handler",
+                    "required": false
+                },
+                "onBlur": {
+                    "type": "function",
+                    "description": "Textarea blur handler",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the textarea is disabled",
+                    "required": false
+                },
+                "rows": {
+                    "type": "number",
+                    "description": "Number of rows for the textarea",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M29",
+            "name": "Textfield",
+            "kind": "molecule",
+            "path": "molecules/Textfield",
+            "hash": "m29avz",
+            "defaultVariant": "default",
+            "props": {
+                "label": {
+                    "type": "string",
+                    "description": "Label text for the input field",
+                    "required": false
+                },
+                "placeholder": {
+                    "type": "string",
+                    "description": "Placeholder text",
+                    "required": false
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Current value of the input",
+                    "required": false
+                },
+                "errorMessage": {
+                    "type": "string",
+                    "description": "Error message to display",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the field is disabled",
+                    "required": false
+                },
+                "showLabel": {
+                    "type": "boolean",
+                    "description": "Whether to show the label",
+                    "required": false
+                },
+                "showIcon": {
+                    "type": "boolean",
+                    "description": "Whether to show an icon",
+                    "required": false
+                },
+                "state": {
+                    "type": "TextfieldState",
+                    "description": "Visual state of the textfield",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onChange": {
+                    "type": "string",
+                    "description": "Input change handler",
+                    "required": false
+                },
+                "onFocus": {
+                    "type": "function",
+                    "description": "Input focus handler",
+                    "required": false
+                },
+                "onBlur": {
+                    "type": "function",
+                    "description": "Input blur handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M30",
+            "name": "Tile",
+            "kind": "molecule",
+            "path": "molecules/Tile",
+            "hash": "m30tjo",
+            "defaultVariant": "default",
+            "props": {
+                "title": {
+                    "type": "string",
+                    "description": "Title text for the tile",
+                    "required": false
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description text for the tile",
+                    "required": false
+                },
+                "rightLabel": {
+                    "type": "string",
+                    "description": "Right side label text",
+                    "required": false
+                },
+                "showRightLabel": {
+                    "type": "boolean",
+                    "description": "Whether to show the right label",
+                    "required": false
+                },
+                "showDescription": {
+                    "type": "boolean",
+                    "description": "Whether to show the description",
+                    "required": false
+                },
+                "showPill": {
+                    "type": "boolean",
+                    "description": "Whether to show a pill/badge",
+                    "required": false
+                },
+                "showIcon": {
+                    "type": "boolean",
+                    "description": "Whether to show the left icon",
+                    "required": false
+                },
+                "leftIcon": {
+                    "type": "React.ReactNode",
+                    "description": "Custom left icon component",
+                    "required": false
+                },
+                "state": {
+                    "type": "TileState",
+                    "description": "Visual state of the tile",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the tile is disabled",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onClick": {
+                    "type": "function",
+                    "description": "Click handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "M31",
+            "name": "TileMultiItem",
+            "kind": "molecule",
+            "path": "molecules/TileMultiItem",
+            "hash": "m31af8",
+            "defaultVariant": "default",
+            "props": {
+                "options": {
+                    "type": "array",
+                    "description": "Array of options to display",
+                    "required": false
+                },
+                "selectedId": {
+                    "type": "string",
+                    "description": "Currently selected option ID",
+                    "required": false
+                },
+                "disabled": {
+                    "type": "boolean",
+                    "description": "Whether the tile is disabled",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onOptionSelect": {
+                    "type": "string",
+                    "description": "Option selection handler",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "O32",
             "name": "Carousel",
             "kind": "organism",
             "path": "organisms/Carousel",
-            "hash": "o1abc",
-            "defaultVariant": "default"
+            "hash": "o32wxu",
+            "defaultVariant": {
+                "variant": "desktop"
+            },
+            "props": {
+                "variant": {
+                    "type": "string",
+                    "description": "Variant for responsive design",
+                    "required": false,
+                    "options": [
+                        "desktop",
+                        "default",
+                        "mobile-desktop"
+                    ],
+                    "default": "desktop"
+                },
+                "images": {
+                    "type": "array",
+                    "description": "Array of images to display",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            },
+            "variants": [
+                {
+                    "name": "desktop",
+                    "props": {
+                        "variant": "desktop"
+                    }
+                },
+                {
+                    "name": "default",
+                    "props": {
+                        "variant": "default"
+                    }
+                },
+                {
+                    "name": "mobile-desktop",
+                    "props": {
+                        "variant": "mobile-desktop"
+                    }
+                }
+            ]
         },
         {
-            "id": "O2",
-            "name": "Supporting",
-            "kind": "organism",
-            "path": "organisms/Supporting",
-            "hash": "o2def",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "O3",
-            "name": "Reviews",
-            "kind": "organism",
-            "path": "organisms/Reviews",
-            "hash": "o3ghi",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "O4",
+            "id": "O33",
             "name": "FAQ",
             "kind": "organism",
             "path": "organisms/FAQ",
-            "hash": "o4jkl",
-            "defaultVariant": "default"
+            "hash": "o33q33",
+            "defaultVariant": "default",
+            "props": {
+                "showIcon": {
+                    "type": "boolean",
+                    "description": "Whether to show the expand/collapse icon",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            }
         },
         {
-            "id": "O5",
-            "name": "HowItWorks",
-            "kind": "organism",
-            "path": "organisms/HowItWorks",
-            "hash": "o5mno",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "O6",
-            "name": "Membership",
-            "kind": "organism",
-            "path": "organisms/Membership",
-            "hash": "o6pqr",
-            "defaultVariant": "default"
-        },
-        {
-            "id": "O7",
+            "id": "O34",
             "name": "Hero",
             "kind": "organism",
             "path": "organisms/Hero",
-            "hash": "o7stu",
-            "defaultVariant": "default"
+            "hash": "o346fe",
+            "defaultVariant": {
+                "variant": "desktop"
+            },
+            "props": {
+                "variant": {
+                    "type": "string",
+                    "description": "Hero variant",
+                    "required": false,
+                    "options": [
+                        "desktop",
+                        "default"
+                    ],
+                    "default": "desktop"
+                },
+                "logoSrc": {
+                    "type": "string",
+                    "description": "Logo image source",
+                    "required": false
+                },
+                "logoAlt": {
+                    "type": "string",
+                    "description": "Logo alt text",
+                    "required": false
+                },
+                "subtitle": {
+                    "type": "string",
+                    "description": "Subtitle text",
+                    "required": false
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Description text",
+                    "required": false
+                },
+                "rating": {
+                    "type": "number",
+                    "description": "Star rating (0-5)",
+                    "required": false
+                },
+                "reviewCount": {
+                    "type": "string",
+                    "description": "Review count text",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            },
+            "variants": [
+                {
+                    "name": "desktop",
+                    "props": {
+                        "variant": "desktop"
+                    }
+                },
+                {
+                    "name": "default",
+                    "props": {
+                        "variant": "default"
+                    }
+                }
+            ]
         },
         {
-            "id": "T1",
+            "id": "O35",
+            "name": "HowItWorks",
+            "kind": "organism",
+            "path": "organisms/HowItWorks",
+            "hash": "o35zaz",
+            "defaultVariant": {
+                "variant": "desktop"
+            },
+            "props": {
+                "showImage": {
+                    "type": "boolean",
+                    "description": "Whether to show the image",
+                    "required": false
+                },
+                "variant": {
+                    "type": "string",
+                    "description": "Variant for responsive design",
+                    "required": false,
+                    "options": [
+                        "desktop",
+                        "default"
+                    ],
+                    "default": "desktop"
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            },
+            "variants": [
+                {
+                    "name": "desktop",
+                    "props": {
+                        "variant": "desktop"
+                    }
+                },
+                {
+                    "name": "default",
+                    "props": {
+                        "variant": "default"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "O36",
+            "name": "Membership",
+            "kind": "organism",
+            "path": "organisms/Membership",
+            "hash": "o363zw",
+            "defaultVariant": "default",
+            "props": {
+                "showAddOn": {
+                    "type": "boolean",
+                    "description": "Whether to show the add-on section",
+                    "required": false
+                },
+                "showWaitlist": {
+                    "type": "boolean",
+                    "description": "Whether to show the waitlist banner",
+                    "required": false
+                },
+                "showPlanSelection": {
+                    "type": "boolean",
+                    "description": "Whether to show the plan selection",
+                    "required": false
+                },
+                "showGifting": {
+                    "type": "boolean",
+                    "description": "Whether to show the gifting option",
+                    "required": false
+                },
+                "showHowItWorks": {
+                    "type": "boolean",
+                    "description": "Whether to show the how it works section",
+                    "required": false
+                },
+                "showMemberPerks": {
+                    "type": "boolean",
+                    "description": "Whether to show the member perks section",
+                    "required": false
+                },
+                "waitlistMessage": {
+                    "type": "string",
+                    "description": "Waitlist message text",
+                    "required": false
+                },
+                "nextOrderDate": {
+                    "type": "string",
+                    "description": "Next order date",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                },
+                "onMealSizeChange": {
+                    "type": "(size: 'one' | 'two') => void",
+                    "description": "Event handlers",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "O37",
+            "name": "Reviews",
+            "kind": "organism",
+            "path": "organisms/Reviews",
+            "hash": "o375th",
+            "defaultVariant": "default",
+            "props": {
+                "reviews": {
+                    "type": "array",
+                    "description": "Array of review items",
+                    "required": false
+                },
+                "showImage": {
+                    "type": "boolean",
+                    "description": "Whether to show the image",
+                    "required": false
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            }
+        },
+        {
+            "id": "O38",
+            "name": "Supporting",
+            "kind": "organism",
+            "path": "organisms/Supporting",
+            "hash": "o38myq",
+            "defaultVariant": {
+                "variant": "desktop"
+            },
+            "props": {
+                "showImage": {
+                    "type": "boolean",
+                    "description": "Whether to show the image",
+                    "required": false
+                },
+                "variant": {
+                    "type": "string",
+                    "description": "Variant for responsive design",
+                    "required": false,
+                    "options": [
+                        "desktop",
+                        "default"
+                    ],
+                    "default": "desktop"
+                },
+                "className": {
+                    "type": "string",
+                    "description": "Additional CSS class name",
+                    "required": false
+                }
+            },
+            "variants": [
+                {
+                    "name": "desktop",
+                    "props": {
+                        "variant": "desktop"
+                    }
+                },
+                {
+                    "name": "default",
+                    "props": {
+                        "variant": "default"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "T39",
             "name": "PDPTemplate",
             "kind": "template",
-            "path": "templates/PDPTemplate",
-            "hash": "t1vwx",
+            "path": "templates",
+            "hash": "t39ncr",
             "defaultVariant": "default"
         }
     ],

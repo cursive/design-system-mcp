@@ -1,9 +1,9 @@
 {
-    "name": "figma-design-system",
+    "name": "@cursive/design-system",
     "version": "1.0.0",
     "description": "React design system generated from Figma via MCP",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "src/index.ts",
+    "types": "src/index.ts",
     "scripts": {
         "build": "vite build",
         "build:lib": "vite build --mode library",
@@ -16,7 +16,8 @@
         "test:coverage": "jest --coverage",
         "lint": "eslint src --ext .ts,.tsx",
         "type-check": "tsc --noEmit",
-        "preview": "vite preview --port 5173 --strictPort"
+        "preview": "vite preview --port 5173 --strictPort",
+        "prepublishOnly": "npm run type-check"
     },
     "dependencies": {
         "react": ">=16.8.0",
@@ -57,7 +58,8 @@
         "react-dom": ">=16.8.0"
     },
     "files": [
-        "dist"
+        "src",
+        "README.md"
     ],
     "keywords": [
         "react",
@@ -66,6 +68,11 @@
         "atomic-design",
         "components"
     ],
-    "author": "",
-    "license": "MIT"
+    "author": "Cursive",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cursive/design-system-mcp.git"
+    },
+    "homepage": "https://github.com/cursive/design-system-mcp#readme"
 }

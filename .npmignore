@@ -1,0 +1,31 @@
+# Exclude catalogue/visualization UI from npm package
+src/catalogue/
+catalogue/
+
+# Exclude development files
+.storybook/
+node_modules/
+.git/
+.gitignore
+.DS_Store
+
+# Exclude build artifacts
+dist/
+build/
+
+# Exclude test files
+*.test.tsx
+*.test.ts
+*.stories.tsx
+setupTests.ts
+
+# Exclude config files
+vite.config.ts
+jest.config.js
+tsconfig.json
+cursor-rules.md
+cursor_mcp_prompt.md
+organisms.json
+
+# Exclude development dependencies
+package-lock.json

@@ -208,6 +208,70 @@
             "path": "molecules/Lists",
             "hash": "m23vwx",
             "defaultVariant": "default"
+        },
+        {
+            "id": "O1",
+            "name": "Carousel",
+            "kind": "organism",
+            "path": "organisms/Carousel",
+            "hash": "o1abc",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "O2",
+            "name": "Supporting",
+            "kind": "organism",
+            "path": "organisms/Supporting",
+            "hash": "o2def",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "O3",
+            "name": "Reviews",
+            "kind": "organism",
+            "path": "organisms/Reviews",
+            "hash": "o3ghi",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "O4",
+            "name": "FAQ",
+            "kind": "organism",
+            "path": "organisms/FAQ",
+            "hash": "o4jkl",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "O5",
+            "name": "HowItWorks",
+            "kind": "organism",
+            "path": "organisms/HowItWorks",
+            "hash": "o5mno",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "O6",
+            "name": "Membership",
+            "kind": "organism",
+            "path": "organisms/Membership",
+            "hash": "o6pqr",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "O7",
+            "name": "Hero",
+            "kind": "organism",
+            "path": "organisms/Hero",
+            "hash": "o7stu",
+            "defaultVariant": "default"
+        },
+        {
+            "id": "T1",
+            "name": "PDPTemplate",
+            "kind": "template",
+            "path": "templates/PDPTemplate",
+            "hash": "t1vwx",
+            "defaultVariant": "default"
         }
     ],
     "edges": [],

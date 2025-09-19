@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { PanelHeaderProps } from './PanelHeader.types';
 import { PlaceholderIcon } from '../../atoms/placeholders';

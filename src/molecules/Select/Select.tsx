@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { ChevronDownIcon } from '../../atoms/ChevronDownIcon';
 import './Select.css';

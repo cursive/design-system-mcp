@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { PackageIconProps } from './PackageIcon.types';
 import './PackageIcon.css';

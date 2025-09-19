@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Banner, Button, Carousel, Dialogue, FAQ, Reviews, Supporting, 
-  HowItWorks, Membership, StarRating, RadioInline, 
-  TileMultiItem, CarouselNav, CarouselPips, IconLine, CheckIcon, 
-  PanelHeader, Textfield, TextArea, Select, SelectItem, SelectList,
-  CheckboxLine, AddOn, PageDivider, PageHeader, FooterPDP, Lists,
-  Tile, RadioIcon, ChevronDownIcon, CirclePauseIcon, PackageIcon,
-  CalendarFoldIcon, Hero, FAQCell, PlaceholderIcon, PDPTemplate
+import {
+    Banner, Button, Carousel, Dialogue, FAQ, Reviews, Supporting,
+    HowItWorks, Membership, StarRating, RadioInline,
+    TileMultiItem, CarouselNav, CarouselPips, IconLine, CheckIcon,
+    PanelHeader, Textfield, TextArea, Select, SelectItem, SelectList,
+    CheckboxLine, AddOn, PageDivider, PageHeader, FooterPDP, Lists,
+    Tile, RadioIcon, ChevronDownIcon, CirclePauseIcon, PackageIcon,
+    CalendarFoldIcon, Hero, FAQCell, PlaceholderIcon, PDPTemplate
 } from 'cursive-design-system';
 import 'cursive-design-system/dist/style.css';
 
@@ -77,14 +77,6 @@ const ComponentShowcasePage: React.FC = () => {
             background: '#f8f9fa',
             minHeight: '100vh'
         }}>
-            {/* Test: Aggressive global styles to see if components are protected */}
-            <style>{`
-        /* These should NOT affect the components if they're properly isolated */
-        .button { background: red !important; color: white !important; }
-        .banner { background: purple !important; }
-        .carousel { border: 5px solid green !important; }
-        * { font-family: Comic Sans MS !important; }
-      `}</style>
             {/* Header */}
             <div style={{
                 textAlign: 'center',
@@ -266,15 +258,15 @@ const ComponentCard: React.FC<{ component: any; onClick: () => void }> = ({ comp
 const ComponentModal: React.FC<{ component: any; onClose: () => void }> = ({ component, onClose }) => {
     const [selectedVariant, setSelectedVariant] = useState(component.defaultVariant || 'default');
 
-  const componentMap: { [key: string]: any } = {
-    Banner, Button, Carousel, Dialogue, FAQ, Reviews, Supporting, 
-    HowItWorks, Membership, StarRating, RadioInline, 
-    TileMultiItem, CarouselNav, CarouselPips, IconLine, CheckIcon, 
-    PanelHeader, Textfield, TextArea, Select, SelectItem, SelectList,
-    CheckboxLine, AddOn, PageDivider, PageHeader, FooterPDP, Lists,
-    Tile, RadioIcon, ChevronDownIcon, CirclePauseIcon, PackageIcon,
-    CalendarFoldIcon, Hero, FAQCell, PlaceholderIcon, PDPTemplate
-  };
+    const componentMap: { [key: string]: any } = {
+        Banner, Button, Carousel, Dialogue, FAQ, Reviews, Supporting,
+        HowItWorks, Membership, StarRating, RadioInline,
+        TileMultiItem, CarouselNav, CarouselPips, IconLine, CheckIcon,
+        PanelHeader, Textfield, TextArea, Select, SelectItem, SelectList,
+        CheckboxLine, AddOn, PageDivider, PageHeader, FooterPDP, Lists,
+        Tile, RadioIcon, ChevronDownIcon, CirclePauseIcon, PackageIcon,
+        CalendarFoldIcon, Hero, FAQCell, PlaceholderIcon, PDPTemplate
+    };
 
     const ComponentToRender = componentMap[component.name];
 

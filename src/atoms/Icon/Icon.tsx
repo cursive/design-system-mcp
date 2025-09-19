@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { IconProps } from './Icon.types';
 import './Icon.css';

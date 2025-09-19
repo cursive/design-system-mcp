@@ -2,6 +2,7 @@ import React from 'react';
 import { PanelHeader } from '../../molecules/PanelHeader';
 import { SupportingProps } from './Supporting.types';
 import supportingPhoto from '../../assets/supporting.png';
+import '../../tokens/base.css';
 import './Supporting.css';
 
 export const Supporting: React.FC<SupportingProps> = ({

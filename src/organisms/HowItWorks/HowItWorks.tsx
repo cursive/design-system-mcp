@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { CirclePauseIcon } from '../../atoms/CirclePauseIcon';
 import { PanelHeader } from '../../molecules/PanelHeader';

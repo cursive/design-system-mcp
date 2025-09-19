@@ -33,6 +33,20 @@ select {
     font: inherit;
 }
 
+/* Simple font isolation - just override inheritance */
+* {
+    font-family: var(--font-family-body) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-headings) !important;
+}
+
 /* Reset media elements */
 img,
 picture,

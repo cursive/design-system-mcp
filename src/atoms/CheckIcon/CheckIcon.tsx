@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { CheckIconProps } from './CheckIcon.types';
 import './CheckIcon.css';

@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { StarRating } from '../../molecules/StarRating';
 import { PanelHeader } from '../../molecules/PanelHeader';

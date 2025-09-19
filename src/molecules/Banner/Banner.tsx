@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../tokens/base.css';
 import './Banner.css';
 
 export interface BannerProps {

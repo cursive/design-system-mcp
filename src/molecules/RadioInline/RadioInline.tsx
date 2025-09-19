@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { RadioIcon } from '../../atoms/RadioIcon';
 import './RadioInline.css';

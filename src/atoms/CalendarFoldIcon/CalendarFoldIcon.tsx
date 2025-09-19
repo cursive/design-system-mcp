@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { CalendarFoldIconProps } from './CalendarFoldIcon.types';
 import './CalendarFoldIcon.css';

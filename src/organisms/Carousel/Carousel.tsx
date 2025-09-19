@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { CarouselNav } from '../../molecules/CarouselNav';
 import { CarouselPips } from '../../molecules/CarouselPips';

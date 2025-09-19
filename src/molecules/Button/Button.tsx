@@ -2,6 +2,7 @@ import React from 'react';
 import { ButtonProps } from './Button.types';
 import { PlaceholderIcon } from '../../atoms/placeholders';
 import { ChevronDownIcon } from '../../atoms/ChevronDownIcon';
+import '../../tokens/base.css';
 import './Button.css';
 
 export const Button: React.FC<ButtonProps> = ({

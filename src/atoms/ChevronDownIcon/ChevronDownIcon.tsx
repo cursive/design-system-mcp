@@ -1,3 +1,4 @@
+import '../../tokens/base.css';
 import React from 'react';
 import { ChevronDownIconProps } from './ChevronDownIcon.types';
 import './ChevronDownIcon.css';

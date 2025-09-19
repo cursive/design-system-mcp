@@ -1,6 +1,6 @@
 {
     "name": "cursive-design-system",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "React design system generated from Figma via MCP",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

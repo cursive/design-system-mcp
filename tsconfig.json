@@ -49,6 +49,8 @@
         "node_modules",
         "dist",
         "**/*.stories.tsx",
-        "**/*.test.tsx"
+        "**/*.test.tsx",
+        "src/showcase/**/*",
+        "src/main.tsx"
     ]
 }

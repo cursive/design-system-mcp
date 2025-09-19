@@ -10,6 +10,9 @@ export * from './molecules';
 // Organisms
 export * from './organisms';
 
+// Templates
+export * from './templates';
+
 // Export manifest for atomic design structure
 export { default as manifest } from './__manifests__/index.json';
 

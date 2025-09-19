@@ -20,7 +20,9 @@
         "prepublishOnly": "npm run type-check"
     },
     "dependencies": {
-        "cursive-design-system": "^1.0.4",
+        "cursive-design-system": "^1.0.5",
+        "express": "^5.1.0",
+        "http-proxy-middleware": "^3.0.5",
         "react": ">=16.8.0",
         "react-dom": ">=16.8.0"
     },

@@ -6,30 +6,30 @@ const path = require('path');
 // Function to extract props from TypeScript interface
 function extractPropsFromTypes(content) {
     const props = {};
-    
+
     // Find interface definitions
     const interfaceRegex = /export interface (\w+)Props\s*\{([^}]+)\}/g;
     let match;
-    
+
     while ((match = interfaceRegex.exec(content)) !== null) {
         const interfaceName = match[1];
         const interfaceBody = match[2];
-        
+
         // Extract individual properties
         const propRegex = /\/\*\*\s*([^*]+)\s*\*\/\s*(\w+)\??:\s*([^;]+);/g;
         let propMatch;
-        
+
         while ((propMatch = propRegex.exec(interfaceBody)) !== null) {
             const description = propMatch[1].trim();
             const propName = propMatch[2];
             const propType = propMatch[3].trim();
             const isOptional = propMatch[0].includes('?');
-            
+
             // Parse the type and extract options if it's a union type
             let type = propType;
             let options = null;
             let defaultValue = null;
-            
+
             // Handle union types like 'default' | 'success' | 'warning' | 'alert'
             if (propType.includes('|')) {
                 const unionTypes = propType.split('|').map(t => t.trim().replace(/'/g, ''));
@@ -39,7 +39,7 @@ function extractPropsFromTypes(content) {
                     defaultValue = unionTypes[0];
                 }
             }
-            
+
             // Handle React types
             if (propType.includes('React.ReactNode')) {
                 type = 'React.ReactNode';
@@ -56,46 +56,46 @@ function extractPropsFromTypes(content) {
             } else if (propType.includes('[]')) {
                 type = 'array';
             }
-            
+
             props[propName] = {
                 type: type,
                 description: description,
                 required: !isOptional
             };
-            
+
             if (options) {
                 props[propName].options = options;
             }
-            
+
             if (defaultValue) {
                 props[propName].default = defaultValue;
             }
         }
     }
-    
+
     return props;
 }
 
 // Function to find all component directories
 function findComponentDirectories(srcPath) {
     const components = [];
-    
+
     function scanDirectory(dir, category) {
         const items = fs.readdirSync(dir);
-        
+
         for (const item of items) {
             const fullPath = path.join(dir, item);
             const stat = fs.statSync(fullPath);
-            
+
             if (stat.isDirectory()) {
                 // Check if this directory contains a component
                 const indexPath = path.join(fullPath, 'index.ts');
                 const typesPath = path.join(fullPath, `${item}.types.ts`);
-                
+
                 // For templates, check for .tsx files instead of index.ts
                 const isTemplate = category === 'templates';
                 const componentFile = isTemplate ? path.join(fullPath, `${item}.tsx`) : indexPath;
-                
+
                 if (fs.existsSync(componentFile)) {
                     const relativePath = path.relative(srcPath, fullPath);
                     components.push({
@@ -109,7 +109,7 @@ function findComponentDirectories(srcPath) {
                 // For templates, also check for .tsx files directly in the directory
                 const componentName = item.replace('.tsx', '');
                 const typesPath = path.join(dir, `${componentName}.types.ts`);
-                
+
                 components.push({
                     name: componentName,
                     category: category,
@@ -119,7 +119,7 @@ function findComponentDirectories(srcPath) {
             }
         }
     }
-    
+
     // Scan each category
     const categories = ['atoms', 'molecules', 'organisms', 'templates'];
     for (const category of categories) {
@@ -128,7 +128,7 @@ function findComponentDirectories(srcPath) {
             scanDirectory(categoryPath, category);
         }
     }
-    
+
     return components;
 }
 
@@ -142,20 +142,20 @@ function generateComponentEntry(component, index) {
         hash: `${component.category.charAt(0).toLowerCase()}${index + 1}${Math.random().toString(36).substr(2, 3)}`,
         defaultVariant: "default"
     };
-    
+
     // Add props if types file exists
     if (component.typesPath && fs.existsSync(component.typesPath)) {
         try {
             const typesContent = fs.readFileSync(component.typesPath, 'utf8');
             const props = extractPropsFromTypes(typesContent);
-            
+
             if (Object.keys(props).length > 0) {
                 entry.props = props;
-                
+
                 // Generate variants based on props with options
                 const variants = [];
                 const variantProps = {};
-                
+
                 for (const [propName, propInfo] of Object.entries(props)) {
                     if (propInfo.options && propInfo.options.length > 0) {
                         variantProps[propName] = propInfo.default || propInfo.options[0];
@@ -163,10 +163,10 @@ function generateComponentEntry(component, index) {
                         variantProps[propName] = propInfo.default;
                     }
                 }
-                
+
                 if (Object.keys(variantProps).length > 0) {
                     entry.defaultVariant = variantProps;
-                    
+
                     // Create variants for each option of the first prop with options
                     const firstPropWithOptions = Object.entries(props).find(([_, info]) => info.options);
                     if (firstPropWithOptions) {
@@ -181,7 +181,7 @@ function generateComponentEntry(component, index) {
                         }
                     }
                 }
-                
+
                 if (variants.length > 0) {
                     entry.variants = variants;
                 }
@@ -190,7 +190,7 @@ function generateComponentEntry(component, index) {
             console.warn(`Warning: Could not parse types for ${component.name}: ${error.message}`);
         }
     }
-    
+
     return entry;
 }
 
@@ -198,11 +198,11 @@ function generateComponentEntry(component, index) {
 function generateManifest() {
     const srcPath = path.join(__dirname, 'src');
     const manifestPath = path.join(srcPath, '__manifests__', 'index.json');
-    
+
     console.log('🔍 Scanning for components...');
     const components = findComponentDirectories(srcPath);
     console.log(`Found ${components.length} components`);
-    
+
     // Group components by category
     const componentsByCategory = {
         atoms: components.filter(c => c.category === 'atoms'),
@@ -210,11 +210,11 @@ function generateManifest() {
         organisms: components.filter(c => c.category === 'organisms'),
         templates: components.filter(c => c.category === 'templates')
     };
-    
+
     // Generate manifest entries
     const manifestEntries = [];
     let idCounter = 1;
-    
+
     for (const [category, categoryComponents] of Object.entries(componentsByCategory)) {
         for (const component of categoryComponents) {
             const entry = generateComponentEntry(component, idCounter - 1);
@@ -223,7 +223,7 @@ function generateManifest() {
             idCounter++;
         }
     }
-    
+
     // Create the complete manifest
     const manifest = {
         schemaVersion: 1,
@@ -233,18 +233,18 @@ function generateManifest() {
             placeholderPath: "atoms/placeholders/PlaceholderIcon"
         }
     };
-    
+
     // Write the manifest
     fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 4));
     console.log(`✅ Generated manifest with ${manifestEntries.length} components`);
     console.log(`📁 Manifest written to: ${manifestPath}`);
-    
+
     // Print summary
     console.log('\n📊 Component Summary:');
     for (const [category, categoryComponents] of Object.entries(componentsByCategory)) {
         console.log(`  ${category}: ${categoryComponents.length} components`);
     }
-    
+
     console.log('\n🎯 Components with detailed props:');
     for (const entry of manifestEntries) {
         if (entry.props && Object.keys(entry.props).length > 0) {

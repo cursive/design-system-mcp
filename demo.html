@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Showcase Demo</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category-header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .component-card {
+            border: 1px solid #e1e5e9;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .component-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .component-id {
+            font-size: 0.8rem;
+            color: #666;
+            background: #f1f3f4;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .component-path {
+            font-size: 0.9rem;
+            color: #888;
+            font-family: monospace;
+            margin-bottom: 15px;
+        }
+
+        .props-list {
+            list-style: none;
+        }
+
+        .prop-item {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 4px;
+        }
+
+        .prop-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .prop-type {
+            color: #667eea;
+            font-family: monospace;
+        }
+
+        .variant-tag {
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function ComponentShowcase() {
+            const [manifest, setManifest] = useState(null);
+            const [loading, setLoading] = useState(true);
+            const [error, setError] = useState(null);
+
+            useEffect(() => {
+                loadComponents();
+            }, []);
+
+            async function loadComponents() {
+                try {
+                    // Import from the published npm package
+                    const { manifest, structure } = await import('https://unpkg.com/cursive-design-system@1.0.5/dist/index.js');
+
+                    if (!manifest) {
+                        throw new Error('Could not load manifest from npm package');
+                    }
+
+                    setManifest(manifest);
+                    setLoading(false);
+                } catch (err) {
+                    console.error('Error:', err);
+                    setError(err.message);
+                    setLoading(false);
+                }
+            }
+
+            if (loading) {
+                return <div style={{ textAlign: 'center', padding: '40px', color: '#666' }}>Loading components...</div>;
+            }
+
+            if (error) {
+                return <div style={{ background: '#fee', color: '#c33', padding: '20px', borderRadius: '8px' }}>Error: {error}</div>;
+            }
+
+            const totalComponents = manifest.components.length;
+            const componentsWithProps = manifest.components.filter(c => c.props && Object.keys(c.props).length > 0).length;
+            const componentsWithVariants = manifest.components.filter(c => c.variants && c.variants.length > 0).length;
+
+            const categories = {
+                atoms: manifest.components.filter(c => c.kind === 'atom'),
+                molecules: manifest.components.filter(c => c.kind === 'molecule'),
+                organisms: manifest.components.filter(c => c.kind === 'organism'),
+                templates: manifest.components.filter(c => c.kind === 'template')
+            };
+
+            return (
+                <div className="container">
+                    <div className="header">
+                        <h1>Design System Component Showcase</h1>
+                        <p>Complete component library from cursive-design-system@1.0.5</p>
+                    </div>
+
+                    <div className="stats">
+                        <div className="stat-card">
+                            <div className="stat-number">{totalComponents}</div>
+                            <div>Total Components</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">{componentsWithProps}</div>
+                            <div>With Props</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-number">{componentsWithVariants}</div>
+                            <div>With Variants</div>
+                        </div>
+                    </div>
+
+                    {Object.entries(categories).map(([categoryName, components]) => {
+                        if (components.length === 0) return null;
+
+                        return (
+                            <div key={categoryName} className="category">
+                                <div className="category-header">
+                                    <div className="category-title">{categoryName.toUpperCase()}</div>
+                                    <div>{components.length} components</div>
+                                </div>
+                                <div className="components-grid">
+                                    {components.map(component => (
+                                        <ComponentCard key={component.id} component={component} />
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            );
+        }
+
+        function ComponentCard({ component }) {
+            const hasProps = component.props && Object.keys(component.props).length > 0;
+            const hasVariants = component.variants && component.variants.length > 0;
+
+            return (
+                <div className="component-card">
+                    <div className="component-name">{component.name}</div>
+                    <div className="component-id">{component.id}</div>
+                    <div className="component-path">{component.path}</div>
+
+                    {hasProps && (
+                        <div>
+                            <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>
+                                Props ({Object.keys(component.props).length})
+                            </div>
+                            <ul className="props-list">
+                                {Object.entries(component.props).map(([propName, propInfo]) => (
+                                    <li key={propName} className="prop-item">
+                                        <span className="prop-name">{propName}</span>:
+                                        <span className="prop-type"> {propInfo.type}</span>
+                                        <span style={{ color: propInfo.required ? '#e74c3c' : '#27ae60', fontSize: '0.7rem' }}>
+                                            ({propInfo.required ? 'required' : 'optional'})
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {hasVariants && (
+                        <div style={{ marginTop: '10px' }}>
+                            <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>Variants</div>
+                            {component.variants.map(variant => (
+                                <span key={variant.name} className="variant-tag">{variant.name}</span>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<ComponentShowcase />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
